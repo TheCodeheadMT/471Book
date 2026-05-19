@@ -9,9 +9,9 @@ parts:
     style: numerical                # Default value (line can be removed), style of numbering for this part, configuration part of TeachBooks' version of sphinx-external-toc (https://github.com/TeachBooks/sphinx-external-toc?tab=readme-ov-file#toc-tree-options)
     restart_numbering: false        # Default value (line can be removed), whether to restart numbering for this part, configuration part of TeachBooks' version of sphinx-external-toc (https://github.com/TeachBooks/sphinx-external-toc?tab=readme-ov-file#toc-tree-options)
     chapters:
-    - file: some_content/overview.md
+    - file: chapters/Lesson 27/reading.md
       sections:
-      - file: some_content/text_and_code.ipynb
+      - file: chapters/Lesson 27/text_and_code.ipynb
   - caption: Exercises
     chapters:
     - file: exercises.md

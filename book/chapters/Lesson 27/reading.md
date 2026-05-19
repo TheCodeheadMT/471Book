@@ -1,4 +1,4 @@
-## Foundations of Statistical Learning: Accuracy, Generalization, and the Bias-Variance Tradeoff
+## Foundations of Statistical Learning - Accuracy, Generalization, and the Bias-Variance Tradeoff
 
 ### 1. Introduction to the Statistical Learning Framework
 
@@ -58,27 +58,7 @@ In a performance plot, you will observe two distinct trajectories:
 * **Grey Curve (Training MSE):** Continually declines. A flexible model can eventually "pass through" every point, achieving zero training error.
 * **Red Curve (Test MSE):** Declines initially, hits a minimum, and then rises sharply. This rise is the hallmark of overfitting, where the model mistakes random noise for a repeatable signal.
 
-```python
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Simulation of Flexibility vs MSE
-flexibility = np.linspace(2, 30, 100)
-training_mse = 2.0 * np.exp(-0.1 * flexibility) + 0.1
-test_mse = 1.5 * np.exp(-0.2 * flexibility) + 0.005 * (flexibility**2) + 0.5
-
-plt.figure(figsize=(10, 6))
-plt.plot(flexibility, training_mse, color='grey', label='Training MSE')
-plt.plot(flexibility, test_mse, color='red', label='Test MSE')
-# The 0.4 line represents the "Irreducible Error" inherent in the system
-plt.axhline(y=0.4, color='black', linestyle='--', label='Irreducible Error')
-plt.xlabel('Flexibility')
-plt.ylabel('Mean Squared Error')
-plt.title('The Fundamental Trade-off: Flexibility vs. Error')
-plt.legend()
-plt.show()
-
-```
+![alt text](flexibility_vs_error.png)
 
 > **The "So what": The Danger of Flexibility**
 > As flexibility increases, we begin to fit the random fluctuations of the specific training set. If the underlying truth is linear, a highly flexible model is actually inferior because it introduces unnecessary variance, failing to mirror the global truth of the population.

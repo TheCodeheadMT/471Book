@@ -11,7 +11,8 @@ parts:
     chapters:
     - file: chapters/Lesson 27/reading.md
       sections:
-      - file: chapters/Lesson 27/text_and_code.ipynb
+      - file: chapters/Lesson 27/simple_perceptron.ipynb
+      - file: chapters/Lesson 27/bias_variance_tradeoff.ipynb
   - caption: Exercises
     chapters:
     - file: exercises.md

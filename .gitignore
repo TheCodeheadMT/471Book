@@ -6,6 +6,7 @@ __pycache__/
 # Python
 .Python
 .vscode/
+./jnb_env
 
 # PyInstaller
 #  Usually these files are written by a python script from a template

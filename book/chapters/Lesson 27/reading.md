@@ -1,4 +1,4 @@
-## Foundations of Statistical Learning - Accuracy, Generalization, and the Bias-Variance Tradeoff
+## Machine Learning Foundations
 
 ### 1. Introduction to the Statistical Learning Framework
 

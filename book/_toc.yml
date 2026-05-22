@@ -4,19 +4,23 @@ format: jb-book
 root: intro.md
 
 parts:
-  - caption: Part with some content # A title for the whole the subtree, e.g. shown above the subtree in ToCs, configuration part of sphinx-external-toc (https://sphinx-external-toc.readthedocs.io/en/latest/intro.html)
+  - caption: Sections # A title for the whole the subtree, e.g. shown above the subtree in ToCs, configuration part of sphinx-external-toc (https://sphinx-external-toc.readthedocs.io/en/latest/intro.html)
     numbered: false                 # Default value (line can be removed), whether to number the chapters/sections in this part, configuration part of sphinx-external-toc (https://sphinx-external-toc.readthedocs.io/en/latest/intro.html)
     style: numerical                # Default value (line can be removed), style of numbering for this part, configuration part of TeachBooks' version of sphinx-external-toc (https://github.com/TeachBooks/sphinx-external-toc?tab=readme-ov-file#toc-tree-options)
     restart_numbering: false        # Default value (line can be removed), whether to restart numbering for this part, configuration part of TeachBooks' version of sphinx-external-toc (https://github.com/TeachBooks/sphinx-external-toc?tab=readme-ov-file#toc-tree-options)
     chapters:
-    - file: chapters/Lesson 27/reading.md
+    - file: lessons/27/Lesson 27 - ML Foundations.md
       sections:
-      - file: chapters/Lesson 27/simple_perceptron.ipynb
-      - file: chapters/Lesson 27/bias_variance_tradeoff.ipynb
+      - file: exercises/Predict Component Failure (LogReg-QDA).ipynb
+      - file: exercises/Classifying Radar Profiles(SVM and QDA).ipynb
+      - file: exercises/Bias Variance Tradeoff.ipynb
   - caption: Exercises
     chapters:
     - file: exercises.md
       sections:
+      - file: exercises/Predict Component Failure (LogReg-QDA).ipynb
+      - file: exercises/Classifying Radar Profiles(SVM and QDA).ipynb
+      - file: exercises/Bias Variance Tradeoff.ipynb
       - file: exercises/001.md
       - file: exercises/002.md
       - file: exercises/003.md
@@ -25,15 +29,15 @@ parts:
       - file: exercises/005a.md
       - file: exercises/006.md
       - file: exercises/summary
-    - file: syntax_exercises.md
+    - file: code_templates.md
       sections:
-      - file: syntax_exercises/007.md
-      - file: syntax_exercises/008.md
-      - file: syntax_exercises/009.md
-      - file: syntax_exercises/010.md
-      - file: syntax_exercises/011.md
-      - file: syntax_exercises/012.md
-      - file: syntax_exercises/013.md
+      - file: code_templates/007.md
+      - file: code_templates/008.md
+      - file: code_templates/009.md
+      - file: code_templates/010.md
+      - file: code_templates/011.md
+      - file: code_templates/012.md
+      - file: code_templates/013.md
     - file: extensions.md
       sections:
       - file: exercises/007.md

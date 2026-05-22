@@ -1,4 +1,4 @@
-Here is the fully updated Markdown and Python content for Lesson 2.1. I have added clear, step-by-step bulleted descriptions before each Python lab so students know exactly what the code is doing before they execute it.
+Here is the updated Markdown and Python content for Lesson 2.1. I have updated the "Complex Problem" section to introduce **Decision Trees and Gini Impurity**, complete with the math and a numerical toy problem, perfectly setting the stage for why we need Random Forests.
 
 ---
 
@@ -32,6 +32,17 @@ $$P(y=1|x) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 x_1 + \dots + \beta_n x_n)}}$$
 
 If $P > 0.5$, the model predicts a failure.
 
+> **Tip: Toy Problem - Logistic Regression**
+> Let's predict engine failure based on a single feature: Vibration ($x_1$).
+> Suppose our trained model has an intercept $\beta_0 = -5$ and a vibration weight $\beta_1 = 0.5$.
+> We receive a new sensor reading of $12\text{ Hz}$ vibration ($x_1 = 12$).
+> 1. Calculate the linear sum: $z = -5 + (0.5 \times 12) = -5 + 6 = 1$
+> 2. Apply the sigmoid function: $P = \frac{1}{1 + e^{-1}}$
+> 3. Since $e^{-1} \approx 0.367$, the probability is $P = \frac{1}{1 + 0.367} = \frac{1}{1.367} \approx 0.73$
+> 
+> 
+> **Result:** The model predicts a 73% probability of engine failure. Since $0.73 > 0.5$, the mechanic is alerted.
+
 ### The Math: Linear Discriminant Analysis (LDA)
 
 Instead of modeling the probability directly, LDA models the distribution of the features for each class (Failed vs. Operational). It assumes the data for both classes share the same variance but have different means. It uses Bayes' Theorem to calculate the probability:
@@ -39,6 +50,17 @@ Instead of modeling the probability directly, LDA models the distribution of the
 $$P(Y=k | X=x) = \frac{f_k(x) \pi_k}{\sum_{l=1}^{K} f_l(x) \pi_l}$$
 
 Where $\pi_k$ is the prior probability of class $k$, and $f_k(x)$ is the Gaussian density function.
+
+> **Tip: Toy Problem - LDA**
+> Suppose 15% of engines fail historically ($\pi_{fail} = 0.15$), and 85% are operational ($\pi_{op} = 0.85$).
+> We read a high temperature of $100^\circ\text{C}$ ($x = 100$). Based on historical distributions, the probability density of seeing $100^\circ\text{C}$ in a failing engine is $f_{fail}(100) = 0.04$, and in an operational engine is $f_{op}(100) = 0.01$.
+> 1. Numerator (Failure score): $0.04 \times 0.15 = 0.006$
+> 2. Numerator (Operational score): $0.01 \times 0.85 = 0.0085$
+> 3. Total sum (Denominator): $0.006 + 0.0085 = 0.0145$
+> 4. Final Probability of Failure: $\frac{0.006}{0.0145} \approx 0.413$
+> 
+> 
+> **Result:** Despite the high temperature, the overwhelming prior probability that engines are usually fine drags the failure probability down to 41.3%. The engine is flagged for monitoring, but not immediately grounded.
 
 ### Python Lab: Predicting Component Failure
 
@@ -121,7 +143,21 @@ The goal is to maximize the margin $\frac{2}{||w||}$ by solving the optimization
 $$\min_{w,b} \frac{1}{2} ||w||^2$$
 
 
-Subject to the constraint that all points are classified correctly. To handle non-linear data, SVM uses the **Kernel Trick** to project data into higher dimensions where a linear cut becomes possible.
+Subject to the constraint that all points are classified correctly:
+
+
+$$y_i(w \cdot x_i + b) \ge 1$$
+
+
+To handle non-linear data, SVM uses the **Kernel Trick** to project data into higher dimensions where a linear cut becomes possible.
+
+> **Tip: Toy Problem - SVM Margin**
+> Imagine we mapped friendly and adversarial radar returns onto a 2D grid. The SVM found the optimal dividing line with a weight vector $w = [3, 4]$.
+> 1. Calculate the magnitude of the weight vector ($||w||$): $\sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5$
+> 2. Calculate the margin width: $\frac{2}{||w||} = \frac{2}{5} = 0.4$
+> 
+> 
+> **Result:** The mathematical margin of $0.4$ represents the physical "buffer zone" in our feature space. A wider margin means the model is more confident and less likely to misclassify a slightly anomalous friendly radar blip as an adversary.
 
 > **Insight:** Quadratic Discriminant Analysis (QDA) allows each class to have its own variance. This allows QDA to draw curved, non-linear boundaries naturally, making it highly effective for complex radar profiles where flight envelopes overlap in curves, not straight lines.
 
@@ -188,9 +224,33 @@ The plot visually demonstrates the power of the **Kernel Trick**. A simple linea
 
 ---
 
-## Complex Problem: Random Forests & The Bias-Variance Tradeoff
+## Complex Problem: Decision Trees, Random Forests, & The Bias-Variance Tradeoff
 
 **Scenario:** Mission Success Prediction. You must predict the probability of mission success based on a massive matrix of weather, logistics, and intelligence data.
+
+### The Math: Decision Trees & Gini Impurity
+
+A Decision Tree learns by recursively splitting data based on the feature that best separates the target classes (e.g., Success vs. Failure). To find the "best" split, the algorithm calculates the **Gini Impurity** of a node. A Gini score of $0$ means the node is perfectly pure (contains only one class).
+
+For a node containing classes $C$, with the probability $p_i$ of an item belonging to class $i$, the Gini Impurity is:
+
+
+$$Gini = 1 - \sum_{i=1}^{C} p_i^2$$
+
+> **Tip: Toy Problem - Decision Tree Splitting**
+> A planning node contains 10 past missions: 6 Successes and 4 Failures.
+> 1. Calculate the Root Node Impurity:
+> $Gini_{root} = 1 - ( (0.6)^2 + (0.4)^2 ) = 1 - (0.36 + 0.16) = 1 - 0.52 = 0.48$
+> 2. We split the data using a rule: "Was the Weather Clear?"
+> * **Left Node (Clear Weather):** 5 missions (all 5 are Successes).
+> $Gini_{left} = 1 - ( (1.0)^2 + (0.0)^2 ) = 1 - 1 = 0.0$ (Perfectly pure!)
+> * **Right Node (Bad Weather):** 5 missions (1 Success, 4 Failures).
+> $Gini_{right} = 1 - ( (0.2)^2 + (0.8)^2 ) = 1 - (0.04 + 0.64) = 1 - 0.68 = 0.32$
+> 
+> 
+> 
+> 
+> **Result:** The weighted average impurity of the two child nodes is $\frac{5}{10}(0) + \frac{5}{10}(0.32) = 0.16$. Since $0.16 < 0.48$, splitting by "Weather" significantly reduced impurity. The algorithm keeps this split!
 
 ### The Math: Bias-Variance Tradeoff
 
@@ -203,9 +263,19 @@ $$E[(y - \hat{f}(x))^2] = \text{Bias}(\hat{f}(x))^2 + \text{Var}(\hat{f}(x)) + \
 * **Variance:** Error from sensitivity to small fluctuations in the training set. High variance leads to **overfitting** (memorizing the noise).
 * **$\sigma^2$ (Irreducible Error):** The inherent noise in the data itself.
 
+> **Tip: Toy Problem - Bias vs. Variance**
+> Let's say the inherent, unpreventable "fog of war" noise ($\sigma^2$) in our mission data causes a baseline error of $2\%$. Our overall model error is $10\%$.
+> 1. **Underfitting (High Bias):** A simple linear model might miss the complex reality of warfare. Its bias squared is $7\%$, and its variance is $1\%$. Total error $= 7\% + 1\% + 2\% = 10\%$.
+> 2. **Overfitting (High Variance):** We switch to a single massive Decision Tree. It perfectly fits the training data, dropping bias to $1\%$. However, it memorizes random historical anomalies, spiking its variance to $7\%$. Total error $= 1\% + 7\% + 2\% = 10\%$.
+> 
+> 
+> **Result:** Lowering bias almost always raises variance. The goal of ensemble methods is to find the "sweet spot" in the middle.
+
 ### Random Forests
 
-A single Decision Tree is prone to high variance. A **Random Forest** fixes this through *bagging* (Bootstrap Aggregating). It trains hundreds of shallow decision trees on random subsets of data and averages their predictions. By averaging many high-variance models, the overall variance drops significantly while maintaining low bias.
+A single Decision Tree is incredibly prone to high variance. If left unchecked, it will grow deep enough to achieve a Gini Impurity of $0$ on every leaf, memorizing the training data completely.
+
+A **Random Forest** fixes this through *bagging* (Bootstrap Aggregating). It trains hundreds of shallow decision trees on random subsets of data and averages their predictions. By averaging many high-variance models, the overall variance drops significantly while maintaining low bias.
 
 ### Python Lab: Random Forest Generalization
 

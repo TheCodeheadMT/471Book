@@ -14,6 +14,7 @@ parts:
       - file: lessons/27/Predict_Component_Failure_(LogReg-QDA).ipynb
       - file: lessons/27/Classifying_Radar_Profiles(SVM-QDA).ipynb
       - file: lessons/27/Bias_Variance_Tradeoff.ipynb
+      - file: lessons/27/dtree_rf.ipynb
 #   - caption: Exercises
 #     chapters:
 #     - file: exercises.md

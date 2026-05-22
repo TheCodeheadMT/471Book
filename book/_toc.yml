@@ -11,40 +11,40 @@ parts:
     chapters:
     - file: lessons/27/Lesson 27 - ML Foundations.md
       sections:
-      - file: exercises/Predict Component Failure (LogReg-QDA).ipynb
-      - file: exercises/Classifying Radar Profiles(SVM and QDA).ipynb
-      - file: exercises/Bias Variance Tradeoff.ipynb
-  - caption: Exercises
-    chapters:
-    - file: exercises.md
-      sections:
-#      - file: exercises/Predict Component Failure (LogReg-QDA).ipynb
-#      - file: exercises/Classifying Radar Profiles(SVM and QDA).ipynb
-#      - file: exercises/Bias Variance Tradeoff.ipynb
-      - file: exercises/001.md
-      - file: exercises/002.md
-      - file: exercises/003.md
-      - file: exercises/004.md
-      - file: exercises/005.md
-      - file: exercises/005a.md
-      - file: exercises/006.md
-      - file: exercises/summary
-    - file: code_templates.md
-      sections:
-      - file: code_templates/007.md
-      - file: code_templates/008.md
-      - file: code_templates/009.md
-      - file: code_templates/010.md
-      - file: code_templates/011.md
-      - file: code_templates/012.md
-      - file: code_templates/013.md
-    - file: extensions.md
-      sections:
-      - file: exercises/007.md
-      - file: extension_exercises/017.md
-      - file: extension_exercises/014.md
-      - file: extension_exercises/015.md
-      - file: extension_exercises/016.md
+      - file: lessons/27/Predict_Component_Failure_(LogReg-QDA).ipynb
+      - file: lessons/27/Classifying_Radar_Profiles(SVM-QDA).ipynb
+      - file: lessons/27/Bias_Variance_Tradeoff.ipynb
+#   - caption: Exercises
+#     chapters:
+#     - file: exercises.md
+#       sections:
+# #      - file: exercises/Predict Component Failure (LogReg-QDA).ipynb
+# #      - file: exercises/Classifying Radar Profiles(SVM and QDA).ipynb
+# #      - file: exercises/Bias Variance Tradeoff.ipynb
+#       - file: exercises/001.md
+#       - file: exercises/002.md
+#       - file: exercises/003.md
+#       - file: exercises/004.md
+#       - file: exercises/005.md
+#       - file: exercises/005a.md
+#       - file: exercises/006.md
+#       - file: exercises/summary
+#     - file: code_templates.md
+#       sections:
+#       - file: code_templates/007.md
+#       - file: code_templates/008.md
+#       - file: code_templates/009.md
+#       - file: code_templates/010.md
+#       - file: code_templates/011.md
+#       - file: code_templates/012.md
+#       - file: code_templates/013.md
+#     - file: extensions.md
+#       sections:
+#       - file: exercises/007.md
+#       - file: extension_exercises/017.md
+#       - file: extension_exercises/014.md
+#       - file: extension_exercises/015.md
+#       - file: extension_exercises/016.md
   - caption: Miscellaneous
     chapters:
     - file: references.md

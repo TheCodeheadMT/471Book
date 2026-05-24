@@ -62,6 +62,9 @@ Where $\pi_k$ is the prior probability of class $k$, and $f_k(x)$ is the Gaussia
 > 
 > **Result:** Despite the high temperature, the overwhelming prior probability that engines are usually fine drags the failure probability down to 41.3%. The engine is flagged for monitoring, but not immediately grounded.
 
+> #### Check out the [**Statitical ML Simulators**](https://thecodeheadmt.github.io/CS471/StatisticalML/index.html) to better understand how Linear Discriminant Analysis works.
+
+
 ---
 
 ## Support Vector Machines (SVM) and QDA
@@ -88,8 +91,10 @@ Subject to the constraint that all points are classified correctly. To handle no
 > 
 > 
 > **Result:** The mathematical margin of $0.4$ represents the physical "buffer zone" in our feature space. A wider margin means the model is more confident and less likely to misclassify a slightly anomalous friendly radar blip as an adversary.
-
+>
 > **Insight:** Quadratic Discriminant Analysis (QDA) allows each class to have its own variance. This allows QDA to draw curved, non-linear boundaries naturally, making it highly effective for complex radar profiles where flight envelopes overlap in curves, not straight lines.
+
+> #### Check out the [**Statitical ML Simulators**](https://thecodeheadmt.github.io/CS471/StatisticalML/index.html) to better understand how a Support Vector Machine works.
 
 ---
 
@@ -113,6 +118,9 @@ $$E[(y - \hat{f}(x))^2] = \text{Bias}(\hat{f}(x))^2 + \text{Var}(\hat{f}(x)) + \
 > 
 > 
 > **Result:** Lowering bias almost always raises variance. The goal of ensemble methods is to find the "sweet spot" in the middle.
+
+> #### Check out the [**Statitical ML Simulators**](https://thecodeheadmt.github.io/CS471/StatisticalML/index.html) to better understand how Random Forests works.
+
 
 
 ### The Math: Decision Trees & Gini Impurity

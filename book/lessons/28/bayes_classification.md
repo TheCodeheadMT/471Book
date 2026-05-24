@@ -16,6 +16,10 @@ $$P(\text{Class} | \text{Evidence}) = \frac{P(\text{Evidence} | \text{Class}) \t
 
 * **$P(\text{Class} | \text{Evidence})$ [The Posterior]:** The final probability that the transmission is Urgent, given that we saw the word "contact".
 
+   
+> #### Check out the [**Bayes Simulator**](https://thecodeheadmt.github.io/CS471/BayesSim/index.html) got gain a better intution of how Bayes classification works.
+
+
 ---
 
 ## Text Classification

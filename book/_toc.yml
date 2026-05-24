@@ -18,6 +18,8 @@ parts:
     - file: lessons/28/bayes_classification.md
       sections:
       - file: lessons/28/triage_classification.ipynb
+      - file: lessons/28/email_phishing.ipynb
+      - file: lessons/28/handling_unknown.ipynb
 #   - caption: Exercises
 #     chapters:
 #     - file: exercises.md

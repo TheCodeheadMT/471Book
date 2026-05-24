@@ -15,6 +15,9 @@ parts:
       - file: lessons/27/Classifying_Radar_Profiles(SVM-QDA).ipynb
       - file: lessons/27/Bias_Variance_Tradeoff.ipynb
       - file: lessons/27/dtree_rf.ipynb
+    - file: lessons/28/bayes_classification.md
+      sections:
+      - file: lessons/28/triage_classification.ipynb
 #   - caption: Exercises
 #     chapters:
 #     - file: exercises.md

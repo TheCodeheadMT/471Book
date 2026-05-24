@@ -29,7 +29,7 @@ $$P(y=1|x) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 x_1 + \dots + \beta_n x_n)}}$$
 If $P > 0.5$, the model predicts a failure.
 
 >
-> **Example - Logistic Regression**
+> **Example 27.1 - Logistic Regression**
 >
 >Let's predict engine failure based on a single feature: Vibration ($x_1$).
 >Suppose our trained model has an intercept $\beta_0 = -5$ and a vibration weight $\beta_1 = 0.5$.
@@ -50,7 +50,7 @@ $$P(Y=k | X=x) = \frac{f_k(x) \pi_k}{\sum_{l=1}^{K} f_l(x) \pi_l}$$
 
 Where $\pi_k$ is the prior probability of class $k$, and $f_k(x)$ is the Gaussian density function.
 
-> **Example - LDA**
+> **Example 27.2 - LDA**
 > Suppose 15% of engines fail historically ($\pi_{fail} = 0.15$), and 85% are operational ($\pi_{op} = 0.85$).
 >
 > We read a high temperature of $100^\circ\text{C}$ ($x = 100$). Based on historical distributions, the probability density of seeing $100^\circ\text{C}$ in a failing engine is $f_{fail}(100) = 0.04$, and in an operational engine is $f_{op}(100) = 0.01$.
@@ -81,7 +81,7 @@ $$\min_{w,b} \frac{1}{2} ||w||^2$$
 Subject to the constraint that all points are classified correctly. To handle non-linear data, SVM uses the **Kernel Trick** to project data into higher dimensions where a linear cut becomes possible.
 
 
-> **Example - SVM Margin**
+> **Example 27.3 - SVM Margin**
 > Imagine we mapped friendly and adversarial radar returns onto a 2D grid. The SVM found the optimal dividing line with a weight vector $w = [3, 4]$.
 > 1. Calculate the magnitude of the weight vector ($||w||$): $\sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5$
 > 2. Calculate the margin width: $\frac{2}{||w||} = \frac{2}{5} = 0.4$
@@ -124,7 +124,7 @@ For a node containing classes $C$, with the probability $p_i$ of an item belongi
 
 $$Gini = 1 - \sum_{i=1}^{C} p_i^2$$
 
-> **Example - Decision Tree Splitting**
+> **Example 27.4 - Decision Tree Splitting**
 > A planning node contains 10 past missions: 6 Successes and 4 Failures.
 > 1. Calculate the Root Node Impurity:
 > $Gini_{root} = 1 - ( (0.6)^2 + (0.4)^2 ) = 1 - (0.36 + 0.16) = 1 - 0.52 = 0.48$

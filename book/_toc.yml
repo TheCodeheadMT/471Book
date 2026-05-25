@@ -24,12 +24,12 @@ parts:
     chapters:
     - file: exercises/L27.md
     - file: exercises/L28.md
+  - caption: Miscellaneous
+    chapters:
     - title: AI Sim Lab
       url: https://thecodeheadmt.github.io/CS471/
     - title: ML Addict
       url: https://www.mladdict.com/
-  - caption: Miscellaneous
-    chapters:
     - file: references.md
     - file: changelog.md
     - file: credits.md

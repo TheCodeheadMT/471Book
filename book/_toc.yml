@@ -24,35 +24,13 @@ parts:
     chapters:
     - file: exercises/L27.md
     - file: exercises/L28.md
-#       - file: exercises/003.md
-#       - file: exercises/004.md
-#       - file: exercises/005.md
-#       - file: exercises/005a.md
-#       - file: exercises/006.md
-#       - file: exercises/summary
-#     - file: code_templates.md
-#       sections:
-#       - file: code_templates/007.md
-#       - file: code_templates/008.md
-#       - file: code_templates/009.md
-#       - file: code_templates/010.md
-#       - file: code_templates/011.md
-#       - file: code_templates/012.md
-#       - file: code_templates/013.md
-#     - file: extensions.md
-#       sections:
-#       - file: exercises/007.md
-#       - file: extension_exercises/017.md
-#       - file: extension_exercises/014.md
-#       - file: extension_exercises/015.md
-#       - file: extension_exercises/016.md
-  - caption: Miscellaneous
-    chapters:
     - links:
       - name: AI Sim Lab
         url: https://thecodeheadmt.github.io/CS471/
       - name: ML Addict
         url: https://www.mladdict.com/
+  - caption: Miscellaneous
+    chapters:
     - file: references.md
     - file: changelog.md
     - file: credits.md

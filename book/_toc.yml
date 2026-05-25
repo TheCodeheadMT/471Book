@@ -22,10 +22,8 @@ parts:
       - file: lessons/28/handling_unknown.ipynb
   - caption: Exercises
     chapters:
-    - file: exercises.md
-      sections:
-      - file: exercises/L27.md
-      - file: exercises/L28.md
+    - file: exercises/L27.md
+    - file: exercises/L28.md
 #       - file: exercises/003.md
 #       - file: exercises/004.md
 #       - file: exercises/005.md

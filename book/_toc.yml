@@ -48,6 +48,11 @@ parts:
 #       - file: extension_exercises/016.md
   - caption: Miscellaneous
     chapters:
+    - links:
+      - name: AI Sim Lab
+        url: https://thecodeheadmt.github.io/CS471/
+      - name: ML Addict
+        url: https://www.mladdict.com/
     - file: references.md
     - file: changelog.md
     - file: credits.md

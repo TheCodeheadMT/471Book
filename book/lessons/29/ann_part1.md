@@ -2,6 +2,8 @@
 
 Welcome to the next leap in the Smart Air Force Warfighter curriculum. While statistical models like Logistic Regression and Support Vector Machines are powerful, they often require humans to manually engineer features. Artificial Neural Networks (ANNs) take inspiration from the human brain, allowing systems to automatically learn complex, non-linear representations of raw data. In this lesson, we will explore the fundamental building block of deep learning: the artificial neuron, and how connecting them creates feedforward architectures capable of solving highly complex tactical problems.
 
+![Aritifical Neural Networks Intro](../../figures/ann1_info.png "ANN Infographfic")
+
 ## The Artificial Neuron (The Perceptron)
 
 **Scenario:** UAV Sortie Viability. You need to predict whether an autonomous UAV has enough battery to complete a sortie based on three telemetry features: Payload Weight, Headwind Speed, and Mission Distance.
@@ -86,4 +88,3 @@ Unlike statistical models that usually output a single prediction, neural networ
 One output node might use a linear activation to predict continuous fuel consumption in gallons, while another output node predicts the flight time in minutes. By sharing hidden layers, the network learns a more robust internal representation of the battlespace, improving the accuracy of both predictions.
 
 
-![Aritifical Neural Networks Intro](../../figures/ann1_info.png "ANN Infographfic")

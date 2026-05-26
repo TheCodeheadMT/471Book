@@ -20,7 +20,7 @@ parts:
       - file: lessons/28/triage_classification.ipynb
       - file: lessons/28/email_phishing.ipynb
       - file: lessons/28/handling_unknown.ipynb
-    - file: lesson/29/ann_part1.md
+    - file: lessons/29/ann_part1.md
   - caption: Exercises
     chapters:
     - file: exercises/L27.md

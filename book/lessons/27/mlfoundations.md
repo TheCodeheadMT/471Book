@@ -67,7 +67,36 @@ Check out the [**Statitical ML Simulators**](https://thecodeheadmt.github.io/CS4
 
 ---
 
-## Support Vector Machines (SVM) and QDA
+### The Math: Quadratic Discriminant Analysis
+
+LDA assumes all classes share the exact same variance. However, in the real battlespace, a drone swarm's flight envelope looks completely different from a cargo plane's. **QDA** solves this by giving every single class $k$ its own covariance matrix ($\Sigma_k$).
+
+Because the variances no longer mathematically cancel out between classes, the resulting decision boundary is a curve (quadratic) rather than a straight line. The model classifies an observation $x$ by calculating a discriminant score $\delta_k(x)$ for each class and picking the highest one:
+
+$$\delta_k(x) = -\frac{1}{2} \log |\Sigma_k| - \frac{1}{2} (x - \mu_k)^T \Sigma_k^{-1} (x - \mu_k) + \log \pi_k$$
+
+For a single feature (1D data), the formula simplifies to:
+
+$$\delta_k(x) = -\frac{1}{2} \ln(\sigma_k^2) - \frac{(x - \mu_k)^2}{2\sigma_k^2} + \ln(\pi_k)$$
+
+> **Example 27.3 - QDA**
+> Assume both Cargo Planes and Drone Swarms average 300 knots ($\mu = 300$), and they are equally common ($\pi = 0.5$). However, Cargo speed variance is tight ($\sigma^2_{Cargo} = 100$), while Drone speed variance is chaotic ($\sigma^2_{Drone} = 2500$).
+> Radar picks up a target flying at $x = 320$ knots. Let's calculate the QDA scores (Note: $\ln(0.5) \approx -0.69$):
+> 1. **Cargo Score:** > $\delta_C(320) = -0.5 \ln(100) - \frac{(320 - 300)^2}{2 \times 100} - 0.69$
+> $\delta_C(320) = -2.30 - \frac{400}{200} - 0.69 = -2.30 - 2.00 - 0.69 = \mathbf{-4.99}$
+> 2. **Drone Score:**
+> $\delta_D(320) = -0.5 \ln(2500) - \frac{(320 - 300)^2}{2 \times 2500} - 0.69$
+> $\delta_D(320) = -3.91 - \frac{400}{5000} - 0.69 = -3.91 - 0.08 - 0.69 = \mathbf{-4.68}$
+> 
+> 
+> **Result:** Since $-4.68 > -4.99$, the model classifies the target as a **Drone Swarm**. Even though 320 knots is close to the Cargo average, QDA mathematically realizes that a 20-knot deviation is highly suspicious for a stable cargo flight, but completely normal for an erratic drone.
+
+Check out the **[Statistical ML Simulators](https://thecodeheadmt.github.io/CS471/StatisticalML/index.html)** to better understand how Quadratic Discriminant Analysis works.
+
+--- 
+
+
+## Support Vector Machines (SVM)
 
 **Scenario:** Radar Cross-Section Classification. You need to classify incoming aircraft as friendly or adversarial based on non-linear radar cross-section profiles and speed.
 

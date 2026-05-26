@@ -11,9 +11,9 @@ parts:
     chapters:
     - file: lessons/27/mlfoundations.md
       sections:
+      - file: lessons/27/Bias_Variance_Tradeoff.ipynb
       - file: lessons/27/Predict_Component_Failure_(LogReg-QDA).ipynb
       - file: lessons/27/Classifying_Radar_Profiles(SVM-QDA).ipynb
-      - file: lessons/27/Bias_Variance_Tradeoff.ipynb
       - file: lessons/27/dtree_rf.ipynb
     - file: lessons/28/bayes_classification.md
       sections:

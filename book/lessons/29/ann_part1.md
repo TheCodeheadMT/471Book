@@ -2,8 +2,6 @@
 
 Welcome to the next leap in the Smart Air Force Warfighter curriculum. While statistical models like Logistic Regression and Support Vector Machines are powerful, they often require humans to manually engineer features. Artificial Neural Networks (ANNs) take inspiration from the human brain, allowing systems to automatically learn complex, non-linear representations of raw data. In this lesson, we will explore the fundamental building block of deep learning: the artificial neuron, and how connecting them creates feedforward architectures capable of solving highly complex tactical problems.
 
-![Aritifical Neural Networks Intro](../../figures/ann1_info.png "ANN Infographfic")
-
 ## The Artificial Neuron (The Perceptron)
 
 **Scenario:** UAV Sortie Viability. You need to predict whether an autonomous UAV has enough battery to complete a sortie based on three telemetry features: Payload Weight, Headwind Speed, and Mission Distance.
@@ -48,8 +46,11 @@ A single neuron can only draw linear decision boundaries. To classify complex, n
 If we only use linear combinations, stacking layers is mathematically useless (a linear function of a linear function is still linear). We must introduce non-linearity using activation functions in the hidden layers:
 
 * **ReLU (Rectified Linear Unit):** $f(x) = \max(0, x)$. It outputs the input directly if positive, otherwise, it outputs zero. This simple function allows networks to model highly complex curves and is computationally efficient.
+
 * **Sigmoid:** $\sigma(x) = \frac{1}{1 + e^{-x}}$. Typically reserved for the final output node to yield a probability.
 
+
+>
 > **Example 29.2 - Two-Layer Forward Propagation**
 > Imagine a simplified sonar system with 2 input features, a hidden layer of 2 neurons using ReLU, and 1 output neuron using Sigmoid.
 > Input vector $X = [2, -1]$.
@@ -88,3 +89,4 @@ Unlike statistical models that usually output a single prediction, neural networ
 One output node might use a linear activation to predict continuous fuel consumption in gallons, while another output node predicts the flight time in minutes. By sharing hidden layers, the network learns a more robust internal representation of the battlespace, improving the accuracy of both predictions.
 
 
+![Aritifical Neural Networks Intro](../../figures/ann1_info.png "ANN Infographfic")

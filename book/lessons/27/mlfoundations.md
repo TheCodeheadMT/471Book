@@ -95,7 +95,6 @@ Check out the **[Statistical ML Simulators](https://thecodeheadmt.github.io/CS47
 
 --- 
 
-
 ## Support Vector Machines (SVM)
 
 **Scenario:** Radar Cross-Section Classification. You need to classify incoming aircraft as friendly or adversarial based on non-linear radar cross-section profiles and speed.
@@ -185,8 +184,13 @@ A **Random Forest** fixes this through *bagging* (Bootstrap Aggregating). It tra
 
 ---
 
+
+![ML Foundations](../../figures/L27_infographic.png "ML Foundations")
+
 ## Knowledge Check & Practice Questions
 
 1. If an Intelligence Surveillance Reconnaissance (ISR) model achieves 99% accuracy on historical training data but only 60% accuracy on new incoming data, what specific problem from the bias-variance tradeoff is occurring?
+
 2. Why would a Data Scientist choose an SVM with an RBF kernel over Logistic Regression for classifying radar cross-sections?
+
 3. In the context of the Random Forest algorithm, explain how "bagging" reduces the overall variance of the model compared to a single decision tree.

@@ -4,6 +4,8 @@ In the previous lesson, we used physical sensor data (numbers) to predict outcom
 
 Whether it's an intercepted enemy radio transmission, a secure network email, or a translated intelligence brief, the Air Force processes millions of words a day. To classify this text rapidly, we rely on **Bayes' Theorem**. The **Naive Bayes** classifier is incredibly fast, highly scalable, and forms the historical foundation for all modern natural language processing (NLP).
 
+
+
 ## The Core Concept: Bayes' Theorem
 
 Bayes' Theorem allows us to update our beliefs based on new evidence. In classification, we want to find the probability of a specific class (like "Urgent") given the text evidence we just observed.
@@ -107,8 +109,12 @@ $$P(w | C) = \frac{\text{count}(w, C) + \alpha}{\text{total words in } C + \alph
 
 ---
 
+![Bayes Theorem](../../figures/L28_infographic.png "Bayes Infographic")
+
 ## Knowledge Check
 
 1. Why is the Naive Bayes algorithm considered "Naive"? Give an example of how this assumption might be violated in an intelligence report.
+
 2. If an intercepted message contains the word "encryption", and this word has never appeared in your training dataset, what mathematical error will occur if you do not use smoothing?
+
 3. Explain how Laplace (Add-One) smoothing prevents the mathematical failure identified in question 2.

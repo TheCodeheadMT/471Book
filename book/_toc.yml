@@ -21,10 +21,14 @@ parts:
       - file: lessons/28/email_phishing.ipynb
       - file: lessons/28/handling_unknown.ipynb
     - file: lessons/29/ann_part1.md
+      sections:
+      - file: lessons/29/forward_prop.ipynb
+      - file: lessons/29/ANN_vs_linear.ipynb
   - caption: Exercises
     chapters:
     - file: exercises/L27.md
     - file: exercises/L28.md
+    - file: exercises/L29.md
   - caption: Miscellaneous
     chapters:
     - title: AI Sim Lab

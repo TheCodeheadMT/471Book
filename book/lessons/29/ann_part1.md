@@ -88,5 +88,17 @@ Unlike statistical models that usually output a single prediction, neural networ
 
 One output node might use a linear activation to predict continuous fuel consumption in gallons, while another output node predicts the flight time in minutes. By sharing hidden layers, the network learns a more robust internal representation of the battlespace, improving the accuracy of both predictions.
 
+---
+
 
 ![Aritifical Neural Networks Intro](../../figures/ann1_info.png "ANN Infographfic")
+
+## Knowledge Check
+
+1. If a Data Scientist builds a deep neural network with 5 hidden layers but uses strictly *linear* activation functions for every single neuron, how will its final decision boundary compare to a single artificial neuron (perceptron)?
+
+2. In the calculation of a neuron's weighted sum, what is the conceptual difference between a "weight" and a "bias"?
+
+3. Why might an engineering team design a single neural network to simultaneously predict both "estimated fuel consumption" and "time-on-target" for a strike package, rather than building two completely separate statistical models?
+
+4. During a forward propagation pass analyzing acoustic signatures, a hidden layer neuron calculates a pre-activation weighted sum of **-4.2**. If this neuron uses a Rectified Linear Unit (ReLU) activation function, what signal does it pass to the next layer, and why is this mathematically important?

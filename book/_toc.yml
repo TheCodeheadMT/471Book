@@ -36,6 +36,8 @@ parts:
       url: https://thecodeheadmt.github.io/CS471/
     - title: ML Addict
       url: https://www.mladdict.com/
+    - file: notation.md
+    - file: terms.md
     - file: references.md
     - file: changelog.md
     - file: credits.md

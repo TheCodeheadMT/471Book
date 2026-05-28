@@ -189,7 +189,7 @@ A **Random Forest** fixes this through *bagging* (Bootstrap Aggregating). It tra
 
 ## Knowledge Check
 
-1. If an Intelligence Surveillance Reconnaissance (ISR) model achieves 99% accuracy on historical training data but only 60% accuracy on new incoming data, what specific problem from the bias-variance tradeoff is occurring?
+1. If an Intelligence Surveillance Reconnaissance (ISR) model achieves 99% accuracy on historical training data but only 60% accuracy on new incoming data, what specific problem from the {term}Bias-Variance Tradeoff is occurring?
 
 2. Why would a Data Scientist choose an SVM with an RBF kernel over Logistic Regression for classifying radar cross-sections?
 

@@ -29,12 +29,17 @@ parts:
       sections:
       - file: lessons/30/grad_dec.ipynb
       - file: lessons/30/overfit_reg.ipynb
+    - file: lessons/31/deeplearning.md
+      sections:
+      - file: lessons/31/deeptransfer.ipynb
+      - file: lessons/31/autoencoders.ipynb
   - caption: Exercises
     chapters:
     - file: exercises/L27.md
     - file: exercises/L28.md
     - file: exercises/L29.md
     - file: exercises/L30.md
+    - file: exercises/L31.md
   - caption: Miscellaneous
     chapters:
     - title: AI Sim Lab

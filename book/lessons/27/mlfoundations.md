@@ -184,7 +184,6 @@ A **Random Forest** fixes this through *bagging* (Bootstrap Aggregating). It tra
 
 ---
 
-
 ![ML Foundations](../../figures/L27_infographic.png "ML Foundations")
 
 ## Knowledge Check
@@ -193,4 +192,4 @@ A **Random Forest** fixes this through *bagging* (Bootstrap Aggregating). It tra
 
 2. Why would a Data Scientist choose an SVM with an RBF kernel over Logistic Regression for classifying radar cross-sections?
 
-3. In the context of the Random Forest algorithm, explain how "bagging" reduces the overall variance of the model compared to a single decision tree.
+3. In the context of the Random Forest algorithm, explain how {term}`Bagging (Bootstrap Aggregating)` reduces the overall variance of the model compared to a single decision tree.

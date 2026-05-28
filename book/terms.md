@@ -1,5 +1,15 @@
 
+# AI/ML Terminology
+
+```{glossary}
+Here is the fully updated glossary, integrating the new deep learning terminology from Lesson 30. The terms are alphabetized and formatted perfectly for the TeachBooks `{glossary}` directive so your cross-referencing links will continue to work seamlessly.
+
+---
+
+```markdown
 # Glossary of Core AI/ML Terminology
+
+This glossary defines the foundational concepts introduced across the machine learning and artificial intelligence lessons.
 
 ```{glossary}
 Activation Function
@@ -8,6 +18,9 @@ Activation Function
 Artificial Neural Network (ANN)
   A computing system inspired by biological brains, consisting of interconnected nodes (neurons) organized in layers that automatically learn complex, non-linear representations of raw data.
 
+Backpropagation
+  The core algorithm used to train neural networks. It calculates the gradient (error) of the loss function with respect to every weight in the network, mathematically working backward from the output layer to the input layer.
+
 Bagging (Bootstrap Aggregating)
   An ensemble machine learning technique that trains multiple models (like Decision Trees) on random subsets of data and averages their predictions to reduce variance and prevent overfitting.
 
@@ -15,7 +28,7 @@ Bias (Neural Networks)
   A learnable constant ($b$) added to a neuron's weighted sum. It acts as a baseline threshold, shifting the activation function left or right so the neuron can fire even if all input features are zero.
 
 Bias (Statistical Error)
-  The error introduced when a model makes overly simplistic assumptions about the data (e.g., assuming a relationship is a straight line when it is actually a curve). High bias leads to {term}`Underfitting`.
+  The error introduced when a model makes overly simplistic assumptions about the data (e.g., assuming a relationship is a straight line when it is actually a curve). High bias leads to {term}`Underfitting (High Bias)`.
 
 Bias-Variance Tradeoff
   The fundamental tension in machine learning where decreasing a model's false assumptions ({term}`Bias (Statistical Error)`) typically increases its dangerous sensitivity to noise ({term}`Variance (Statistical Error)`), and vice versa. 
@@ -26,11 +39,26 @@ Confusion Matrix
 Decision Tree
   A supervised learning model that classifies data by recursively splitting it into branches based on the feature that best purifies the resulting groups (often measured by {term}`Gini Impurity`).
 
+Dropout
+  A regularization technique where a random percentage of neurons in a layer are temporarily disabled during each training step. This prevents the network from relying on specific neurons to memorize noise, forcing it to learn robust, generalized features.
+
+Early Stopping
+  A regularization technique that monitors the validation loss during training. It automatically halts the training process when the model stops improving on unseen data, saving the optimal weights before overfitting occurs.
+
+Epoch
+  One complete pass of the entire training dataset through the neural network during the training phase.
+
 Feedforward Architecture
   A neural network design where information moves in only one direction—from the input layer, through hidden layers, directly to the output layer—without looping back.
 
 Gini Impurity
   A mathematical metric used by Decision Trees to measure how "mixed" or impure a node of data is. A score of 0 means perfect purity (the node contains only one class).
+
+Gradient
+  A mathematical vector of partial derivatives representing the direction of steepest ascent for the loss function.
+
+Gradient Descent
+  The optimization algorithm used to minimize a network's loss. It updates the network's weights iteratively by taking small mathematical steps in the opposite direction of the {term}`Gradient`.
 
 Hidden Layer
   A layer of artificial neurons situated between the input and output layers of a neural network. These layers are responsible for learning abstract, hidden features in the data.
@@ -47,11 +75,20 @@ Kernel Trick
 Laplace Smoothing (Add-One Smoothing)
   A mathematical technique used in Naive Bayes to prevent the formula from collapsing to zero when the model encounters a feature (like a new vocabulary word) it has never seen before.
 
+Learning Rate
+  A hyperparameter ($\alpha$) that dictates how large of a step the network takes during {term}`Gradient Descent`. If it is too large, the network overcorrects erratically; if it is too small, learning is painfully slow.
+
 Likelihood
   In Bayes' Theorem, the probability of observing a specific piece of evidence assuming that a particular class is true.
 
 Logistic Regression
   A foundational classification algorithm that passes a linear equation through a {term}`Sigmoid Function` to predict the probability of a binary outcome.
+
+Loss Function (Cost Function)
+  A mathematical function that evaluates how far off a network's predictions are from the true targets. The network's entire training goal is to minimize this value.
+
+Mean Squared Error (MSE)
+  A common loss function used for regression tasks (predicting continuous numbers) that calculates the average squared difference between the predicted values and the actual target values.
 
 Naive Assumption (Independence Assumption)
   The core (and mathematically flawed) assumption in Naive Bayes that every feature in a dataset is completely independent of every other feature.
@@ -70,6 +107,9 @@ Prior
 
 Random Forest
   A powerful ensemble model that builds hundreds of shallow Decision Trees and averages their predictions to achieve high accuracy while avoiding the overfitting trap of single trees.
+
+Regularization
+  A set of techniques (like {term}`Dropout` or {term}`Early Stopping`) used to mathematically penalize complex models to prevent them from overfitting the training data.
 
 ReLU (Rectified Linear Unit)
   A highly efficient and popular activation function used in deep learning hidden layers. It outputs the raw input directly if it is positive, and outputs zero if it is negative.

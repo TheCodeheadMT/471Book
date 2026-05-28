@@ -25,11 +25,16 @@ parts:
       - file: lessons/29/forward_prop.ipynb
       - file: lessons/29/ANN_vs_linear.ipynb
       - file: lessons/29/multi_output_reg.ipynb
+    - file: lessons/30/ann_part2.md
+      sections:
+      - file: lessons/30/grad_dec.ipynb
+      - file: lessons/30/overfit_reg.ipynb
   - caption: Exercises
     chapters:
     - file: exercises/L27.md
     - file: exercises/L28.md
     - file: exercises/L29.md
+    - file: exercises/L30.md
   - caption: Miscellaneous
     chapters:
     - title: AI Sim Lab

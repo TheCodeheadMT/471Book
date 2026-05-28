@@ -187,7 +187,7 @@ A **Random Forest** fixes this through *bagging* (Bootstrap Aggregating). It tra
 
 ![ML Foundations](../../figures/L27_infographic.png "ML Foundations")
 
-## Knowledge Check & Practice Questions
+## Knowledge Check
 
 1. If an Intelligence Surveillance Reconnaissance (ISR) model achieves 99% accuracy on historical training data but only 60% accuracy on new incoming data, what specific problem from the bias-variance tradeoff is occurring?
 

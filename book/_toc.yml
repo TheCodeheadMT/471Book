@@ -24,6 +24,7 @@ parts:
       sections:
       - file: lessons/29/forward_prop.ipynb
       - file: lessons/29/ANN_vs_linear.ipynb
+      - file: lessons/29/multi_output_reg.ipynb
   - caption: Exercises
     chapters:
     - file: exercises/L27.md

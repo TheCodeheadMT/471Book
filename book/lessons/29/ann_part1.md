@@ -82,14 +82,18 @@ If we only use linear combinations, stacking layers is mathematically useless (a
 
 ## Complex Architectures: Multiple Outputs
 
-**Scenario:** Strike Package Optimization. You must simultaneously predict the estimated fuel consumption and the projected time-on-target for a strike package.
+**Scenario:** Flight Dynamics. A commander wants to know two things simultaneously: How much fuel will the strike package consume, and exactly how many minutes until they are over the target?
 
-Unlike statistical models that usually output a single prediction, neural networks can be designed to output multiple predictions at once. A **Multi-Output Feedforward Network** takes a single input vector, passes it through shared hidden layers (which extract universal features like weather conditions and aircraft drag), and then branches off into distinct output nodes.
+### The Math: Vector Outputs
 
-One output node might use a linear activation to predict continuous fuel consumption in gallons, while another output node predicts the flight time in minutes. By sharing hidden layers, the network learns a more robust internal representation of the battlespace, improving the accuracy of both predictions.
+Statistical models typically output a single number. Neural Networks can output an entire vector simply by adding more neurons to the final layer. If the final layer has two neurons with linear activations (no Sigmoid, because we are predicting raw continuous numbers, not probabilities), the network produces two distinct predictions from the exact same shared hidden layers.
+
+$$Y = [y_{\text{fuel}}, y_{\text{time}}]$$
+
+We will explore how to create these models using multiple outputs in the following sections.
+
 
 ---
-
 
 ![Aritifical Neural Networks Intro](../../figures/ann1_info.png "ANN Infographfic")
 

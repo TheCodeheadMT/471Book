@@ -32,7 +32,7 @@ parts:
     - file: lessons/31/deeplearning.md
       sections:
       - file: lessons/31/deeptransfer.ipynb
-      - file: lessons/31/autoencoders.ipynb
+      - file: lessons/31/autoencoder.ipynb
   - caption: Exercises
     chapters:
     - file: exercises/L27.md

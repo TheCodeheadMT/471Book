@@ -1,22 +1,20 @@
 
 # AI/ML Terminology
 
-```{glossary}
-Here is the fully updated glossary, integrating the new deep learning terminology from Lesson 30. The terms are alphabetized and formatted perfectly for the TeachBooks `{glossary}` directive so your cross-referencing links will continue to work seamlessly.
-
----
-
-```markdown
-# Glossary of Core AI/ML Terminology
-
 This glossary defines the foundational concepts introduced across the machine learning and artificial intelligence lessons.
 
 ```{glossary}
+1D-Convolutional Neural Network (1D-CNN)
+  A deep learning architecture highly specialized for processing one-dimensional sequence data, such as raw time-series radio frequency (RF) signals in Electronic Warfare.
+
 Activation Function
   The mathematical "gate" in an artificial neuron that determines whether, and how strongly, the neuron fires. It introduces non-linearity into neural networks. *(Examples: Sigmoid, ReLU).*
 
 Artificial Neural Network (ANN)
   A computing system inspired by biological brains, consisting of interconnected nodes (neurons) organized in layers that automatically learn complex, non-linear representations of raw data.
+
+Autoencoder
+  An unsupervised neural network architecture consisting of an encoder and decoder, trained to reconstruct its own input. Highly effective for detecting zero-day cyber anomalies by measuring reconstruction failure.
 
 Backpropagation
   The core algorithm used to train neural networks. It calculates the gradient (error) of the loss function with respect to every weight in the network, mathematically working backward from the output layer to the input layer.
@@ -36,14 +34,23 @@ Bias-Variance Tradeoff
 Confusion Matrix
   A performance measurement table that visualizes exactly how a classification model succeeds or fails, categorizing predictions into True Positives, True Negatives, False Positives, and False Negatives. Crucial for weighing operational risks.
 
+Decoder
+  The second half of an Autoencoder that attempts to decompress the latent space bottleneck back into the original data format.
+
 Decision Tree
   A supervised learning model that classifies data by recursively splitting it into branches based on the feature that best purifies the resulting groups (often measured by {term}`Gini Impurity`).
+
+Deep Learning
+  A subset of machine learning utilizing neural networks with many hidden layers (deep architectures) capable of autonomously engineering complex, hierarchical features from raw, unstructured data (like images or RF signals).
 
 Dropout
   A regularization technique where a random percentage of neurons in a layer are temporarily disabled during each training step. This prevents the network from relying on specific neurons to memorize noise, forcing it to learn robust, generalized features.
 
 Early Stopping
   A regularization technique that monitors the validation loss during training. It automatically halts the training process when the model stops improving on unseen data, saving the optimal weights before overfitting occurs.
+
+Encoder
+  The first half of an Autoencoder that compresses raw input data down into a mathematically dense bottleneck.
 
 Epoch
   One complete pass of the entire training dataset through the neural network during the training phase.
@@ -63,6 +70,9 @@ Gradient Descent
 Hidden Layer
   A layer of artificial neurons situated between the input and output layers of a neural network. These layers are responsible for learning abstract, hidden features in the data.
 
+Hierarchical Feature Learning
+  The process by which deep neural networks autonomously learn simple concepts (like lines and edges) in early layers and mathematically combine them into complex tactical concepts (like vehicles or radar structures) in deeper layers.
+
 Hyperplane
   The mathematical decision boundary drawn by a Support Vector Machine to separate classes. In 2D space, it is a line; in 3D space, it is a flat plane.
 
@@ -74,6 +84,9 @@ Kernel Trick
 
 Laplace Smoothing (Add-One Smoothing)
   A mathematical technique used in Naive Bayes to prevent the formula from collapsing to zero when the model encounters a feature (like a new vocabulary word) it has never seen before.
+
+Latent Space (Bottleneck)
+  The highly compressed, mathematical representation of data found in the middle layer connecting an encoder and decoder within an Autoencoder.
 
 Learning Rate
   A hyperparameter ($\alpha$) that dictates how large of a step the network takes during {term}`Gradient Descent`. If it is too large, the network overcorrects erratically; if it is too small, learning is painfully slow.
@@ -108,6 +121,9 @@ Prior
 Random Forest
   A powerful ensemble model that builds hundreds of shallow Decision Trees and averages their predictions to achieve high accuracy while avoiding the overfitting trap of single trees.
 
+Reconstruction Error
+  The mathematical difference (often measured via MSE) between an original input and an Autoencoder's attempted reconstruction of it. Spikes in this error trigger anomaly alerts.
+
 Regularization
   A set of techniques (like {term}`Dropout` or {term}`Early Stopping`) used to mathematically penalize complex models to prevent them from overfitting the training data.
 
@@ -119,6 +135,9 @@ Sigmoid Function
 
 Supervised Learning
   A machine learning paradigm where the algorithm is trained on historical data that already includes the correct answers (labels). It learns to map inputs to those known outputs.
+
+Transfer Learning
+  A rapid deployment technique where a massive neural network, pre-trained on millions of generic data points, has its base layers "frozen" and its final classification head re-trained for a specific tactical domain.
 
 Underfitting (High Bias)
   A failure state where a model is too rigid or simple to learn the underlying patterns in the training data, resulting in poor predictive performance across the board.

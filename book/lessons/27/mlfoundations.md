@@ -193,3 +193,9 @@ A **Random Forest** fixes this through *bagging* (Bootstrap Aggregating). It tra
 2. Why would a Data Scientist choose an SVM with an RBF kernel over Logistic Regression for classifying radar cross-sections?
 
 3. In the context of the Random Forest algorithm, explain how {term}`Bagging (Bootstrap Aggregating)` reduces the overall variance of the model compared to a single decision tree.
+
+```{code-cell} ipython3
+:tags: [remove-input]
+
+from jupyterquiz import display_quiz
+display_quiz("questions.json")

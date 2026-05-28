@@ -1,4 +1,4 @@
-# L30: Neural Networks II - Training & Regularization
+# L30: Neural Networks II 
 
 In the previous lesson, we built the architecture of a neural network and executed {term}`Forward Propagation`—pushing data through the layers to get a prediction. But a freshly initialized network is like an untrained cadet; its initial weights are completely random, meaning its first predictions will likely be entirely wrong.
 
@@ -55,7 +55,9 @@ We combat this using {term}`Regularization` techniques.
 > **Example 30.2 - The Power of Dropout**
 > Imagine an EW classification network with 10 hidden neurons. Without dropout, Neuron #3 might become mathematically "lazy," relying entirely on Neuron #7 to identify the radar frequency, while Neuron #3 just memorizes the background static.
 > If we apply a Dropout rate of $p = 0.5$, Neuron #7 is randomly turned off 50% of the time! Neuron #3 is suddenly forced to learn how to identify the radar frequency itself because it can no longer rely on its neighbor.
+>
 > **Result:** Dropout forces the network to create redundant, robust, and independent feature detectors. It prevents the network from memorizing the noise, forcing it to focus on the signal.
+
 
 
 ---

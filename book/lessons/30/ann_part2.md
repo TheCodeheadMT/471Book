@@ -62,6 +62,9 @@ We combat this using {term}`Regularization` techniques.
 
 ---
 
+![Aritifical Neural Networks Part 2](../../figures/L30_infographic.png "ANN Infographfic Part 2")
+
+
 ## Knowledge Check & Practice Questions
 
 1. In the context of {term}`Gradient Descent`, what happens to the weight updates if the Learning Rate ($\alpha$) is set significantly too high?

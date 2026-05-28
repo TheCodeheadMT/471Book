@@ -14,7 +14,7 @@ The weighted sum $z$ of a single neuron is calculated as:
 
 $$z = \sum_{i=1}^{n} w_i x_i + b$$
 
-Once the weighted sum is calculated, it is passed through an **activation function** to determine the neuron's final output. For binary classification (like Success or Failure), we often use the **Sigmoid** activation function to squash the output into a probability between **0.0** and **1.0**.
+Once the weighted sum is calculated, it is passed through an {term}`Activation Function` to determine the neuron's final output. For binary classification (like Success or Failure), we often use the {term}`Sigmoid Function` to squash the output into a probability between **0.0** and **1.0**.
 
 > **Example 29.1 - The Single Neuron**
 > Let's predict UAV battery viability. Our trained artificial neuron has the following weights:

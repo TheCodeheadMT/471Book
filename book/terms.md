@@ -1,12 +1,5 @@
-The TeachBooks template (built on Jupyter Book and Sphinx) includes a native `{glossary}` directive specifically for this purpose. This is vastly superior to a standard Markdown list because it automatically adds the terms to the book's overarching Index page, and allows you to cross-reference terms throughout the textbook using the `{term}` role.
-
-Here is the properly formatted TeachBook/Sphinx Markdown for your glossary.
-
----
 
 # Glossary of Core AI/ML Terminology
-
-This glossary defines the foundational concepts introduced across the machine learning and artificial intelligence lessons.
 
 ```{glossary}
 Activation Function
@@ -100,16 +93,3 @@ Weights
   The learnable parameters ($w_i$) in a neural network that determine the importance or influence of a specific input feature on the final prediction.
 
 ```
-
----
-
-### TeachBook Cross-Referencing Tip
-
-Because we used the `{glossary}` directive, you can now link back to these definitions from anywhere else in your textbook.
-
-If you are writing Lesson 2.4 and want to mention Overfitting, you simply write:
-`This leads to the danger of {term}Overfitting (High Variance).`
-
-TeachBook will automatically generate a hyperlink directly back to this glossary page.
-
-Are there any specific CSS styles you want applied to this list, or shall we move on to drafting Lesson 2.4?

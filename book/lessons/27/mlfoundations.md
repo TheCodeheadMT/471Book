@@ -1,16 +1,19 @@
-# L27: ML Foundations
+<div style=" background-color: #adadad; color: #000000; padding: 15px 20px; border-radius: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; border: 1px solid #444d56; line-height: 1.5; "> 
 
-<div style="
-    background-color: #2f363d; 
-    color: #f1f8ff; 
-    padding: 15px 20px; 
-    border-radius: 8px; 
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    border: 1px solid #444d56;
-    line-height: 1.5;
-">
-    Welcome to the foundation of the Smart Air Force Warfighter. Before we can deploy advanced neural networks or autonomous drone wingmen, we must master the statistical algorithms that form the bedrock of artificial intelligence. In this lesson, we will explore how mathematical models learn from data to predict outcomes, classify threats, and optimize missions.
+  <!-- Modified Title Block -->
+  <div style="font-size: 2em; font-weight: 600; margin-bottom: 15px; border-bottom: 1px solid #777; padding-bottom: 5px;">
+    L27: ML Foundations
+  </div>
+
+  <div style=" background-color: #2f363d; color: #f1f8ff; padding: 15px 20px; border-radius: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; border: 1px solid #444d56; line-height: 1.5; "> 
+    Welcome to the foundation of the Smart Air Force Warfighter. Before we can deploy advanced neural networks or autonomous drone wingmen, we must master the statistical algorithms that form the bedrock of artificial intelligence. In this lesson, we will explore how mathematical models learn from data to predict outcomes, classify threats, and optimize missions. 
+  </div> 
+
+  * Lesson Objective #1 
+  * Lesson Objective #2 
+  * Lesson Objective #3  
 </div>
+<br>
 
 ## Supervised vs. Unsupervised Learning
 

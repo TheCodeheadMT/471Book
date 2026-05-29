@@ -1,9 +1,12 @@
+
+## L27: ML Foundations 
+
 <div style=" background-color: #adadad; color: #000000; padding: 15px 20px; border-radius: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; border: 1px solid #444d56; line-height: 1.5; "> 
 
-  <!-- Modified Title Block -->
+  <!-- Modified Title Block
   <div style="font-size: 3em; font-weight: 600; margin-bottom: 15px; border-bottom: 1px solid #777; padding-bottom: 5px;">
     L27: ML Foundations
-  </div>
+  </div> -->
 
   <!-- Lesson Summary -->
   <div style=" background-color: #2f363d; color: #f1f8ff; padding: 15px 20px; border-radius: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 1.2em; border: 1px solid #444d56; line-height: 1.5; "> 
@@ -22,9 +25,10 @@
 At the highest level, machine learning is split into two primary paradigms based on the data available to the algorithm:
 
 * **Supervised Learning:** The algorithm is trained on a labeled dataset. It learns a mapping from inputs (features, like radar cross-section) to known outputs (labels, like "F-35" or "Civilian Airliner"). It acts as a student with an answer key.
-* **Unsupervised Learning:** The algorithm is given unlabeled data and must find hidden structures or patterns on its own. It acts as an analyst grouping unidentified radar anomalies based on similarities in speed and altitude, without knowing what those anomalies are.
+* **Unsupervised Learning:** The algorithm is given unlabeled data and must find hidden structures or patterns on its own. It acts as an analyst grouping unidentified radar anomalies based on similarities in speed and altitude, without knowing what those anomalies are. [Pg. 25 {cite:t}`James2023`]
 
 In this lesson, we focus entirely on **Supervised Learning** to build reliable classification models.
+
 
 <br>
 <hr width="100%" size="4" color="black">
@@ -35,7 +39,7 @@ In this lesson, we focus entirely on **Supervised Learning** to build reliable c
 
 ### The Math: Logistic Regression
 
-Despite its name, Logistic Regression is a classification algorithm. It uses a linear equation but passes the result through a **sigmoid function** to squash the output into a probability between 0.0 and 1.0.
+Despite its name, Logistic Regression [Pg. 138 {cite:t}`James2023`] is a classification algorithm. It uses a linear equation but passes the result through a **sigmoid function** to squash the output into a probability between 0.0 and 1.0.
 
 The probability of engine failure given feature vector $x$ is:
 

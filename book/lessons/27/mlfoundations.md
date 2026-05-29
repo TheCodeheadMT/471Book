@@ -199,7 +199,7 @@ A **Random Forest** fixes this through *bagging* (Bootstrap Aggregating). It tra
 <br>
 <hr width="100%" size="4" color="black">
 
-### Summary Infographic
+## Summary Infographic
 ![ML Foundations](../../figures/L27_infographic.png "ML Foundations")
 
 <br>

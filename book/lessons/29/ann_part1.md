@@ -2,6 +2,15 @@
 
 Welcome to the next leap in the Smart Air Force Warfighter curriculum. While statistical models like Logistic Regression and Support Vector Machines are powerful, they often require humans to manually engineer features. Artificial Neural Networks (ANNs) take inspiration from the human brain, allowing systems to automatically learn complex, non-linear representations of raw data. In this lesson, we will explore the fundamental building block of deep learning: the artificial neuron, and how connecting them creates feedforward architectures capable of solving highly complex tactical problems.
 
+:::{admonition} Lesson Objectives
+:class: note
+  * Describe neuron structure and layered architectures
+  * Interpret activations and weighted sums
+  * Explain forward propagation
+:::
+
+<br>
+
 ## The Artificial Neuron (The Perceptron)
 
 **Scenario:** UAV Sortie Viability. You need to predict whether an autonomous UAV has enough battery to complete a sortie based on three telemetry features: Payload Weight, Headwind Speed, and Mission Distance.
@@ -33,7 +42,10 @@ Once the weighted sum is calculated, it is passed through an {term}`Activation F
 > 
 > **Result:** The neuron predicts a **99.3%** probability that the UAV will successfully complete the sortie. The mission is cleared.
 
----
+<br>
+
+<hr width="100%" size="4" color="black">
+
 
 ## Feedforward Architectures & Non-Linearity
 
@@ -78,7 +90,10 @@ If we only use linear combinations, stacking layers is mathematically useless (a
 > 
 > **Result:** The network predicts a **73%** probability that the sonar return is a Subsurface Mine.
 
----
+<br>
+
+<hr width="100%" size="4" color="black">
+
 
 ## Complex Architectures: Multiple Outputs
 
@@ -93,9 +108,17 @@ $$Y = [y_{\text{fuel}}, y_{\text{time}}]$$
 We will explore how to create these models using multiple outputs in the following sections.
 
 
----
+<br>
+
+<hr width="100%" size="4" color="black">
+
+## Summary Infographic
 
 ![Aritifical Neural Networks Intro](../../figures/ann1_info.png "ANN Infographfic")
+
+<br>
+
+<hr width="100%" size="4" color="black">
 
 ## Knowledge Check
 

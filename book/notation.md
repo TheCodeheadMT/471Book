@@ -4,6 +4,14 @@
 
 ### L27: ML Foundations
 
+### Confusion Matrix
+| Notation | Definition |
+| --- | --- |
+| $TP$ | **True Positive:** The model correctly predicted the presence of a target/condition. |
+| $TN$ | **True Negative:** The model correctly predicted the absence of a target/condition. |
+| $FP$ | **False Positive:** The model incorrectly predicted a target/condition (Type I Error / False Alarm). |
+| $FN$ | **False Negative:** The model incorrectly predicted the absence of a target/condition (Type II Error / Missed Threat). |
+
 ### Logistic Regression
 
 | Notation | Definition |

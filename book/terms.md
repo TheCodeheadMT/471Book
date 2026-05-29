@@ -55,8 +55,23 @@ Encoder
 Epoch
   One complete pass of the entire training dataset through the neural network during the training phase.
 
+F1-Score
+  The harmonic mean of Precision and Recall. It provides a single, balanced mathematical metric to evaluate a model's performance, especially when dealing with highly imbalanced datasets.
+
+False Negative (FN)
+  A failure where the model predicts that a condition is absent, but it is actually present (e.g., the AI predicts "no threat," but an enemy is there). In warfare, this is often the most fatal type of error.
+
+False Positive (FP)
+  A failure where the model predicts that a condition is present, but it is actually absent (e.g., the AI predicts an enemy, but it is a civilian). This leads to false alarms and wasted resources.
+
+Feature Importance
+  A technique used to interpret machine learning models by calculating and ranking exactly which input variables (features) had the greatest mathematical impact on the model's final predictions.
+
 Feedforward Architecture
   A neural network design where information moves in only one direction—from the input layer, through hidden layers, directly to the output layer—without looping back.
+
+Generalization
+  The ultimate goal of a machine learning model: the ability to learn the true underlying patterns of a dataset so successfully that it performs highly accurately on brand new, unseen data. 
 
 Gini Impurity
   A mathematical metric used by Decision Trees to measure how "mixed" or impure a node of data is. A score of 0 means perfect purity (the node contains only one class).
@@ -115,11 +130,20 @@ Perceptron
 Posterior
   In Bayes' Theorem, the final, updated probability of a class being true *after* factoring in the new evidence.
 
+Precision
+  An operational metric answering: "Out of all the times the model predicted a positive target, how many were actually correct?" Calculated as TP / (TP + FP).
+
+Precision-Recall (PR) Curve
+  A graph that plots Precision against Recall across different probability thresholds. It is highly valuable for evaluating models trained on severely imbalanced datasets, visually demonstrating the tactical tradeoff between catching all threats and avoiding false alarms.
+
 Prior
   In Bayes' Theorem, the baseline, historical probability of a class occurring *before* any new evidence is observed.
 
 Random Forest
   A powerful ensemble model that builds hundreds of shallow Decision Trees and averages their predictions to achieve high accuracy while avoiding the overfitting trap of single trees.
+
+Recall (Sensitivity)
+  An operational metric answering: "Out of all the true positive targets that actually existed in the environment, how many did the model successfully find?" Calculated as TP / (TP + FN).
 
 Reconstruction Error
   The mathematical difference (often measured via MSE) between an original input and an Autoencoder's attempted reconstruction of it. Spikes in this error trigger anomaly alerts.
@@ -130,11 +154,21 @@ Regularization
 ReLU (Rectified Linear Unit)
   A highly efficient and popular activation function used in deep learning hidden layers. It outputs the raw input directly if it is positive, and outputs zero if it is negative.
 
+
+ROC Curve (Receiver Operating Characteristic)
+  A graph showing the performance of a classification model at all classification thresholds. It plots the True Positive Rate against the False Positive Rate. The area under this curve (AUC) provides an aggregate measure of performance across all possible thresholds.
+
 Sigmoid Function
   A mathematical function that squashes any real number into a valid probability value bounded strictly between 0.0 and 1.0. 
 
 Supervised Learning
   A machine learning paradigm where the algorithm is trained on historical data that already includes the correct answers (labels). It learns to map inputs to those known outputs.
+
+Testing Set
+  A portion of the dataset (usually 20%) that is strictly hidden from the machine learning algorithm during training. It is used as a final "combat simulation" to test how well the model generalizes to unseen data.
+
+Training Set
+  The portion of the dataset (usually 80%) exposed to the machine learning algorithm. The model uses this data to adjust its internal math and learn patterns.
 
 Transfer Learning
   A rapid deployment technique where a massive neural network, pre-trained on millions of generic data points, has its base layers "frozen" and its final classification head re-trained for a specific tactical domain.
@@ -149,6 +183,4 @@ Variance (Statistical Error)
   The error introduced when a model is overly sensitive to tiny fluctuations or noise in the training data. High variance leads to {term}`Overfitting (High Variance)`.
 
 Weights
-  The learnable parameters ($w_i$) in a neural network that determine the importance or influence of a specific input feature on the final prediction.
-
 ```

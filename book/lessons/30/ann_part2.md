@@ -2,7 +2,20 @@
 
 In the previous lesson, we built the architecture of a neural network and executed {term}`Forward Propagation`—pushing data through the layers to get a prediction. But a freshly initialized network is like an untrained cadet; its initial weights are completely random, meaning its first predictions will likely be entirely wrong.
 
+
+:::{admonition} Lesson Objectives
+:class: note
+  * Explain loss functions and gradient descent
+  * Interpret training behavior
+  * Describe overfitting and regularization
+:::
+
 In this lesson, we will explore how a neural network actually *learns* from its mistakes using a process called {term}`Backpropagation` and {term}`Gradient Descent`. We will then tackle the greatest enemy of deep learning: the tendency of complex networks to memorize the "fog of war" (overfitting) rather than learning true tactical generalizations, and how to defeat it using {term}`Regularization`.
+
+
+<br>
+
+<hr width="100%" size="4" color="black">
 
 ## The Learning Process: Gradient Descent
 
@@ -37,7 +50,11 @@ $$w_{new} = w_{old} - \alpha \frac{\partial L}{\partial w}$$
 > 
 > **Result:** The new weight is **2.35**. In the next training epoch, the fin will adjust slightly less aggressively, resulting in a lower loss and a more accurate strike.
 
----
+
+<br>
+
+<hr width="100%" size="4" color="black">
+
 ## Defeating the Fog of War: Regularization
 
 **Scenario:** Electronic Warfare (EW) Signal Classification. You are training an AI to differentiate between hostile radar locks and friendly background noise.
@@ -60,9 +77,18 @@ We combat this using {term}`Regularization` techniques.
 
 
 
----
+
+<br>
+
+<hr width="100%" size="4" color="black">
+
+## Summary Infographic
 
 ![Aritifical Neural Networks Part 2](../../figures/L30_infographic.png "ANN Infographfic Part 2")
+
+<br>
+
+<hr width="100%" size="4" color="black">
 
 
 ## Knowledge Check & Practice Questions

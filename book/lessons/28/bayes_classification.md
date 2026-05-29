@@ -2,9 +2,18 @@
 
 In the previous lesson, we used physical sensor data (numbers) to predict outcomes. But what happens when the intelligence we gather isn't numbers, but unstructured text?
 
-Whether it's an intercepted enemy radio transmission, a secure network email, or a translated intelligence brief, the Air Force processes millions of words a day. To classify this text rapidly, we rely on **Bayes' Theorem**. The **Naive Bayes** classifier is incredibly fast, highly scalable, and forms the historical foundation for all modern natural language processing (NLP).
+:::{admonition} Lesson Objectives
+:class: note
+  * Apply Naive Bayes classification
+  * Interpret independence assumptions
+  * Compute class probabilities
+:::
 
+Whether it's an intercepted enemy radio transmission, a secure network email, or a translated intelligence brief, the Air Force processes millions of words a day. To classify this text rapidly, we rely on **Bayes' Theorem**. The **Naive Bayes** classifier is incredibly fast, highly scalable, and forms the historical foundation for all modern natural language processing (NLP). [Pg. 158, {cite:t}`James2023`]
 
+<br>
+
+<hr width="100%" size="4" color="black">
 
 ## The Core Concept: Bayes' Theorem
 
@@ -22,7 +31,10 @@ $$P(\text{Class} | \text{Evidence}) = \frac{P(\text{Evidence} | \text{Class}) \t
 Check out the [**Bayes Simulator**](https://thecodeheadmt.github.io/CS471/BayesSim/index.html)to better understand how a  Bayes classification works.
 
 
----
+<br>
+
+<hr width="100%" size="4" color="black">
+
 
 ## Text Classification
 
@@ -56,7 +68,10 @@ The $\propto$ symbol means "proportional to." We calculate this score for both "
 >
 > **Result:** Since $0.012 > 0.00045$, the model confidently classifies the message as **Urgent**. Even though Routine messages are 9 times more common, the specific words provided overwhelming evidence to the contrary.
 
----
+<br>
+
+<hr width="100%" size="4" color="black">
+
 
 ## Cyber Threats & The Independence Assumption
 
@@ -74,7 +89,10 @@ $$P(\text{"password"}, \text{"reset"} | \text{Malicious}) = P(\text{"password"} 
 >
 > **Result:** This causes Naive Bayes to "double-count" the evidence, making its final probability scores overly confident (e.g., predicting a 99.99% probability of an attack). Yet, despite being mathematically overconfident, the *decision boundary* rarely changes—an email marked 99.99% malicious and an email marked 85% malicious are both correctly sent to the spam folder!
 
----
+<br>
+
+<hr width="100%" size="4" color="black">
+
 
 ## Zero-Frequency Events & Laplace Smoothing
 
@@ -107,11 +125,23 @@ $$P(w | C) = \frac{\text{count}(w, C) + \alpha}{\text{total words in } C + \alph
 > 
 > **Result:** The probability is tiny ($0.16\%$), representing that it is rare, but crucially, it is *not zero*. The math survives, and the rest of the sentence can still drive the classification.
 
----
+<br>
+
+<hr width="100%" size="4" color="black">
+
 
 ![Bayes Theorem](../../figures/L28_infographic.png "Bayes Infographic")
+<br>
+
+<hr width="100%" size="4" color="black">
+
 
 ## Knowledge Check
+
+<!-- :::{note} Click here to reveal!
+:class: dropdown
+This is hidden until the user clicks the box.
+::: -->
 
 1. Why is the Naive Bayes algorithm considered "Naive"? Give an example of how this assumption might be violated in an intelligence report.
 

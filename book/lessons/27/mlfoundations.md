@@ -1,23 +1,17 @@
 
-## L27: ML Foundations 
+# L27: ML Foundations 
 
-<div style=" background-color: #adadad; color: #000000; padding: 15px 20px; border-radius: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; border: 1px solid #444d56; line-height: 1.5; "> 
+Welcome to the foundation of the Smart Air Force Warfighter. Before we can deploy advanced neural networks or autonomous drone wingmen, we must master the statistical algorithms that form the bedrock of artificial intelligence. In this lesson, we will explore how mathematical models learn from data to predict outcomes, classify threats, and optimize missions. 
 
-  <!-- Modified Title Block
-  <div style="font-size: 3em; font-weight: 600; margin-bottom: 15px; border-bottom: 1px solid #777; padding-bottom: 5px;">
-    L27: ML Foundations
-  </div> -->
+:::{admonition} Lesson Objectives
+:class: note
+  * Distinguish supervised and unsupervised machine learning
+  * Explain the bias-variance tradeoff in statitical machine learning
+  * Explain training, testing, and generalization
+  * Interpret features and performance
+  * Understand the math behind Logistic Regression, Linear Discriminant Analysis (LDA), Quadratic Discriminant Analysis (QDA), Support Vector Machines (SVM), and Decision Trees/Random Forests 
+:::
 
-  <!-- Lesson Summary -->
-  <div style=" background-color: #2f363d; color: #f1f8ff; padding: 15px 20px; border-radius: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 1.2em; border: 1px solid #444d56; line-height: 1.5; "> 
-    Welcome to the foundation of the Smart Air Force Warfighter. Before we can deploy advanced neural networks or autonomous drone wingmen, we must master the statistical algorithms that form the bedrock of artificial intelligence. In this lesson, we will explore how mathematical models learn from data to predict outcomes, classify threats, and optimize missions. 
-  </div> 
-
-  <!-- Lesson Objectives -->
-  * Lesson Objective #1 
-  * Lesson Objective #2 
-  * Lesson Objective #3  
-</div>
 <br>
 
 ## Supervised vs. Unsupervised Learning
@@ -25,13 +19,85 @@
 At the highest level, machine learning is split into two primary paradigms based on the data available to the algorithm:
 
 * **Supervised Learning:** The algorithm is trained on a labeled dataset. It learns a mapping from inputs (features, like radar cross-section) to known outputs (labels, like "F-35" or "Civilian Airliner"). It acts as a student with an answer key.
-* **Unsupervised Learning:** The algorithm is given unlabeled data and must find hidden structures or patterns on its own. It acts as an analyst grouping unidentified radar anomalies based on similarities in speed and altitude, without knowing what those anomalies are. [Pg. 25 {cite:t}`James2023`]
+* **Unsupervised Learning:** The algorithm is given unlabeled data and must find hidden structures or patterns on its own. It acts as an analyst grouping unidentified radar anomalies based on similarities in speed and altitude, without knowing what those anomalies are. [Pg. 25, {cite:t}`James2023`]
 
 In this lesson, we focus entirely on **Supervised Learning** to build reliable classification models.
+
+<br>
+
+<hr width="100%" size="4" color="black">
+
+## Bias-Variance Tradeoff
+
+This is the fundamental tension in machine learning. The expected error of any model can be broken down into three parts:
+
+$$E[(y - \hat{f}(x))^2] = \text{Bias}(\hat{f}(x))^2 + \text{Var}(\hat{f}(x)) + \sigma^2$$
+
+* **Bias:** Error from erroneous assumptions (e.g., assuming a relationship is linear when it is complex). High bias leads to **underfitting**.
+* **Variance:** Error from sensitivity to small fluctuations in the training set. High variance leads to **overfitting** (memorizing the noise).
+* **$\sigma^2$ (Irreducible Error):** The inherent noise in the data itself. [Pg. 31, {cite:t}`James2023`]
+
+> **Example - Bias vs. Variance**
+> Let's say the inherent, unpreventable "fog of war" noise ($\sigma^2$) in our mission data causes a baseline error of $2\%$. Our overall model error is $10\%$.
+> 1. **Underfitting (High Bias):** A simple linear model might miss the complex reality of warfare. Its bias squared is $7\%$, and its variance is $1\%$. Total error $= 7\% + 1\% + 2\% = 10\%$.
+> 2. **Overfitting (High Variance):** We switch to a single massive Decision Tree. It perfectly fits the training data, dropping bias to $1\%$. However, it memorizes random historical anomalies, spiking its variance to $7\%$. Total error $= 1\% + 7\% + 2\% = 10\%$.
+> 
+> 
+> **Result:** Lowering bias almost always raises variance. The goal of ensemble methods is to find the "sweet spot" in the middle.
+
+Check out the [**Statitical ML Simulators**](https://thecodeheadmt.github.io/CS471/StatisticalML/index.html) to better understand how Random Forests works.
 
 
 <br>
 <hr width="100%" size="4" color="black">
+
+## The Training Pipeline: Train How You Fight
+
+**Scenario:** Radar Signature Database. You have a database of 10,000 known enemy and friendly radar signatures. You want to train an AI to classify them.
+
+If you let the algorithm "study" all 10,000 signatures and then test it on those exact same 10,000 signatures, it will score 100%. However, this is tactically useless. The model hasn't learned to identify threats; it has simply memorized the answers. In the Air Force, we train how we fight. To ensure our models are combat-ready, we must simulate the unknown.
+
+### Training, Testing, and Generalization
+
+Before training begins, we strictly partition our data:
+
+* **The Training Set (Usually 80%):** The data the algorithm studies. It uses this to adjust its internal weights and math to find patterns.
+* **The Testing Set (Usually 20%):** The "combat simulation." This data is locked away in a vault during training. The model *never* sees it until the final evaluation.
+
+The ultimate goal of machine learning is **Generalization**—the ability of a model to perform accurately on entirely new, unseen data. If a model scores 99% on the Training Set but 50% on the Testing Set, it has failed to generalize. It has memorized the training data (a catastrophic failure known as *Overfitting*).
+
+
+## Operational Metrics: Interpreting Performance
+
+**Scenario:** Surface-to-Air Missile (SAM) Detection. You deploy an AI to scan satellite imagery for hidden SAM sites.
+
+You run the model, and it reports **99% Accuracy**. The commander is thrilled, but as a Data Scientist, you know that flat accuracy is often a dangerous lie. Why? Because 99% of the desert is empty sand. If the AI simply draws a box over the entire map and blindly predicts "No SAM Sites Here," it will be mathematically 99% accurate, but you will lose aircraft.
+
+### The Math: Beyond Flat Accuracy
+
+To truly interpret a model's operational performance, we break its predictions down into a **Confusion Matrix** [{cite:t}`powers2011evaluation`]:
+
+* **True Positive (TP):** Model predicted a SAM site. There *is* a SAM site. (Target Acquired).
+* **True Negative (TN):** Model predicted empty sand. It *is* empty sand. (All clear).
+* **False Positive (FP):** Model predicted a SAM site. It was actually a civilian school. (Wasted munition / Collateral damage).
+* **False Negative (FN):** Model predicted empty sand. It was actually a SAM site. (Aircraft shot down).
+
+From these four quadrants, we calculate tactical metrics:
+
+**1. Precision (Quality of the Strike):** When the model pulls the trigger, how often is it right? Highly critical when the cost of a False Positive (collateral damage) is unacceptable.
+
+
+$$\text{Precision} = \frac{TP}{TP + FP}$$
+
+**2. Recall (Completeness of the Scan):** Out of all the actual threats in the battlespace, how many did the model successfully find? Highly critical when the cost of a False Negative (missed threat) is fatal.
+
+
+$$\text{Recall} = \frac{TP}{TP + FN}$$
+
+**3. F1-Score:** The harmonic mean of Precision and Recall. Used when you need a balanced, single-number summary of the model's combat effectiveness.
+
+
+$$F1 = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$$
 
 ## Logistic Regression, LDA, & QDA
 
@@ -64,7 +130,7 @@ If $P > 0.5$, the model predicts a failure.
 
 ### The Math: Linear Discriminant Analysis (LDA)
 
-Instead of modeling the probability directly, LDA models the distribution of the features for each class (Failed vs. Operational). It assumes the data for both classes share the same variance but have different means. It uses Bayes' Theorem to calculate the probability:
+Instead of modeling the probability directly, LDA models the distribution of the features for each class (Failed vs. Operational). It assumes the data for both classes share the same variance but have different means. [Pg. 150-156, {cite:t}`James2023`] It uses Bayes' Theorem to calculate the probability:
 
 $$P(Y=k | X=x) = \frac{f_k(x) \pi_k}{\sum_{l=1}^{K} f_l(x) \pi_l}$$
 
@@ -86,7 +152,7 @@ Check out the [**Statitical ML Simulators**](https://thecodeheadmt.github.io/CS4
 
 ### The Math: Quadratic Discriminant Analysis
 
-LDA assumes all classes share the exact same variance. However, in the real battlespace, a drone swarm's flight envelope looks completely different from a cargo plane's. **QDA** solves this by giving every single class $k$ its own covariance matrix ($\Sigma_k$).
+LDA assumes all classes share the exact same variance. However, in the real battlespace, a drone swarm's flight envelope looks completely different from a cargo plane's. **QDA** solves this by giving every single class $k$ its own covariance matrix ($\Sigma_k$). [Pg. 156, {cite:t}`James2023`]
 
 Because the variances no longer mathematically cancel out between classes, the resulting decision boundary is a curve (quadratic) rather than a straight line. The model classifies an observation $x$ by calculating a discriminant score $\delta_k(x)$ for each class and picking the highest one:
 
@@ -119,7 +185,7 @@ Check out the **[Statistical ML Simulators](https://thecodeheadmt.github.io/CS47
 
 ### The Math: Support Vector Machine
 
-An SVM seeks the optimal hyperplane that separates the classes with the maximum possible margin. The "support vectors" are the data points closest to the boundary.
+An SVM seeks the optimal hyperplane that separates the classes with the maximum possible margin. The "support vectors" are the data points closest to the boundary. [Pg. 367, {cite:t}`James2023`]
 
 The goal is to maximize the margin $\frac{2}{||w||}$ by solving the optimization problem:
 
@@ -145,34 +211,12 @@ Check out the [**Statitical ML Simulators**](https://thecodeheadmt.github.io/CS4
 <br>
 <hr width="100%" size="4" color="black">
 
-## Bias-Variance Tradeoff, Decision Trees, & Random Forests  
+## Decision Trees, & Random Forests  
 **Scenario:** Mission Success Prediction. You must predict the probability of mission success based on a massive matrix of weather, logistics, and intelligence data.
-
-### The Math: Bias-Variance Tradeoff
-
-This is the fundamental tension in machine learning. The expected error of any model can be broken down into three parts:
-
-$$E[(y - \hat{f}(x))^2] = \text{Bias}(\hat{f}(x))^2 + \text{Var}(\hat{f}(x)) + \sigma^2$$
-
-* **Bias:** Error from erroneous assumptions (e.g., assuming a relationship is linear when it is complex). High bias leads to **underfitting**.
-* **Variance:** Error from sensitivity to small fluctuations in the training set. High variance leads to **overfitting** (memorizing the noise).
-* **$\sigma^2$ (Irreducible Error):** The inherent noise in the data itself.
-
-> **Example - Bias vs. Variance**
-> Let's say the inherent, unpreventable "fog of war" noise ($\sigma^2$) in our mission data causes a baseline error of $2\%$. Our overall model error is $10\%$.
-> 1. **Underfitting (High Bias):** A simple linear model might miss the complex reality of warfare. Its bias squared is $7\%$, and its variance is $1\%$. Total error $= 7\% + 1\% + 2\% = 10\%$.
-> 2. **Overfitting (High Variance):** We switch to a single massive Decision Tree. It perfectly fits the training data, dropping bias to $1\%$. However, it memorizes random historical anomalies, spiking its variance to $7\%$. Total error $= 1\% + 7\% + 2\% = 10\%$.
-> 
-> 
-> **Result:** Lowering bias almost always raises variance. The goal of ensemble methods is to find the "sweet spot" in the middle.
-
-Check out the [**Statitical ML Simulators**](https://thecodeheadmt.github.io/CS471/StatisticalML/index.html) to better understand how Random Forests works.
-
-
 
 ### The Math: Decision Trees & Gini Impurity
 
-A Decision Tree learns by recursively splitting data based on the feature that best separates the target classes (e.g., Success vs. Failure). To find the "best" split, the algorithm calculates the **Gini Impurity** of a node. A Gini score of $0$ means the node is perfectly pure (contains only one class).
+A Decision Tree learns by recursively splitting data based on the feature that best separates the target classes (e.g., Success vs. Failure). To find the "best" split, the algorithm calculates the **Gini Impurity** of a node. A Gini score of $0$ means the node is perfectly pure (contains only one class). [Pg. 331, {cite:t}`James2023`]
 
 For a node containing classes $C$, with the probability $p_i$ of an item belonging to class $i$, the Gini Impurity is:
 
@@ -216,9 +260,3 @@ A **Random Forest** fixes this through *bagging* (Bootstrap Aggregating). It tra
 2. Why would a Data Scientist choose an SVM with an RBF kernel over Logistic Regression for classifying radar cross-sections?
 
 3. In the context of the Random Forest algorithm, explain how {term}`Bagging (Bootstrap Aggregating)` reduces the overall variance of the model compared to a single decision tree.
-
-```{code-cell} ipython3
-:tags: [remove-input]
-
-from jupyterquiz import display_quiz
-display_quiz("questions.json")

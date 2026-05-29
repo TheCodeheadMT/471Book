@@ -2,7 +2,17 @@
 
 In the previous lessons, we built shallow neural networks (1-2 hidden layers) and trained them to solve specific, highly structured problems. However, the modern battlespace does not always provide neatly organized tabular data. We must process raw, high-dimensional data: live video feeds from drones, gigabytes of raw network traffic, and chaotic electromagnetic radio frequencies.
 
+
+:::{admonition} Lesson Objectives
+:class: note
+  * Explain hierarchical feature learning
+  * Describe modern architectures
+  * Identify real-world deep learning applications
+:::
+
 Enter **Deep Learning**. By stacking dozens (or hundreds) of hidden layers, a neural network ceases to be a simple mathematical calculator and becomes a **hierarchical feature extractor**. In this lesson, we will explore how deep architectures autonomously learn the underlying structure of reality, and how we can rapidly adapt these massive models for tactical advantage.
+
+<br>
 
 ## Hierarchical Feature Learning
 
@@ -18,7 +28,10 @@ If we feed raw pixels of a satellite image into a deep network:
 
 The network mathematically engineers its own features. The human operator no longer has to tell the algorithm *what* to look for; the algorithm figures it out autonomously.
 
----
+<br>
+
+<hr width="100%" size="4" color="black">
+
 
 ## Transfer Learning
 
@@ -38,7 +51,10 @@ $$W_{head} = \text{Trainable (Updates via Gradient Descent)}$$
 
 We only train the final layer. The network learns to map its pre-existing knowledge of "shapes and wheels" directly to our specific tactical categories in minutes rather than weeks.
 
----
+<br>
+
+<hr width="100%" size="4" color="black">
+
 
 ## Unsupervised Autoencoders
 
@@ -59,7 +75,9 @@ $$\text{Loss} = \text{MSE}(X, X')$$
 When a Zero-Day cyber attack occurs, the anomalous traffic is fed into the network. Because the network has never seen this pattern, it fails to compress it properly, resulting in a massive, mathematically measurable {term}`Reconstruction Error`. If the error spikes above a threshold, we isolate the network node.
 
 
----
+<br>
+
+<hr width="100%" size="4" color="black">
 
 ## Electronic Warfare (Case Study)
 

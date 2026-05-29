@@ -15,7 +15,7 @@ At the highest level, machine learning is split into two primary paradigms based
 
 In this lesson, we focus entirely on **Supervised Learning** to build reliable classification models.
 
----
+<hr width="100%" size="4" color="black">
 
 ## Simple Problem: Logistic Regression and LDA
 

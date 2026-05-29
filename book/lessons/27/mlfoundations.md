@@ -6,7 +6,7 @@
   </div>
 
   <!-- Lesson Summary -->
-  <div style=" background-color: #2f363d; color: #f1f8ff; padding: 15px 20px; border-radius: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; border: 1px solid #444d56; line-height: 1.5; "> 
+  <div style=" background-color: #2f363d; color: #f1f8ff; padding: 15px 20px; border-radius: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 1.2em; border: 1px solid #444d56; line-height: 1.5; "> 
     Welcome to the foundation of the Smart Air Force Warfighter. Before we can deploy advanced neural networks or autonomous drone wingmen, we must master the statistical algorithms that form the bedrock of artificial intelligence. In this lesson, we will explore how mathematical models learn from data to predict outcomes, classify threats, and optimize missions. 
   </div> 
 

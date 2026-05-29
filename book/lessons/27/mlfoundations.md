@@ -1,6 +1,8 @@
 # L27: ML Foundations
 
+'''
 Welcome to the foundation of the Smart Air Force Warfighter. Before we can deploy advanced neural networks or autonomous drone wingmen, we must master the statistical algorithms that form the bedrock of artificial intelligence. In this lesson, we will explore how mathematical models learn from data to predict outcomes, classify threats, and optimize missions.
+'''
 
 ## Supervised vs. Unsupervised Learning
 
@@ -11,9 +13,10 @@ At the highest level, machine learning is split into two primary paradigms based
 
 In this lesson, we focus entirely on **Supervised Learning** to build reliable classification models.
 
----
+<br>
+<hr width="100%" size="4" color="black">
 
-## Logistic Regression and LDA
+## Logistic Regression, LDA, & QDA
 
 **Scenario:** Predictive Maintenance. You are tasked with analyzing historical telemetry from aircraft components to predict engine failures before they happen.
 
@@ -64,9 +67,6 @@ Where $\pi_k$ is the prior probability of class $k$, and $f_k(x)$ is the Gaussia
 
 Check out the [**Statitical ML Simulators**](https://thecodeheadmt.github.io/CS471/StatisticalML/index.html) to better understand how Linear Discriminant Analysis works.
 
-
----
-
 ### The Math: Quadratic Discriminant Analysis
 
 LDA assumes all classes share the exact same variance. However, in the real battlespace, a drone swarm's flight envelope looks completely different from a cargo plane's. **QDA** solves this by giving every single class $k$ its own covariance matrix ($\Sigma_k$).
@@ -93,7 +93,8 @@ $$\delta_k(x) = -\frac{1}{2} \ln(\sigma_k^2) - \frac{(x - \mu_k)^2}{2\sigma_k^2}
 
 Check out the **[Statistical ML Simulators](https://thecodeheadmt.github.io/CS471/StatisticalML/index.html)** to better understand how Quadratic Discriminant Analysis works.
 
---- 
+<br>
+<hr width="100%" size="4" color="black"> 
 
 ## Support Vector Machines (SVM)
 
@@ -124,9 +125,10 @@ Subject to the constraint that all points are classified correctly. To handle no
 
 Check out the [**Statitical ML Simulators**](https://thecodeheadmt.github.io/CS471/StatisticalML/index.html) to better understand how a Support Vector Machine works.
 
----
+<br>
+<hr width="100%" size="4" color="black">
 
-## Decision Trees, Random Forests, & The Bias-Variance Tradeoff 
+## Bias-Variance Tradeoff, Decision Trees, & Random Forests  
 **Scenario:** Mission Success Prediction. You must predict the probability of mission success based on a massive matrix of weather, logistics, and intelligence data.
 
 ### The Math: Bias-Variance Tradeoff
@@ -181,10 +183,14 @@ A single Decision Tree is incredibly prone to high variance. If left unchecked, 
 
 A **Random Forest** fixes this through *bagging* (Bootstrap Aggregating). It trains hundreds of shallow decision trees on random subsets of data and averages their predictions. By averaging many high-variance models, the overall variance drops significantly while maintaining low bias.
 
+<br>
+<hr width="100%" size="4" color="black">
 
----
-
+### Summary Infographic
 ![ML Foundations](../../figures/L27_infographic.png "ML Foundations")
+
+<br>
+<hr width="100%" size="4" color="black">
 
 ## Knowledge Check
 

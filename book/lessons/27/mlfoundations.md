@@ -1,7 +1,7 @@
 <div style=" background-color: #adadad; color: #000000; padding: 15px 20px; border-radius: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; border: 1px solid #444d56; line-height: 1.5; "> 
 
   <!-- Modified Title Block -->
-  <div style="font-size: 2em; font-weight: 600; margin-bottom: 15px; border-bottom: 1px solid #777; padding-bottom: 5px;">
+  <div style="font-size: 3em; font-weight: 600; margin-bottom: 15px; border-bottom: 1px solid #777; padding-bottom: 5px;">
     L27: ML Foundations
   </div>
 

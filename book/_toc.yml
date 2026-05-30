@@ -39,13 +39,14 @@ parts:
       - file: lessons/32/edge_detection.ipynb
       - file: lessons/32/translation_invariance.ipynb
       - file: lessons/32/visualize_features.ipynb
-  - caption: Exercises
+  - caption: Examples
     chapters:
     - file: exercises/L27.md
     - file: exercises/L28.md
     - file: exercises/L29.md
     - file: exercises/L30.md
     - file: exercises/L31.md
+    - file: exercises/L32.md
   - caption: Miscellaneous
     chapters:
     - title: AI Sim Lab
@@ -55,5 +56,5 @@ parts:
     - file: notation.md
     - file: terms.md
     - file: references.md
-    - file: changelog.md
-    - file: credits.md
+    # - file: changelog.md
+    # - file: credits.md

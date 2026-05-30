@@ -5,9 +5,9 @@ In the previous lesson, we built the architecture of a neural network and execut
 
 :::{admonition} Lesson Objectives
 :class: note
-  * Explain loss functions and gradient descent
-  * Interpret training behavior
-  * Describe overfitting and regularization
+* Explain loss functions, gradient descent, and backpropagation
+* Interpret training curves
+* Diagnose and mitigate overfitting using regularization techniques (L2, Dropout)
 :::
 
 In this lesson, we will explore how a neural network actually *learns* from its mistakes using a process called {term}`Backpropagation` and {term}`Gradient Descent`. We will then tackle the greatest enemy of deep learning: the tendency of complex networks to memorize the "fog of war" (overfitting) rather than learning true tactical generalizations, and how to defeat it using {term}`Regularization`.

@@ -4,9 +4,10 @@ In the previous lesson, we used physical sensor data (numbers) to predict outcom
 
 :::{admonition} Lesson Objectives
 :class: note
-  * Apply Naive Bayes classification
-  * Interpret independence assumptions
-  * Compute class probabilities
+* Apply Naive Bayes classification
+* Interpret independence assumptions
+* Compute class probabilities
+* Implement smoothing techniques to handle zero-frequency events
 :::
 
 Whether it's an intercepted enemy radio transmission, a secure network email, or a translated intelligence brief, the Air Force processes millions of words a day. To classify this text rapidly, we rely on **Bayes' Theorem**. The **Naive Bayes** classifier is incredibly fast, highly scalable, and forms the historical foundation for all modern natural language processing (NLP). [Pg. 158, {cite:t}`James2023`]

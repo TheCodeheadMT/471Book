@@ -5,11 +5,11 @@ Welcome to the foundation of the Smart Air Force Warfighter. Before we can deplo
 
 :::{admonition} Lesson Objectives
 :class: note
-  * Distinguish supervised and unsupervised machine learning
-  * Explain the bias-variance tradeoff in statitical machine learning
-  * Explain training, testing, and generalization
-  * Interpret features and performance
-  * Understand the math behind Logistic Regression, Linear Discriminant Analysis (LDA), Quadratic Discriminant Analysis (QDA), Support Vector Machines (SVM), and Decision Trees/Random Forests 
+
+  * Distinguish supervised and unsupervised learning
+  * Explain the bias-variance tradeoff
+  * Evaluate generalization using train/test splits and performance metrics
+  * Apply statistical ML models (Regression, LDA, QDA, SVM, Random Forest)
 :::
 
 <br>

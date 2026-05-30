@@ -34,6 +34,11 @@ parts:
       sections:
       - file: lessons/31/deeptransfer.ipynb
       - file: lessons/31/autoencoder.ipynb
+    - file: lessons/32/intro_cnn.md
+      sections:
+      - file: lessons/32/edge_detection.ipynb
+      - file: lessons/32/translation_invariance.ipynb
+      - file: lessons/32/visualize_features.ipynb
   - caption: Exercises
     chapters:
     - file: exercises/L27.md

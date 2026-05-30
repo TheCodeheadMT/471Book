@@ -4,9 +4,10 @@ Welcome to the next leap in the Smart Air Force Warfighter curriculum. While sta
 
 :::{admonition} Lesson Objectives
 :class: note
-  * Describe neuron structure and layered architectures
-  * Interpret activations and weighted sums
-  * Explain forward propagation
+* Describe artificial neuron structure and feedforward architectures
+* Execute forward propagation
+* Compute weighted sums
+* Explain how non-linear activation functions enable complex decision boundaries
 :::
 
 <br>

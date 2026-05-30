@@ -5,9 +5,9 @@ In the previous lessons, we built shallow neural networks (1-2 hidden layers) an
 
 :::{admonition} Lesson Objectives
 :class: note
-  * Explain hierarchical feature learning
-  * Describe modern architectures
-  * Identify real-world deep learning applications
+* Explain hierarchical feature learning
+* Describe modern deep architectures
+* Apply transfer learning to adapt pre-trained models to domain-specific tasks
 :::
 
 Enter **Deep Learning**. By stacking dozens (or hundreds) of hidden layers, a neural network ceases to be a simple mathematical calculator and becomes a **hierarchical feature extractor**. In this lesson, we will explore how deep architectures autonomously learn the underlying structure of reality, and how we can rapidly adapt these massive models for tactical advantage.

@@ -183,4 +183,5 @@ Variance (Statistical Error)
   The error introduced when a model is overly sensitive to tiny fluctuations or noise in the training data. High variance leads to {term}`Overfitting (High Variance)`.
 
 Weights
+  The learnable parameters ($w_i$) in a neural network that determine the importance or influence of a specific input feature on the final prediction.
 ```

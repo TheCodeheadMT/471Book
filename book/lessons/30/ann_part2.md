@@ -36,7 +36,7 @@ How does a machine actually learn? Think of it like calling in artillery.
 
 4. **Adjust the Dials ({term}`Gradient Descent`):** Now that you know which dials are wrong, you turn them slightly in the opposite direction of the error to improve the next shot.
 
-### The Math: Gradient Descent and Learning Rate
+###  Gradient Descent and Learning Rate
 
 For regression tasks (predicting a continuous number, like coordinates), the most common loss function is {term}`Mean Squared Error (MSE)`. We square the errors so that negative misses (hitting short) and positive misses (hitting long) don't accidentally cancel each other out:
 
@@ -78,7 +78,7 @@ This is {term}`Overfitting`. It is the equivalent of a cadet memorizing the exac
 
 To combat this, we use {term}`Regularization`. One of the most effective methods is **Dropout**. Think of Dropout like unit cross-training. If a 10-person squad relies entirely on one star radio operator to call in airstrikes, the whole squad fails if that operator goes down. To prevent this, the commander randomly pulls different people out of training exercises. This forces every single member of the squad to learn how to operate the radio.
 
-### The Math: Dropout
+###  Dropout
 
 {term}`Dropout` is a brilliantly counter-intuitive technique. During training, at every single {term}`Epoch`, we randomly turn off (drop out) a certain percentage of the neurons in a layer.
 
@@ -131,7 +131,7 @@ In this lesson, we will explore how a neural network actually *learns* from its 
 
 To train the network, we must define what "failure" looks like. We do this using a {term}`Loss Function (Cost Function)`. The network calculates a prediction, compares it to the actual target, and computes the error (Loss). The goal of the network is to minimize this Loss.
 
-### The Math: Gradient Descent and Learning Rate
+###  Gradient Descent and Learning Rate
 
 For regression tasks (predicting a continuous number, like coordinates), the most common loss function is {term}`Mean Squared Error (MSE)`:
 
@@ -171,7 +171,7 @@ Neural Networks are mathematically greedy. If you give a deep network enough lay
 
 We combat this using {term}`Regularization` techniques.
 
-### The Math: Dropout
+###  Dropout
 
 {term}`Dropout` is a brilliantly counter-intuitive technique. During training, at every single {term}`Epoch`, we randomly turn off (drop out) a certain percentage of the neurons in a layer.
 

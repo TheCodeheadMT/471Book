@@ -1,6 +1,6 @@
 # L27: ML Foundations
 
-Welcome to the foundation of the Smart Air Force Warfighter. Before we can deploy advanced neural networks or autonomous drone wingmen, we must master the statistical algorithms that form the bedrock of artificial intelligence. In this lesson, we will explore how mathematical models learn from data to predict outcomes, classify threats, and optimize missions.
+Welcome to the foundation of the Machine Learning. Before we can deploy advanced neural networks or autonomous drone wingmen, we must master the statistical algorithms that form the bedrock of artificial intelligence. In this lesson, we will explore how mathematical models learn from data to predict outcomes, classify threats, and optimize missions.
 
 :::{admonition} Lesson Objectives
 :class: note

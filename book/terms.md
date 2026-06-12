@@ -34,6 +34,12 @@ Bias-Variance Tradeoff
 Confusion Matrix
   A performance measurement table that visualizes exactly how a classification model succeeds or fails, categorizing predictions into True Positives, True Negatives, False Positives, and False Negatives. Crucial for weighing operational risks.
 
+Convolution
+  A mathematical operation where a small matrix (filter/kernel) slides across an input image, multiplying and summing pixel values to detect specific visual features like edges, shapes, or textures.
+
+Convolutional Neural Network (CNN)
+  A specialized deep learning architecture designed to process grid-like data (such as images). It uses sliding filters to learn spatial hierarchies of features, making it highly effective for visual ISR and target recognition tasks.
+
 Decoder
   The second half of an Autoencoder that attempts to decompress the latent space bottleneck back into the original data format.
 
@@ -67,8 +73,14 @@ False Positive (FP)
 Feature Importance
   A technique used to interpret machine learning models by calculating and ranking exactly which input variables (features) had the greatest mathematical impact on the model's final predictions.
 
+Feature Map
+  The output image or matrix produced after a convolution filter has scanned across the input data, mathematically highlighting exactly where specific visual features (like lines or shapes) are located.
+
 Feedforward Architecture
   A neural network design where information moves in only one direction—from the input layer, through hidden layers, directly to the output layer—without looping back.
+
+Filter (Kernel)
+  A small grid of learnable weights used in a CNN that slides across an image to detect specific patterns, such as horizontal lines or color gradients.
 
 Generalization
   The ultimate goal of a machine learning model: the ability to learn the true underlying patterns of a dataset so successfully that it performs highly accurately on brand new, unseen data. 
@@ -124,8 +136,14 @@ Naive Assumption (Independence Assumption)
 Overfitting (High Variance)
   A failure state where a model becomes so overly complex that it memorizes the random noise in its training data rather than learning the underlying tactical rules. It performs perfectly in training but fails on unseen data.
 
+Padding (Zero-Padding)
+  The technique of adding a border of zero-value pixels around the edges of an input image before applying a convolution. This prevents the resulting feature map from shrinking and preserves edge information.
+
 Perceptron
   The simplest historical form of an artificial neuron. It takes multiple inputs, calculates a weighted sum, adds a bias, and passes the result through a hard step-function to output a 1 or a 0.
+
+Pooling (Max Pooling)
+  A downsampling operation in CNNs that slides a window across a feature map, keeping only the most prominent signal (e.g., the maximum value) while discarding the rest. This reduces computational load and provides translation invariance.
 
 Posterior
   In Bayes' Theorem, the final, updated probability of a class being true *after* factoring in the new evidence.
@@ -154,12 +172,14 @@ Regularization
 ReLU (Rectified Linear Unit)
   A highly efficient and popular activation function used in deep learning hidden layers. It outputs the raw input directly if it is positive, and outputs zero if it is negative.
 
-
 ROC Curve (Receiver Operating Characteristic)
   A graph showing the performance of a classification model at all classification thresholds. It plots the True Positive Rate against the False Positive Rate. The area under this curve (AUC) provides an aggregate measure of performance across all possible thresholds.
 
 Sigmoid Function
   A mathematical function that squashes any real number into a valid probability value bounded strictly between 0.0 and 1.0. 
+
+Stride
+  A hyperparameter defining how many pixels a convolution filter or pooling window shifts at a time as it slides across an image or feature map.
 
 Supervised Learning
   A machine learning paradigm where the algorithm is trained on historical data that already includes the correct answers (labels). It learns to map inputs to those known outputs.
@@ -173,6 +193,9 @@ Training Set
 Transfer Learning
   A rapid deployment technique where a massive neural network, pre-trained on millions of generic data points, has its base layers "frozen" and its final classification head re-trained for a specific tactical domain.
 
+Translation Invariance
+  The ability of a neural network (particularly a CNN using pooling) to recognize a target regardless of where it physically shifted or moved within the camera frame.
+
 Underfitting (High Bias)
   A failure state where a model is too rigid or simple to learn the underlying patterns in the training data, resulting in poor predictive performance across the board.
 
@@ -183,4 +206,5 @@ Variance (Statistical Error)
   The error introduced when a model is overly sensitive to tiny fluctuations or noise in the training data. High variance leads to {term}`Overfitting (High Variance)`.
 
 Weights
+  The learnable parameters ($w_i$) in a neural network that determine the importance or influence of a specific input feature on the final prediction.
 ```

@@ -39,6 +39,7 @@ parts:
       - file: lessons/32/edge_detection.ipynb
       - file: lessons/32/translation_invariance.ipynb
       - file: lessons/32/visualize_features.ipynb
+      - file: lessons/32/cnn_1d.ipynb
   - caption: Examples
     chapters:
     - file: exercises/L27.md

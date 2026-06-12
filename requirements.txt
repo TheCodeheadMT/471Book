@@ -5,4 +5,12 @@ teachbooks # depends on jupyter-book v1
 git+https://github.com/TeachBooks/TeachBooks-Favourites
 jupyterquiz
 sphinx_dropdown_toggle
-sphinx_apa_references 
+sphinx_apa_references
+numpy
+matplotlib 
+scikit-learn 
+pandas 
+tensorflow
+keras
+pydot
+graphviz

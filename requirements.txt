@@ -6,6 +6,7 @@ git+https://github.com/TeachBooks/TeachBooks-Favourites
 jupyterquiz
 sphinx_dropdown_toggle
 sphinx_apa_references
+sphinx_thebe
 numpy
 matplotlib 
 scikit-learn 

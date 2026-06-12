@@ -202,10 +202,8 @@ $$X' = \text{Decoder}(Z)$$
 $$\text{Loss} = \text{MSE}(X, X')$$
 
 **The Tactical Application:** We train the Autoencoder *exclusively* on benign, normal network traffic. The network learns to perfectly compress and decompress normal behavior.
-
-When a Zero-Day cyber attack occurs, the anomalous traffic is fed into the network. Because the network has never seen this pattern, it fails to compress it properly, resulting in a massive, mathematically measurable {term}`Reconstruction Error`. If the error spikes above a threshold, we isolate the network node.
-
-
+ 
+  
 <br>
 
 <hr width="100%" size="4" color="black">

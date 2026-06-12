@@ -4,6 +4,7 @@
 This glossary defines the foundational concepts introduced across the machine learning and artificial intelligence lessons.
 
 ```{glossary}
+
 1D-Convolutional Neural Network (1D-CNN)
   A deep learning architecture highly specialized for processing one-dimensional sequence data, such as raw time-series radio frequency (RF) signals in Electronic Warfare.
 
@@ -55,6 +56,9 @@ Dropout
 Early Stopping
   A regularization technique that monitors the validation loss during training. It automatically halts the training process when the model stops improving on unseen data, saving the optimal weights before overfitting occurs.
 
+Edge Device
+  A lightweight, low-power hardware payload (like a drone's onboard computer) capable of processing neural network inference locally without requiring a connection to a centralized cloud server.
+
 Encoder
   The first half of an Autoencoder that compresses raw input data down into a mathematically dense bottleneck.
 
@@ -64,11 +68,11 @@ Epoch
 F1-Score
   The harmonic mean of Precision and Recall. It provides a single, balanced mathematical metric to evaluate a model's performance, especially when dealing with highly imbalanced datasets.
 
-False Negative (FN)
+False Negative (Type II Error)
   A failure where the model predicts that a condition is absent, but it is actually present (e.g., the AI predicts "no threat," but an enemy is there). In warfare, this is often the most fatal type of error.
 
-False Positive (FP)
-  A failure where the model predicts that a condition is present, but it is actually absent (e.g., the AI predicts an enemy, but it is a civilian). This leads to false alarms and wasted resources.
+False Positive (Type I Error)
+  A failure where the model predicts that a condition is present, but it is actually absent (e.g., the AI predicts an enemy, but it is a civilian). This leads to false alarms, wasted resources, and collateral damage.
 
 Feature Importance
   A technique used to interpret machine learning models by calculating and ranking exactly which input variables (features) had the greatest mathematical impact on the model's final predictions.
@@ -81,6 +85,12 @@ Feedforward Architecture
 
 Filter (Kernel)
   A small grid of learnable weights used in a CNN that slides across an image to detect specific patterns, such as horizontal lines or color gradients.
+
+Fine-Tuning
+  An advanced form of transfer learning where the upper layers of a pre-trained neural network are "unfrozen" and trained on domain-specific data to adapt the model to new geometric realities (like shifting from ground-level to top-down satellite imagery).
+
+Forward Propagation
+  The process of pushing raw input data forward through the hidden layers of a neural network to generate a final prediction. It involves calculating the weighted sums and applying activation functions at each neuron in the sequence.
 
 Generalization
   The ultimate goal of a machine learning model: the ability to learn the true underlying patterns of a dataset so successfully that it performs highly accurately on brand new, unseen data. 
@@ -102,6 +112,9 @@ Hierarchical Feature Learning
 
 Hyperplane
   The mathematical decision boundary drawn by a Support Vector Machine to separate classes. In 2D space, it is a line; in 3D space, it is a flat plane.
+
+Inference Latency
+  The time it takes for a deployed neural network to process a single input (like a video frame) and output a prediction. Critical for autonomous edge devices tracking fast-moving targets.
 
 Irreducible Error
   The inherent noise, randomness, or "fog of war" in a dataset that no machine learning model can ever predict or eliminate.
@@ -127,23 +140,23 @@ Logistic Regression
 Loss Function (Cost Function)
   A mathematical function that evaluates how far off a network's predictions are from the true targets. The network's entire training goal is to minimize this value.
 
+Max Pooling
+  A downsampling operation commonly used in CNNs that slides a window across a feature map, keeping only the most prominent signal (the maximum value) while discarding the rest. This reduces computational load and provides translation invariance.
+
 Mean Squared Error (MSE)
   A common loss function used for regression tasks (predicting continuous numbers) that calculates the average squared difference between the predicted values and the actual target values.
 
 Naive Assumption (Independence Assumption)
   The core (and mathematically flawed) assumption in Naive Bayes that every feature in a dataset is completely independent of every other feature.
 
-Overfitting (High Variance)
-  A failure state where a model becomes so overly complex that it memorizes the random noise in its training data rather than learning the underlying tactical rules. It performs perfectly in training but fails on unseen data.
+Overfitting
+  A failure state (driven by high variance) where a model becomes so overly complex that it memorizes the random noise in its training data rather than learning the underlying tactical rules. It performs perfectly in training but fails on unseen data.
 
 Padding (Zero-Padding)
   The technique of adding a border of zero-value pixels around the edges of an input image before applying a convolution. This prevents the resulting feature map from shrinking and preserves edge information.
 
 Perceptron
   The simplest historical form of an artificial neuron. It takes multiple inputs, calculates a weighted sum, adds a bias, and passes the result through a hard step-function to output a 1 or a 0.
-
-Pooling (Max Pooling)
-  A downsampling operation in CNNs that slides a window across a feature map, keeping only the most prominent signal (e.g., the maximum value) while discarding the rest. This reduces computational load and provides translation invariance.
 
 Posterior
   In Bayes' Theorem, the final, updated probability of a class being true *after* factoring in the new evidence.
@@ -203,7 +216,7 @@ Unsupervised Learning
   A machine learning paradigm where the algorithm is given raw, unlabeled data and must autonomously discover hidden structures, clusters, or patterns on its own.
 
 Variance (Statistical Error)
-  The error introduced when a model is overly sensitive to tiny fluctuations or noise in the training data. High variance leads to {term}`Overfitting (High Variance)`.
+  The error introduced when a model is overly sensitive to tiny fluctuations or noise in the training data. High variance leads to {term}`Overfitting`.
 
 Weights
   The learnable parameters ($w_i$) in a neural network that determine the importance or influence of a specific input feature on the final prediction.

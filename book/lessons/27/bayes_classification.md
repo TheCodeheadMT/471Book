@@ -1,4 +1,4 @@
-# L28: Naive Bayes Classification
+# L27: Naive Bayes Classification
 
 In the previous lesson, we used physical sensor data (numbers) to predict outcomes. But what happens when the intelligence we gather isn't numbers, but unstructured text?
 

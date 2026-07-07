@@ -1,4 +1,4 @@
-# L32: Convolutional Neural Networks
+# L31: Convolutional Neural Networks
 
 In the previous lessons, our neural networks analyzed data by looking at individual features (like airspeed or altitude). If we fed an image into a standard dense network, we would have to flatten the 2D image into a single 1D line of pixels. This mathematically destroys all spatial relationships—the network would forget which pixels were next to each other.
 

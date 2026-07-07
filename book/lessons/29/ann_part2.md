@@ -1,4 +1,4 @@
-# L30: Neural Networks II
+# L29: Neural Networks II
 
 In the previous lesson, we built the architecture of a neural network and executed {term}`Forward Propagation`—pushing data through the layers to get a prediction. But a freshly initialized network is like an untrained cadet; its initial weights are completely random, meaning its first predictions will likely be entirely wrong.
 

@@ -1,5 +1,5 @@
 
-# L31: Deep Learning
+# L30: Deep Learning
 
 In the previous lessons, we built shallow neural networks (1-2 hidden layers) and trained them to solve specific, highly structured problems. However, the modern battlespace does not always provide neatly organized tabular data. We must process raw, high-dimensional data: live video feeds from drones, gigabytes of raw network traffic, and chaotic electromagnetic radio frequencies.
 

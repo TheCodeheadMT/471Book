@@ -40,7 +40,7 @@ parts:
       - file: lessons/31/translation_invariance.ipynb
       - file: lessons/31/visualize_features.ipynb
       - file: lessons/31/cnn_1d.ipynb
-    - file: lessons/32/ccn_applications.md
+    - file: lessons/32/ml_applications.md
       sections:
       - file: lessons/32/fine_tuning_satellite.ipynb
   - caption: Examples

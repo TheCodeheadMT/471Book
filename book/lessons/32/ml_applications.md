@@ -61,6 +61,11 @@ This introduces a severe engineering trade-off: **Speed vs. Accuracy**.
 
 To explore how these hardware limitations, resolution demands, and architectural choices interact during an active flight window, adjust the mission parameters in the drone payload simulator below.
 
+## Summary Infographic
+![CNN Applications](../../figures/CNN_apps_infographic.png "CNN Applications")
+
+<br>
+<hr width="100%" size="4" color="black">
 
 ## Knowledge Check & Practice Questions
 

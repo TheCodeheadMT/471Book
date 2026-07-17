@@ -43,6 +43,9 @@ parts:
     - file: lessons/32/ml_applications.md
       sections:
       - file: lessons/32/fine_tuning_satellite.ipynb
+    - file: lessons/33/transformers_LLMs.md
+      sections:
+      - file: lessons/33/llm_APIs.ipynb
   - caption: Examples
     chapters:
     - file: exercises/L26.md
@@ -51,6 +54,8 @@ parts:
     - file: exercises/L29.md
     - file: exercises/L30.md
     - file: exercises/L31.md
+    # - file: exercises/L32.md
+    # - file: exercises/L33.md
   - caption: Miscellaneous
     chapters:
     - title: AI Sim Lab

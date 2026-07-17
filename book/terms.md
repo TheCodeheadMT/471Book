@@ -5,11 +5,14 @@ This glossary defines the foundational concepts introduced across the machine le
 
 ```{glossary}
 
-1D-Convolutional Neural Network (1D-CNN)
+Glossary of Core AI/ML TerminologyThis glossary defines the foundational concepts introduced across the machine learning and artificial intelligence lessons.1D-Convolutional Neural Network (1D-CNN)
   A deep learning architecture highly specialized for processing one-dimensional sequence data, such as raw time-series radio frequency (RF) signals in Electronic Warfare.
 
 Activation Function
   The mathematical "gate" in an artificial neuron that determines whether, and how strongly, the neuron fires. It introduces non-linearity into neural networks. *(Examples: Sigmoid, ReLU).*
+
+API (Application Programming Interface)
+  A set of protocols that allows different software applications to communicate. In AI, APIs are used to send data (like raw text) to powerful cloud-hosted models (like LLMs) and securely receive the processed output.
 
 Artificial Neural Network (ANN)
   A computing system inspired by biological brains, consisting of interconnected nodes (neurons) organized in layers that automatically learn complex, non-linear representations of raw data.
@@ -22,6 +25,9 @@ Backpropagation
 
 Bagging (Bootstrap Aggregating)
   An ensemble machine learning technique that trains multiple models (like Decision Trees) on random subsets of data and averages their predictions to reduce variance and prevent overfitting.
+
+Base Model
+  A foundational Large Language Model that has completed pre-training but has not yet undergone instruct-tuning. It excels at predicting the next word and understanding language, but cannot reliably follow commands or act as an assistant.
 
 Bias (Neural Networks)
   A learnable constant ($b$) added to a neuron's weighted sum. It acts as a baseline threshold, shifting the activation function left or right so the neuron can fire even if all input features are zero.
@@ -116,6 +122,9 @@ Hyperplane
 Inference Latency
   The time it takes for a deployed neural network to process a single input (like a video frame) and output a prediction. Critical for autonomous edge devices tracking fast-moving targets.
 
+Instruct-Tuning
+  The secondary training phase for LLMs where the model is fine-tuned on explicitly labeled prompt/response pairs. This transforms a base model into a highly obedient assistant capable of following specific tactical instructions.
+
 Irreducible Error
   The inherent noise, randomness, or "fog of war" in a dataset that no machine learning model can ever predict or eliminate.
 
@@ -124,6 +133,9 @@ Kernel Trick
 
 Laplace Smoothing (Add-One Smoothing)
   A mathematical technique used in Naive Bayes to prevent the formula from collapsing to zero when the model encounters a feature (like a new vocabulary word) it has never seen before.
+
+Large Language Model (LLM)
+  A massive deep learning model based on the Transformer architecture, trained on enormous datasets to understand, generate, and reason over human language and unstructured text.
 
 Latent Space (Bottleneck)
   The highly compressed, mathematical representation of data found in the middle layer connecting an encoder and decoder within an Autoencoder.
@@ -158,6 +170,9 @@ Padding (Zero-Padding)
 Perceptron
   The simplest historical form of an artificial neuron. It takes multiple inputs, calculates a weighted sum, adds a bias, and passes the result through a hard step-function to output a 1 or a 0.
 
+Positional Encoding
+  A mathematical mechanism in Transformers that tags every input token with a unique signature indicating its exact order in the sentence, allowing the model to process all words in parallel without losing sequential context.
+
 Posterior
   In Bayes' Theorem, the final, updated probability of a class being true *after* factoring in the new evidence.
 
@@ -166,6 +181,9 @@ Precision
 
 Precision-Recall (PR) Curve
   A graph that plots Precision against Recall across different probability thresholds. It is highly valuable for evaluating models trained on severely imbalanced datasets, visually demonstrating the tactical tradeoff between catching all threats and avoiding false alarms.
+
+Pre-Training
+  The initial, massive training phase of an LLM where it ingests vast amounts of unstructured internet text and plays a continuous game of "predict the next word" to learn grammar, facts, and logic.
 
 Prior
   In Bayes' Theorem, the baseline, historical probability of a class occurring *before* any new evidence is observed.
@@ -188,6 +206,9 @@ ReLU (Rectified Linear Unit)
 ROC Curve (Receiver Operating Characteristic)
   A graph showing the performance of a classification model at all classification thresholds. It plots the True Positive Rate against the False Positive Rate. The area under this curve (AUC) provides an aggregate measure of performance across all possible thresholds.
 
+Self-Attention
+  The core mechanism of a Transformer that evaluates how strongly every word in a sequence relates to every other word. It computes a weighted sum of values (words) based on relevancy scores between queries and keys, creating context-aware representations.
+
 Sigmoid Function
   A mathematical function that squashes any real number into a valid probability value bounded strictly between 0.0 and 1.0. 
 
@@ -200,11 +221,17 @@ Supervised Learning
 Testing Set
   A portion of the dataset (usually 20%) that is strictly hidden from the machine learning algorithm during training. It is used as a final "combat simulation" to test how well the model generalizes to unseen data.
 
+Tokenization
+  The process of chopping raw text down into sub-word chunks (tokens) and translating them into mathematical ID numbers so they can be processed by a neural network.
+
 Training Set
   The portion of the dataset (usually 80%) exposed to the machine learning algorithm. The model uses this data to adjust its internal math and learn patterns.
 
 Transfer Learning
   A rapid deployment technique where a massive neural network, pre-trained on millions of generic data points, has its base layers "frozen" and its final classification head re-trained for a specific tactical domain.
+
+Transformer
+  A breakthrough sequence model architecture that abandoned sequential processing. By relying entirely on neural attention mechanisms, it processes text in parallel and maps complex contextual relationships, forming the foundation of LLMs.
 
 Translation Invariance
   The ability of a neural network (particularly a CNN using pooling) to recognize a target regardless of where it physically shifted or moved within the camera frame.
@@ -220,4 +247,5 @@ Variance (Statistical Error)
 
 Weights
   The learnable parameters ($w_i$) in a neural network that determine the importance or influence of a specific input feature on the final prediction.
+
 ```

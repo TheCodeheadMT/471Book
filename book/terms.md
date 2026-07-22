@@ -5,7 +5,7 @@ This glossary defines the foundational concepts introduced across the machine le
 
 ```{glossary}
 
-Glossary of Core AI/ML TerminologyThis glossary defines the foundational concepts introduced across the machine learning and artificial intelligence lessons.1D-Convolutional Neural Network (1D-CNN)
+1D-Convolutional Neural Network (1D-CNN)
   A deep learning architecture highly specialized for processing one-dimensional sequence data, such as raw time-series radio frequency (RF) signals in Electronic Warfare.
 
 Activation Function
@@ -158,6 +158,9 @@ Max Pooling
 Mean Squared Error (MSE)
   A common loss function used for regression tasks (predicting continuous numbers) that calculates the average squared difference between the predicted values and the actual target values.
 
+Meta-Prompting
+  The technique of adding overarching instructions to a prompt that dictate *how* the AI should process the request (e.g., "think step-by-step" or "ask me for clarification first"), rather than just what the final output should be.
+
 Naive Assumption (Independence Assumption)
   The core (and mathematically flawed) assumption in Naive Bayes that every feature in a dataset is completely independent of every other feature.
 
@@ -188,6 +191,9 @@ Pre-Training
 Prior
   In Bayes' Theorem, the baseline, historical probability of a class occurring *before* any new evidence is observed.
 
+Prompt Engineering
+  The discipline of structuring text inputs using specific frameworks (like Task, Format, Voice, and Context) to reliably extract highly accurate, specific, and useful outputs from a Large Language Model.
+
 Random Forest
   A powerful ensemble model that builds hundreds of shallow Decision Trees and averages their predictions to achieve high accuracy while avoiding the overfitting trap of single trees.
 
@@ -207,7 +213,7 @@ ROC Curve (Receiver Operating Characteristic)
   A graph showing the performance of a classification model at all classification thresholds. It plots the True Positive Rate against the False Positive Rate. The area under this curve (AUC) provides an aggregate measure of performance across all possible thresholds.
 
 Self-Attention
-  The core mechanism of a Transformer that evaluates how strongly every word in a sequence relates to every other word. It computes a weighted sum of values (words) based on relevancy scores between queries and keys, creating context-aware representations.
+  The core mechanism of a Transformer that allows the model to look at every single word in a document simultaneously and mathematically weigh how strongly each word relates to every other word, creating deep contextual understanding.
 
 Sigmoid Function
   A mathematical function that squashes any real number into a valid probability value bounded strictly between 0.0 and 1.0. 
@@ -231,7 +237,7 @@ Transfer Learning
   A rapid deployment technique where a massive neural network, pre-trained on millions of generic data points, has its base layers "frozen" and its final classification head re-trained for a specific tactical domain.
 
 Transformer
-  A breakthrough sequence model architecture that abandoned sequential processing. By relying entirely on neural attention mechanisms, it processes text in parallel and maps complex contextual relationships, forming the foundation of LLMs.
+  A breakthrough neural network architecture that relies heavily on self-attention and positional encoding to process sequential data (like text) entirely in parallel, forming the architectural foundation of all modern Large Language Models.
 
 Translation Invariance
   The ability of a neural network (particularly a CNN using pooling) to recognize a target regardless of where it physically shifted or moved within the camera frame.
@@ -247,5 +253,6 @@ Variance (Statistical Error)
 
 Weights
   The learnable parameters ($w_i$) in a neural network that determine the importance or influence of a specific input feature on the final prediction.
+
 
 ```

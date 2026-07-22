@@ -46,6 +46,9 @@ parts:
     - file: lessons/33/transformers_LLMs.md
       sections:
       - file: lessons/33/llm_APIs.ipynb
+    - file: lessons/34/prompt_eng.md
+      sections: 
+      - file: lessons/34/prompt_eng_nb.ipynb
   - caption: Examples
     chapters:
     - file: exercises/L26.md
@@ -54,8 +57,9 @@ parts:
     - file: exercises/L29.md
     - file: exercises/L30.md
     - file: exercises/L31.md
-    # - file: exercises/L32.md
-    # - file: exercises/L33.md
+    - file: exercises/L32.md
+    - file: exercises/L33.md
+    - file: exercises/L34.md
   - caption: Miscellaneous
     chapters:
     - title: AI Sim Lab

@@ -2,7 +2,7 @@
 
 The modern battlespace generates an overwhelming amount of unstructured text: Intelligence, Surveillance, and Reconnaissance (ISR) reports, After Action Reports (AARs), intercepted communications, and geopolitical news feeds. In the past, algorithms struggled to understand the nuance, context, and complex grammar of human language.
 
-Starting in 2017, a new model architecture overtook the field of natural language processing: the {term}`Transformer`. Introduced in the seminal paper *“Attention is all you need,”* this architecture proved that a simple mechanism called "neural attention" could build powerful sequence models without relying on the slow, sequential processing of older recurrent neural networks. This breakthrough gave birth to **Large Language Models (LLMs)**.
+Starting in 2017, a new model architecture overtook the field of natural language processing: the {term}`Transformer`. Introduced in the seminal paper *“Attention is all you need,”* this architecture proved that a simple mechanism called "neural attention" could build powerful sequence models without relying on the slow, sequential processing of older recurrent neural networks. This breakthrough gave birth to **Large Language Models (LLMs)**. The content for this less is derived from Deep Learning with Python {cite}`chollet2021deep`.
 
 :::{admonition} Lesson Objectives
 :class: note

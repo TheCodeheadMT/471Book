@@ -4,7 +4,6 @@
 This glossary defines the foundational concepts introduced across the machine learning and artificial intelligence lessons.
 
 ```{glossary}
-
 1D-Convolutional Neural Network (1D-CNN)
   A deep learning architecture highly specialized for processing one-dimensional sequence data, such as raw time-series radio frequency (RF) signals in Electronic Warfare.
 
@@ -41,11 +40,17 @@ Bias-Variance Tradeoff
 Confusion Matrix
   A performance measurement table that visualizes exactly how a classification model succeeds or fails, categorizing predictions into True Positives, True Negatives, False Positives, and False Negatives. Crucial for weighing operational risks.
 
+Context Window
+  The hard mathematical limit on the maximum number of tokens (words/sub-words) a Large Language Model can process in a single request. 
+
 Convolution
   A mathematical operation where a small matrix (filter/kernel) slides across an input image, multiplying and summing pixel values to detect specific visual features like edges, shapes, or textures.
 
 Convolutional Neural Network (CNN)
   A specialized deep learning architecture designed to process grid-like data (such as images). It uses sliding filters to learn spatial hierarchies of features, making it highly effective for visual ISR and target recognition tasks.
+
+Cosine Similarity
+  A mathematical metric used to determine how similar two vectors are by measuring the angle between them. In semantic search, a cosine similarity near 1.0 means two text chunks have almost identical meanings, regardless of the specific vocabulary used.
 
 Decoder
   The second half of an Autoencoder that attempts to decompress the latent space bottleneck back into the original data format.
@@ -55,6 +60,9 @@ Decision Tree
 
 Deep Learning
   A subset of machine learning utilizing neural networks with many hidden layers (deep architectures) capable of autonomously engineering complex, hierarchical features from raw, unstructured data (like images or RF signals).
+
+Document Chunking
+  The strategy of splitting massive text documents into smaller, overlapping segments (chunks) so they can be individually embedded, searched, and fit within an LLM's limited context window.
 
 Dropout
   A regularization technique where a random percentage of neurons in a layer are temporarily disabled during each training step. This prevents the network from relying on specific neurons to memorize noise, forcing it to learn robust, generalized features.
@@ -110,6 +118,12 @@ Gradient
 Gradient Descent
   The optimization algorithm used to minimize a network's loss. It updates the network's weights iteratively by taking small mathematical steps in the opposite direction of the {term}`Gradient`.
 
+Grounding
+  The process of forcing an LLM to generate its response based strictly on verified, provided context (such as retrieved documents) rather than relying on its generalized, pre-trained memory. 
+
+Hallucinations
+  A phenomenon where a Large Language Model (LLM) or generative AI generates false, fabricated, or nonsensical information but presents it with high confidence as if it were a verified fact. This occurs because the model is predicting statistically likely word sequences, not retrieving verified truth.
+
 Hidden Layer
   A layer of artificial neurons situated between the input and output layers of a neural network. These layers are responsible for learning abstract, hidden features in the data.
 
@@ -158,9 +172,6 @@ Max Pooling
 Mean Squared Error (MSE)
   A common loss function used for regression tasks (predicting continuous numbers) that calculates the average squared difference between the predicted values and the actual target values.
 
-Meta-Prompting
-  The technique of adding overarching instructions to a prompt that dictate *how* the AI should process the request (e.g., "think step-by-step" or "ask me for clarification first"), rather than just what the final output should be.
-
 Naive Assumption (Independence Assumption)
   The core (and mathematically flawed) assumption in Naive Bayes that every feature in a dataset is completely independent of every other feature.
 
@@ -191,9 +202,6 @@ Pre-Training
 Prior
   In Bayes' Theorem, the baseline, historical probability of a class occurring *before* any new evidence is observed.
 
-Prompt Engineering
-  The discipline of structuring text inputs using specific frameworks (like Task, Format, Voice, and Context) to reliably extract highly accurate, specific, and useful outputs from a Large Language Model.
-
 Random Forest
   A powerful ensemble model that builds hundreds of shallow Decision Trees and averages their predictions to achieve high accuracy while avoiding the overfitting trap of single trees.
 
@@ -209,11 +217,17 @@ Regularization
 ReLU (Rectified Linear Unit)
   A highly efficient and popular activation function used in deep learning hidden layers. It outputs the raw input directly if it is positive, and outputs zero if it is negative.
 
+Retrieval-Augmented Generation (RAG)
+  An AI architecture that enhances a Large Language Model's responses by first retrieving verified facts from an external database and injecting them into the model's prompt, effectively grounding the AI in proprietary or real-time intelligence.
+
 ROC Curve (Receiver Operating Characteristic)
   A graph showing the performance of a classification model at all classification thresholds. It plots the True Positive Rate against the False Positive Rate. The area under this curve (AUC) provides an aggregate measure of performance across all possible thresholds.
 
 Self-Attention
   The core mechanism of a Transformer that allows the model to look at every single word in a document simultaneously and mathematically weigh how strongly each word relates to every other word, creating deep contextual understanding.
+
+Semantic Search
+  A highly advanced database search technique that uses Vector Embeddings to find documents based on the actual *meaning* and context of a user's query, rather than relying on exact keyword matches.
 
 Sigmoid Function
   A mathematical function that squashes any real number into a valid probability value bounded strictly between 0.0 and 1.0. 
@@ -250,6 +264,12 @@ Unsupervised Learning
 
 Variance (Statistical Error)
   The error introduced when a model is overly sensitive to tiny fluctuations or noise in the training data. High variance leads to {term}`Overfitting`.
+
+Vector Database
+  A specialized database designed to store and query high-dimensional vector embeddings, forming the backbone of semantic search in a RAG pipeline.
+
+Vector Embeddings
+  A dense array of floating-point numbers representing the core semantic meaning of a piece of text (or image), allowing algorithms to measure the "distance" or similarity between distinct concepts mathematically.
 
 Weights
   The learnable parameters ($w_i$) in a neural network that determine the importance or influence of a specific input feature on the final prediction.

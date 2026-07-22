@@ -2,7 +2,7 @@
 
 # Notation Reference
 
-### L27: ML Foundations
+## L27: ML Foundations
 
 ### Confusion Matrix
 | Notation | Definition |
@@ -184,7 +184,7 @@
 | $\lfloor \dots \rfloor$ | The **floor** function. Rounds a decimal down to the nearest whole integer. |
 
 
-## L34: Transformers and LLMs Self-Attention Mechanism
+## L33: Transformers and LLMs Self-Attention Mechanism
 
 | Notation | Definition |
 | --- | --- |
@@ -196,3 +196,13 @@
 | $\text{softmax}$ | A mathematical function that converts the raw attention scores into a clean probability distribution (where all weights sum to exactly 1.0), determining exactly what percentage of attention the model should pay to each word. |
 
 
+## L35: Retrieval-Augmented Generation
+
+| Notation | Definition |
+| --- | --- |
+| $\vec{A}, \vec{B}$ (or $\mathbf{E}$) | Continuous, high-dimensional vector arrays representing the mathematical embedding of specific chunks of text. |
+| $\vec{A} \cdot \vec{B}$ | The Dot Product: The sum of the products of the corresponding entries of two sequences of numbers. In vector math, this measures how closely two vectors align directionally. |
+| $\Vert{}\vec{A}\Vert{}$ | The Magnitude: The physical "length" (or L2 Norm) of the vector, calculated using the Pythagorean theorem extended to higher dimensions. |
+| $\cos(\theta)$ | Cosine Similarity: The core metric used in semantic search to compare two vectors ($\vec{A}$ and $\vec{B}$). Calculated as $\frac{\vec{A} \cdot \vec{B}}{\Vert{}\vec{A}\Vert{} \Vert{}\vec{B}\Vert{}}$. A score of $1$ means identical direction; $0$ means orthogonal (unrelated). |
+| $C_s$ | Chunk Size: The mathematical constraint defining the maximum number of tokens allowed in a single segmented document block. |
+| $C_o$ | Chunk Overlap: The number of tokens repeated from the end of the previous chunk into the beginning of the current chunk, used to preserve context across splits. |

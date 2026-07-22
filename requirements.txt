@@ -15,3 +15,5 @@ tensorflow
 keras
 pydot
 graphviz
+sentence_transformers
+chromadb

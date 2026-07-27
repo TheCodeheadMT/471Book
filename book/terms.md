@@ -7,11 +7,20 @@ This glossary defines the foundational concepts introduced across the machine le
 1D-Convolutional Neural Network (1D-CNN)
   A deep learning architecture highly specialized for processing one-dimensional sequence data, such as raw time-series radio frequency (RF) signals in Electronic Warfare.
 
+Action (ReAct)
+  The step in the ReAct loop where the agent executes a specific, structured tool call (e.g., querying a database or calling an API) to interact with the external environment.
+
 Activation Function
   The mathematical "gate" in an artificial neuron that determines whether, and how strongly, the neuron fires. It introduces non-linearity into neural networks. *(Examples: Sigmoid, ReLU).*
 
+Adjudicator Agent
+  In multi-agent wargaming, an impartial referee AI that receives proposed actions from competing agents (Red/Blue teams), evaluates them against simulated physical rules or probabilities, and updates the shared environment.
+
 Adversarial Evasion
   A deployment-phase attack where an adversary subtly alters the physical environment or input data (e.g., using digital static or specialized camouflage) to mathematically force an already-trained AI model to make a highly confident, incorrect prediction.
+
+Agentic AI
+  An AI system endowed with agency—the capacity to autonomously plan, reason, use tools, and take actions over multiple steps to achieve a complex goal, rather than simply reacting to a single prompt.
 
 Algorithmic Bias
   A failure mode where an AI system produces systematically prejudiced or skewed results, usually caused by imbalanced, incomplete, or historically biased training data.
@@ -43,11 +52,14 @@ Bias (Statistical Error)
 Bias-Variance Tradeoff
   The fundamental tension in machine learning where decreasing a model's false assumptions ({term}`Bias (Statistical Error)`) typically increases its dangerous sensitivity to noise ({term}`Variance (Statistical Error)`), and vice versa. 
 
+Cascading Hallucination
+  A failure mode unique to multi-agent systems where one agent hallucinates a fact or capability, and other agents subsequently accept that hallucination as truth, rapidly derailing the entire workflow or simulation.
+
 Confusion Matrix
   A performance measurement table that visualizes exactly how a classification model succeeds or fails, categorizing predictions into True Positives, True Negatives, False Positives, and False Negatives. Crucial for weighing operational risks.
 
 Context Window
-  The hard mathematical limit on the maximum number of tokens (words/sub-words) a Large Language Model can process in a single request. 
+  The hard mathematical limit on the maximum number of tokens (words/sub-words) a Large Language Model can process in a single request. In agentic AI, this serves as the agent's Short-Term Memory.
 
 Convolution
   A mathematical operation where a small matrix (filter/kernel) slides across an input image, multiplying and summing pixel values to detect specific visual features like edges, shapes, or textures.
@@ -175,6 +187,9 @@ Likelihood
 Logistic Regression
   A foundational classification algorithm that passes a linear equation through a {term}`Sigmoid Function` to predict the probability of a binary outcome.
 
+Long-Term Memory (Agentic)
+  An AI agent's ability to store and recall information across different, isolated chat sessions, typically implemented using a Vector Database and Retrieval-Augmented Generation (RAG).
+
 Loss Function (Cost Function)
   A mathematical function that evaluates how far off a network's predictions are from the true targets. The network's entire training goal is to minimize this value.
 
@@ -186,6 +201,9 @@ Mean Squared Error (MSE)
 
 Naive Assumption (Independence Assumption)
   The core (and mathematically flawed) assumption in Naive Bayes that every feature in a dataset is completely independent of every other feature.
+
+Observation (ReAct)
+  The step in the ReAct loop where the result of an external tool call is returned and injected back into the agent's context window, allowing the agent to evaluate the outcome of its action.
 
 Overfitting
   A failure state (driven by high variance) where a model becomes so overly complex that it memorizes the random noise in its training data rather than learning the underlying tactical rules. It performs perfectly in training but fails on unseen data.
@@ -217,6 +235,9 @@ Prior
 Random Forest
   A powerful ensemble model that builds hundreds of shallow Decision Trees and averages their predictions to achieve high accuracy while avoiding the overfitting trap of single trees.
 
+ReAct (Reasoning and Acting)
+  An agentic architecture and prompting strategy that forces an LLM to alternate between articulating explicit reasoning (Thought) and executing tool calls (Action), using the results (Observation) to guide subsequent steps.
+
 Recall (Sensitivity)
   An operational metric answering: "Out of all the true positive targets that actually existed in the environment, how many did the model successfully find?" Calculated as TP / (TP + FN).
 
@@ -244,6 +265,9 @@ Semantic Search
 SHAP (SHapley Additive exPlanations)
   A mathematical method used in Explainable AI (XAI) based on cooperative game theory. It assigns a specific numerical value to each input feature, representing exactly how much that feature contributed to pushing the model's final prediction away from the baseline average.
 
+Short-Term Memory (Agentic)
+  An AI agent's immediate, temporary memory, strictly limited by the model's context window. It tracks the immediate sequence of thoughts, actions, and observations during the current operational loop.
+
 Sigmoid Function
   A mathematical function that squashes any real number into a valid probability value bounded strictly between 0.0 and 1.0. 
 
@@ -255,6 +279,9 @@ Supervised Learning
 
 Testing Set
   A portion of the dataset (usually 20%) that is strictly hidden from the machine learning algorithm during training. It is used as a final "combat simulation" to test how well the model generalizes to unseen data.
+
+Thought (ReAct)
+  The step in the ReAct loop where the agent explicitly articulates its internal reasoning, assessing the current situation and determining what action to take next.
 
 Tokenization
   The process of chopping raw text down into sub-word chunks (tokens) and translating them into mathematical ID numbers so they can be processed by a neural network.

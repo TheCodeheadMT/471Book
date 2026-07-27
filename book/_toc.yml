@@ -55,6 +55,12 @@ parts:
     - file: lessons/36/failure_modes_ethics.md
       sections: 
       - file: lessons/36/failure_modes_ethics_nb.ipynb
+    - file: lessons/37/agentic_ai.md
+      sections: 
+      - file: lessons/37/agentic_ai_nb.ipynb
+    - file: lessons/38/ml_workshop.md
+      sections: 
+      - file: lessons/38/ml_workshop_nb.ipynb
   - caption: Examples
     chapters:
     - file: exercises/L26.md
@@ -68,6 +74,7 @@ parts:
     - file: exercises/L34.md
     - file: exercises/L35.md
     - file: exercises/L36.md
+    - file: exercises/L37.md
   - caption: Miscellaneous
     chapters:
     - title: AI Sim Lab

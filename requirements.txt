@@ -18,3 +18,4 @@ graphviz
 sentence_transformers
 chromadb
 shap
+seaborn

@@ -52,6 +52,9 @@ parts:
     - file: lessons/35/rag.md
       sections: 
       - file: lessons/35/rag_nb.ipynb
+    - file: lessons/36/failure_modes_ethics.md
+      sections: 
+      - file: lessons/36/failure_modes_ethics_nb.ipynb
   - caption: Examples
     chapters:
     - file: exercises/L26.md
@@ -64,6 +67,7 @@ parts:
     - file: exercises/L33.md
     - file: exercises/L34.md
     - file: exercises/L35.md
+    - file: exercises/L36.md
   - caption: Miscellaneous
     chapters:
     - title: AI Sim Lab

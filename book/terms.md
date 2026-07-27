@@ -10,6 +10,12 @@ This glossary defines the foundational concepts introduced across the machine le
 Activation Function
   The mathematical "gate" in an artificial neuron that determines whether, and how strongly, the neuron fires. It introduces non-linearity into neural networks. *(Examples: Sigmoid, ReLU).*
 
+Adversarial Evasion
+  A deployment-phase attack where an adversary subtly alters the physical environment or input data (e.g., using digital static or specialized camouflage) to mathematically force an already-trained AI model to make a highly confident, incorrect prediction.
+
+Algorithmic Bias
+  A failure mode where an AI system produces systematically prejudiced or skewed results, usually caused by imbalanced, incomplete, or historically biased training data.
+
 API (Application Programming Interface)
   A set of protocols that allows different software applications to communicate. In AI, APIs are used to send data (like raw text) to powerful cloud-hosted models (like LLMs) and securely receive the processed output.
 
@@ -52,6 +58,9 @@ Convolutional Neural Network (CNN)
 Cosine Similarity
   A mathematical metric used to determine how similar two vectors are by measuring the angle between them. In semantic search, a cosine similarity near 1.0 means two text chunks have almost identical meanings, regardless of the specific vocabulary used.
 
+Data Poisoning
+  A training-phase attack where an adversary infiltrates a data pipeline and subtly alters the training examples or labels, causing the AI to learn a malicious, hidden rule (a "backdoor") that the adversary can exploit later in combat.
+
 Decoder
   The second half of an Autoencoder that attempts to decompress the latent space bottleneck back into the original data format.
 
@@ -78,6 +87,9 @@ Encoder
 
 Epoch
   One complete pass of the entire training dataset through the neural network during the training phase.
+
+Explainable AI (XAI)
+  A field of research and a set of mathematical tools (like SHAP) designed to make the internal mechanics and outputs of "black box" machine learning models understandable to human operators, ensuring trust and traceability.
 
 F1-Score
   The harmonic mean of Precision and Recall. It provides a single, balanced mathematical metric to evaluate a model's performance, especially when dealing with highly imbalanced datasets.
@@ -228,6 +240,9 @@ Self-Attention
 
 Semantic Search
   A highly advanced database search technique that uses Vector Embeddings to find documents based on the actual *meaning* and context of a user's query, rather than relying on exact keyword matches.
+
+SHAP (SHapley Additive exPlanations)
+  A mathematical method used in Explainable AI (XAI) based on cooperative game theory. It assigns a specific numerical value to each input feature, representing exactly how much that feature contributed to pushing the model's final prediction away from the baseline average.
 
 Sigmoid Function
   A mathematical function that squashes any real number into a valid probability value bounded strictly between 0.0 and 1.0. 

@@ -17,3 +17,4 @@ pydot
 graphviz
 sentence_transformers
 chromadb
+shap

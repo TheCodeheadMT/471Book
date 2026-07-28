@@ -39,7 +39,7 @@ Modern tactical AI relies heavily on the problem-solving approach. Much like med
 
 
 
-The methods used to achieve artificial intelligence have evolved dramatically over the decades. Intro_to_AI-Intro.pdf breaks this history into several key phases:
+The methods used to achieve artificial intelligence have evolved dramatically over the decades over several key phases:
 
 Symbolic AI and Logic (1950s–1980s): Early AI focused heavily on logic and symbol processing. Engineers built {term}`Expert System` by hardcoding thousands of explicit "if-then" rules. While successful for small, controlled problems, these systems suffered from a "combinatorial explosion"—the real world (and the battlefield) is simply too complex to program every possible rule by hand.
 

@@ -124,6 +124,9 @@ False Negative (Type II Error)
 False Positive (Type I Error)
   A failure where the model predicts that a condition is present, but it is actually absent (e.g., the AI predicts an enemy, but it is a civilian). This leads to false alarms, wasted resources, and collateral damage.
 
+Feature Extraction
+  The process of isolating the most relevant mathematical variables from preprocessed data to feed into an AI model.
+
 Feature Importance
   A technique used to interpret machine learning models by calculating and ranking exactly which input variables (features) had the greatest mathematical impact on the model's final predictions.
 
@@ -172,6 +175,9 @@ Hierarchical Feature Learning
 Hyperplane
   The mathematical decision boundary drawn by a Support Vector Machine to separate classes. In 2D space, it is a line; in 3D space, it is a flat plane.
 
+Inference
+  The phase in an AI pipeline where a trained model or logic system applies its learned rules to new, unseen data to generate a prediction or decision.
+
 Inference Latency
   The time it takes for a deployed neural network to process a single input (like a video frame) and output a prediction. Critical for autonomous edge devices tracking fast-moving targets.
 
@@ -198,6 +204,9 @@ Large Language Model (LLM)
 
 Latent Space (Bottleneck)
   The highly compressed, mathematical representation of data found in the middle layer connecting an encoder and decoder within an Autoencoder.
+
+Learning
+  An AI methodology where a system automatically identifies patterns and rules from historical training data, rather than being explicitly programmed.
 
 Learning Rate
   A hyperparameter ($\alpha$) that dictates how large of a step the network takes during {term}`Gradient Descent`. If it is too large, the network overcorrects erratically; if it is too small, learning is painfully slow.
@@ -235,6 +244,9 @@ Padding (Zero-Padding)
 Perceptron
   The simplest historical form of an artificial neuron. It takes multiple inputs, calculates a weighted sum, adds a bias, and passes the result through a hard step-function to output a 1 or a 0.
 
+Pipeline
+  The highly structured sequence of operations in an AI system that dictates how raw input data is ingested, processed, modeled, and translated into an actionable output.
+
 Positional Encoding
   A mathematical mechanism in Transformers that tags every input token with a unique signature indicating its exact order in the sentence, allowing the model to process all words in parallel without losing sequential context.
 
@@ -246,6 +258,9 @@ Precision
 
 Precision-Recall (PR) Curve
   A graph that plots Precision against Recall across different probability thresholds. It is highly valuable for evaluating models trained on severely imbalanced datasets, visually demonstrating the tactical tradeoff between catching all threats and avoiding false alarms.
+
+Preprocessing
+  The step immediately following data ingestion where raw data is cleaned, normalized, or filtered to make it mathematically usable for the model.
 
 Pre-Training
   The initial, massive training phase of an LLM where it ingests vast amounts of unstructured internet text and plays a continuous game of "predict the next word" to learn grammar, facts, and logic.
@@ -279,6 +294,9 @@ Retrieval-Augmented Generation (RAG)
 
 ROC Curve (Receiver Operating Characteristic)
   A graph showing the performance of a classification model at all classification thresholds. It plots the True Positive Rate against the False Positive Rate. The area under this curve (AUC) provides an aggregate measure of performance across all possible thresholds.
+
+Search
+  A problem-solving AI technique used to explore a state space (such as a physical map or a logical decision tree) to find the optimal path to a designated goal.
 
 Self-Attention
   The core mechanism of a Transformer that allows the model to look at every single word in a document simultaneously and mathematically weigh how strongly each word relates to every other word, creating deep contextual understanding.

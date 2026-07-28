@@ -55,6 +55,11 @@ Because LLMs are statistical text generators, they exhibit unique failure modes 
 **Context Forgetting:** If an input prompt exceeds the model's {term}`Context Window`, the model will "forget" the instructions at the beginning of the prompt, leading to inconsistent outputs that fail to follow the Commander's intent.
 
 
+## Summary Infographic
+![LLM Workshop](../../figures/llm_workshop.png "LLM Workshop")
+
+<br>
+<hr width="100%" size="4" color="black">
 
 ## Knowledge Check & Practice Questions
 

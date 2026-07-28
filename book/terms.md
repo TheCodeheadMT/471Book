@@ -7,6 +7,9 @@ This glossary defines the foundational concepts introduced across the machine le
 1D-Convolutional Neural Network (1D-CNN)
   A deep learning architecture highly specialized for processing one-dimensional sequence data, such as raw time-series radio frequency (RF) signals in Electronic Warfare.
 
+Action
+  A specific, localized possibility for an agent to move to another state or manipulate its environment (e.g., move North, fire thruster).
+
 Action (ReAct)
   The step in the ReAct loop where the agent executes a specific, structured tool call (e.g., querying a database or calling an API) to interact with the external environment.
 
@@ -57,6 +60,9 @@ Bias (Statistical Error)
 
 Bias-Variance Tradeoff
   The fundamental tension in machine learning where decreasing a model's false assumptions ({term}`Bias (Statistical Error)`) typically increases its dangerous sensitivity to noise ({term}`Variance (Statistical Error)`), and vice versa. 
+
+Branching Factor
+  The number of successor actions available to an agent from a given node in a search tree, heavily influencing the time complexity of a search algorithm.
 
 Cascading Hallucination
   A failure mode unique to multi-agent systems where one agent hallucinates a fact or capability, and other agents subsequently accept that hallucination as truth, rapidly derailing the entire workflow or simulation.
@@ -148,11 +154,17 @@ Fine-Tuning
 Forward Propagation
   The process of pushing raw input data forward through the hidden layers of a neural network to generate a final prediction. It involves calculating the weighted sums and applying activation functions at each neuron in the sequence.
 
+Fringe
+  In a search algorithm, the frontier or collection of unexpanded nodes waiting to be explored.
+
 Generalization
   The ultimate goal of a machine learning model: the ability to learn the true underlying patterns of a dataset so successfully that it performs highly accurately on brand new, unseen data. 
 
 Gini Impurity
   A mathematical metric used by Decision Trees to measure how "mixed" or impure a node of data is. A score of 0 means perfect purity (the node contains only one class).
+
+Goal State
+  The target configuration or end condition that a rational agent is attempting to reach in a search problem.
 
 Gradient
   A mathematical vector of partial derivatives representing the direction of steepest ascent for the loss function.
@@ -235,6 +247,9 @@ Mean Squared Error (MSE)
 Naive Assumption (Independence Assumption)
   The core (and mathematically flawed) assumption in Naive Bayes that every feature in a dataset is completely independent of every other feature.
 
+Node
+  A discrete point or data structure. In a state space graph, it represents a single physical configuration. In a search tree, it represents an entire path or plan taken from the start state.
+
 Observation (ReAct)
   The step in the ReAct loop where the result of an external tool call is returned and injected back into the agent's context window, allowing the agent to evaluate the outcome of its action.
 
@@ -243,6 +258,9 @@ Overfitting
 
 Padding (Zero-Padding)
   The technique of adding a border of zero-value pixels around the edges of an input image before applying a convolution. This prevents the resulting feature map from shrinking and preserves edge information.
+
+Path Cost
+  A numerical value used in search problems to compare the effects (e.g., fuel, time, risk) of different possible sequences of actions.
 
 Perceptron
   The simplest historical form of an artificial neuron. It takes multiple inputs, calculates a weighted sum, adds a bias, and passes the result through a hard step-function to output a 1 or a 0.
@@ -307,6 +325,9 @@ ROC Curve (Receiver Operating Characteristic)
 Search
   A problem-solving AI technique used to explore a state space (such as a physical map or a logical decision tree) to find the optimal path to a designated goal.
 
+Search State
+  An abstracted representation of an environment that retains *only* the details and variables strictly necessary for an AI algorithm to plan a path or reach a goal.
+
 Self-Attention
   The core mechanism of a Transformer that allows the model to look at every single word in a document simultaneously and mathematically weigh how strongly each word relates to every other word, creating deep contextual understanding.
 
@@ -325,8 +346,17 @@ Sigmoid Function
 Software Agent
   An AI program that lacks physical actuators and exists entirely digitally, calculating results or taking actions based purely on data inputs.
 
+Start State
+  The initial configuration or state in which a rational agent begins a search problem or sequence of actions.
+
+State Space
+  The complete mathematical set of all possible states (configurations) that can exist within a given environment.
+
 Stride
   A hyperparameter defining how many pixels a convolution filter or pooling window shifts at a time as it slides across an image or feature map.
+
+Successor Function
+  The critical mapping mechanism in a search problem. It accepts a current state and a valid action, and returns the resulting next state alongside its associated path cost.
 
 Supervised Learning
   A machine learning paradigm where the algorithm is trained on historical data that already includes the correct answers (labels). It learns to map inputs to those known outputs.
@@ -372,6 +402,9 @@ Vector Embeddings
 
 Weights
   The learnable parameters ($w_i$) in a neural network that determine the importance or influence of a specific input feature on the final prediction.
+
+World State
+  A representation of an environment that includes every last physical detail (e.g., exact geometry, colors, irrelevant background noise). Typically too complex for efficient AI search, requiring abstraction.
 
 Zero-Shot Prompting
   Asking a Large Language Model to perform a task without providing it with any examples of the desired output in the prompt.

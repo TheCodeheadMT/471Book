@@ -17,6 +17,7 @@ sphinx:                                              # Options passed on to the 
     - sphinx_dropdown_toggle
     - sphinx_apa_references
     - sphinx_thebe 
+    - sphinxcontrib.mermaid
   config:
     language: en                                     # Defines language (English) of everything except the content itself. For Dutch: replace with `nl`, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
     html_js_files:

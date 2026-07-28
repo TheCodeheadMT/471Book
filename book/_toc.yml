@@ -18,6 +18,12 @@ parts:
     - file: lessons/3/ai_llm_workshop.md
       sections:
       - file: lessons/3/ai_llm_workshop_nb.ipynb
+    - file: lessons/4/problem_formulation.md
+      sections:
+      - file: lessons/4/problem_formulation_nb.ipynb
+    - file: lessons/5/search.md
+      sections:
+      - file: lessons/5/search_nb.ipynb
     - file: lessons/26/mlfoundations.md
       sections:
       - file: lessons/26/evaluating_performance.ipynb
@@ -75,6 +81,8 @@ parts:
     - file: exercises/L01.md
     - file: exercises/L02.md
     - file: exercises/L03.md
+    - file: exercises/L04.md
+    - file: exercises/L05.md
     - file: exercises/L26.md
     - file: exercises/L27.md
     - file: exercises/L28.md

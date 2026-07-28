@@ -19,6 +19,9 @@ Adjudicator Agent
 Adversarial Evasion
   A deployment-phase attack where an adversary subtly alters the physical environment or input data (e.g., using digital static or specialized camouflage) to mathematically force an already-trained AI model to make a highly confident, incorrect prediction.
 
+Agent
+  A system that processes information and produces an output from an input. It perceives its environment and takes actions to achieve a specific goal.
+
 Agentic AI
   An AI system endowed with agency—the capacity to autonomously plan, reason, use tools, and take actions over multiple steps to achieve a complex goal, rather than simply reacting to a single prompt.
 
@@ -27,6 +30,9 @@ Algorithmic Bias
 
 API (Application Programming Interface)
   A set of protocols that allows different software applications to communicate. In AI, APIs are used to send data (like raw text) to powerful cloud-hosted models (like LLMs) and securely receive the processed output.
+
+Artificial Intelligence (AI)
+  The study of how to make computers do things at which, at the moment, people are better (e.g., rapid pattern recognition, natural language processing, and complex decision-making).
 
 Artificial Neural Network (ANN)
   A computing system inspired by biological brains, consisting of interconnected nodes (neurons) organized in layers that automatically learn complex, non-linear representations of raw data.
@@ -54,6 +60,9 @@ Bias-Variance Tradeoff
 
 Cascading Hallucination
   A failure mode unique to multi-agent systems where one agent hallucinates a fact or capability, and other agents subsequently accept that hallucination as truth, rapidly derailing the entire workflow or simulation.
+
+Connectionism
+  A subdiscipline of AI popularized in the 1980s that abandoned explicit, programmed rules in favor of artificial neural networks that learn from training examples.
 
 Confusion Matrix
   A performance measurement table that visualizes exactly how a classification model succeeds or fails, categorizing predictions into True Positives, True Negatives, False Positives, and False Negatives. Crucial for weighing operational risks.
@@ -99,6 +108,9 @@ Encoder
 
 Epoch
   One complete pass of the entire training dataset through the neural network during the training phase.
+
+Expert System
+  An early form of Symbolic AI that attempts to mimic human expertise by utilizing an inference engine to process a massive knowledge base of hardcoded, explicit "if-then" rules.
 
 Explainable AI (XAI)
   A field of research and a set of mathematical tools (like SHAP) designed to make the internal mechanics and outputs of "black box" machine learning models understandable to human operators, ensuring trust and traceability.
@@ -148,6 +160,9 @@ Grounding
 Hallucinations
   A phenomenon where a Large Language Model (LLM) or generative AI generates false, fabricated, or nonsensical information but presents it with high confidence as if it were a verified fact. This occurs because the model is predicting statistically likely word sequences, not retrieving verified truth.
 
+Hardware Agent (Autonomous Robot)
+  An agent equipped with physical sensors (to perceive the environment) and physical actuators (to manipulate the environment).
+
 Hidden Layer
   A layer of artificial neurons situated between the input and output layers of a neural network. These layers are responsible for learning abstract, hidden features in the data.
 
@@ -160,6 +175,9 @@ Hyperplane
 Inference Latency
   The time it takes for a deployed neural network to process a single input (like a video frame) and output a prediction. Critical for autonomous edge devices tracking fast-moving targets.
 
+Inference Mechanism
+  The processing engine or program in a knowledge-based system that parses the declarative rules stored in the Knowledge Base to draw conclusions or answer queries.
+
 Instruct-Tuning
   The secondary training phase for LLMs where the model is fine-tuned on explicitly labeled prompt/response pairs. This transforms a base model into a highly obedient assistant capable of following specific tactical instructions.
 
@@ -168,6 +186,9 @@ Irreducible Error
 
 Kernel Trick
   A mathematical technique used by Support Vector Machines (SVMs) to project non-linear, complex data into higher dimensions where it can be easily sliced by a flat hyperplane.
+
+Knowledge Base (KB)
+  A centralized repository of declarative rules, logic, or data that is explicitly separated from the system's processing/inference mechanism, allowing the knowledge to be updated independently.
 
 Laplace Smoothing (Add-One Smoothing)
   A mathematical technique used in Naive Bayes to prevent the formula from collapsing to zero when the model encounters a feature (like a new vocabulary word) it has never seen before.
@@ -244,6 +265,9 @@ Recall (Sensitivity)
 Reconstruction Error
   The mathematical difference (often measured via MSE) between an original input and an Autoencoder's attempted reconstruction of it. Spikes in this error trigger anomaly alerts.
 
+Reflex Agent
+  An AI agent that makes decisions purely by reacting to current, immediate input/perceptions, without relying on internal memory of past events.
+
 Regularization
   A set of techniques (like {term}`Dropout` or {term}`Early Stopping`) used to mathematically penalize complex models to prevent them from overfitting the training data.
 
@@ -271,11 +295,17 @@ Short-Term Memory (Agentic)
 Sigmoid Function
   A mathematical function that squashes any real number into a valid probability value bounded strictly between 0.0 and 1.0. 
 
+Software Agent
+  An AI program that lacks physical actuators and exists entirely digitally, calculating results or taking actions based purely on data inputs.
+
 Stride
   A hyperparameter defining how many pixels a convolution filter or pooling window shifts at a time as it slides across an image or feature map.
 
 Supervised Learning
   A machine learning paradigm where the algorithm is trained on historical data that already includes the correct answers (labels). It learns to map inputs to those known outputs.
+
+Symbolic AI
+  An early paradigm of AI that relied exclusively on explicit, hardcoded logic and symbol processing (like `if-then` rules) rather than learning from data.
 
 Testing Set
   A portion of the dataset (usually 20%) that is strictly hidden from the machine learning algorithm during training. It is used as a final "combat simulation" to test how well the model generalizes to unseen data.
@@ -315,6 +345,7 @@ Vector Embeddings
 
 Weights
   The learnable parameters ($w_i$) in a neural network that determine the importance or influence of a specific input feature on the final prediction.
+
 
 
 ```

@@ -136,6 +136,9 @@ Feature Map
 Feedforward Architecture
   A neural network design where information moves in only one direction—from the input layer, through hidden layers, directly to the output layer—without looping back.
 
+Few-Shot Prompting
+  Providing an LLM with several examples of the desired input-output behavior within the prompt to guide its inference and establish a strict format before passing it new data.
+
 Filter (Kernel)
   A small grid of learnable weights used in a CNN that slides across an image to detect specific patterns, such as horizontal lines or color gradients.
 
@@ -268,6 +271,12 @@ Pre-Training
 Prior
   In Bayes' Theorem, the baseline, historical probability of a class occurring *before* any new evidence is observed.
 
+Prompt Engineering
+  The iterative process of designing, structuring, and refining input text to elicit optimal, accurate, and safe responses from a Large Language Model.
+
+Prompt Injection
+  A failure mode or cyber attack where malicious input is designed to bypass an LLM's safety filters, causing it to ignore its original system instructions and execute an unauthorized command.
+
 Random Forest
   A powerful ensemble model that builds hundreds of shallow Decision Trees and averages their predictions to achieve high accuracy while avoiding the overfitting trap of single trees.
 
@@ -363,6 +372,9 @@ Vector Embeddings
 
 Weights
   The learnable parameters ($w_i$) in a neural network that determine the importance or influence of a specific input feature on the final prediction.
+
+Zero-Shot Prompting
+  Asking a Large Language Model to perform a task without providing it with any examples of the desired output in the prompt.
 
 
 

@@ -15,6 +15,9 @@ parts:
     - file: lessons/2/anatomy_of_AI.md
       sections:
       - file: lessons/2/anatomy_of_AI_nb.ipynb
+    - file: lessons/3/ai_llm_workshop.md
+      sections:
+      - file: lessons/3/ai_llm_workshop_nb.ipynb
     - file: lessons/26/mlfoundations.md
       sections:
       - file: lessons/26/evaluating_performance.ipynb
@@ -71,6 +74,7 @@ parts:
     chapters:
     - file: exercises/L01.md
     - file: exercises/L02.md
+    - file: exercises/L03.md
     - file: exercises/L26.md
     - file: exercises/L27.md
     - file: exercises/L28.md

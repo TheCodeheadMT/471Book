@@ -63,7 +63,7 @@ The {term}`Knowledge Base (KB)`: A declarative database that stores facts, rules
 
 The {term}`Inference Mechanism`: The processing engine that uses the information in the Knowledge Base to draw conclusions, answer queries, or formulate plans.
 
-IBM's Watson (which famously defeated human champions on the quiz show Jeopardy!) as a prime example of a knowledge-based system. It utilized an inference engine to rapidly search a Knowledge Base containing four terabytes of data.
+IBM's Watson (which [famously defeated](https://www.youtube.com/watch?v=P18EdAKuC1U)  human champions on the quiz show Jeopardy!) as a prime example of a knowledge-based system. It utilized an inference engine to rapidly search a Knowledge Base containing four terabytes of data.
 
 Decoupling the knowledge from the processor is a massive operational advantage. If an adversary introduces a new type of radar jammer, engineers do not have to rewrite the entire AI targeting algorithm. They simply update the declarative facts in the Knowledge Base, and the existing Inference Mechanism automatically adapts its conclusions based on the new intelligence.
 

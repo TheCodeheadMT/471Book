@@ -178,7 +178,7 @@ Gradient
 Gradient Descent
   The optimization algorithm used to minimize a network's loss. It updates the network's weights iteratively by taking small mathematical steps in the opposite direction of the {term}`Gradient`.
 
-Greedy Best-First Search
+Greedy
   An informed search algorithm that expands the node that appears closest to the goal based entirely on the heuristic function ($h(n)$), ignoring the cost of the path taken so far. It is fast but heavily prone to suboptimal paths and getting trapped by obstacles.
 
 Grounding

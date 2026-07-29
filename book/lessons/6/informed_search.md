@@ -24,7 +24,7 @@ For a routing AI, a common heuristic is the **straight-line (Euclidean) distance
 
 ## Greedy Best-First Search
 
-{term}`Greedy Best-First Search` is an algorithm that makes decisions looking *only* forward. It evaluates nodes entirely based on the heuristic:
+{term}`Greedy` is an algorithm that makes decisions looking *only* forward. It evaluates nodes entirely based on the heuristic:
 
 **Evaluation Function:** $f(n) = h(n)$
 
@@ -32,14 +32,15 @@ The agent always moves to the adjacent waypoint that appears closest to the goal
 
 ```{mermaid}
 graph LR
-    S((Start)) -- Fuel Cost: 1 --> A((Waypoint A<br>h=2))
-    S -- Fuel Cost: 2 --> B((Waypoint B<br>h=5))
-    A -- Fuel Cost: 10 --> G((Goal<br>h=0))
-    B -- Fuel Cost: 2 --> G
+    S((Start)) -- "Fuel Cost: 1" --> A((Waypoint A<br>h=2))
+    S -- "Fuel Cost: 2" --> B((Waypoint B<br>h=5))
+    A -- "Fuel Cost: 10" --> G((Goal<br>h=0))
+    B -- "Fuel Cost: 2" --> G
 
-    classDef default fill:#f9f9f9,stroke:#333,stroke-width:2px;
-    classDef start fill:#d4edda,stroke:#28a745,stroke-width:2px;
-    classDef goal fill:#f8d7da,stroke:#dc3545,stroke-width:2px;
+    classDef default fill:#f9f9f9,stroke:#888,stroke-width:2px,color:#000;
+    classDef start fill:#d4edda,stroke:#28a745,stroke-width:2px,color:#000;
+    classDef goal fill:#f8d7da,stroke:#dc3545,stroke-width:2px,color:#000;
+    linkStyle default stroke:#a0a0a0,stroke-width:2px;
     class S start;
     class G goal;
 ```
@@ -76,8 +77,7 @@ The quality of an informed AI is entirely dependent on its heuristic.
 
 ---
 
-{admonition} Knowledge Check & Practice Questions
-:class: note
+## Knowledge Check & Practice Questions
 
 1. Explain why Greedy Best-First Search is highly susceptible to generating suboptimal paths in a complex tactical environment.
 2. If an AI is routing a supply convoy, and its heuristic function accidentally includes the time it takes to load the trucks (which has already happened), what happens to the A* algorithm?

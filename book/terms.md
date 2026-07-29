@@ -7,6 +7,9 @@ This glossary defines the foundational concepts introduced across the machine le
 1D-Convolutional Neural Network (1D-CNN)
   A deep learning architecture highly specialized for processing one-dimensional sequence data, such as raw time-series radio frequency (RF) signals in Electronic Warfare.
 
+A* Search
+  An optimal and complete informed search algorithm that selects the path minimizing the total estimated cost, calculated by adding the exact cost incurred so far and the estimated cost to the target ($f(n) = g(n) + h(n)$).
+
 Action
   A specific, localized possibility for an agent to move to another state or manipulate its environment (e.g., move North, fire thruster).
 
@@ -18,6 +21,9 @@ Activation Function
 
 Adjudicator Agent
   In multi-agent wargaming, an impartial referee AI that receives proposed actions from competing agents (Red/Blue teams), evaluates them against simulated physical rules or probabilities, and updates the shared environment.
+
+Admissible Heuristic
+  A heuristic that never overestimates the true cost to reach the goal. In tactical routing, assuming a UAV can fly in a perfect straight line (Euclidean distance) is admissible because physical obstacles will only make the actual flight path longer, never shorter.
 
 Adversarial Evasion
   A deployment-phase attack where an adversary subtly alters the physical environment or input data (e.g., using digital static or specialized camouflage) to mathematically force an already-trained AI model to make a highly confident, incorrect prediction.
@@ -172,6 +178,9 @@ Gradient
 Gradient Descent
   The optimization algorithm used to minimize a network's loss. It updates the network's weights iteratively by taking small mathematical steps in the opposite direction of the {term}`Gradient`.
 
+Greedy Best-First Search
+  An informed search algorithm that expands the node that appears closest to the goal based entirely on the heuristic function ($h(n)$), ignoring the cost of the path taken so far. It is fast but heavily prone to suboptimal paths and getting trapped by obstacles.
+
 Grounding
   The process of forcing an LLM to generate its response based strictly on verified, provided context (such as retrieved documents) rather than relying on its generalized, pre-trained memory. 
 
@@ -180,6 +189,9 @@ Hallucinations
 
 Hardware Agent (Autonomous Robot)
   An agent equipped with physical sensors (to perceive the environment) and physical actuators (to manipulate the environment).
+
+Heuristic
+  A mathematical, educated guess used to estimate the remaining cost from a current state to the goal state. It guides an AI's search process to explore promising paths first, vastly reducing the mathematical search space.
 
 Hidden Layer
   A layer of artificial neurons situated between the input and output layers of a neural network. These layers are responsible for learning abstract, hidden features in the data.
@@ -198,6 +210,9 @@ Inference Latency
 
 Inference Mechanism
   The processing engine or program in a knowledge-based system that parses the declarative rules stored in the Knowledge Base to draw conclusions or answer queries.
+
+Informed Search
+  A class of search algorithms that utilizes domain-specific knowledge (heuristics) to find solutions more efficiently than blind (uninformed) search methods.
 
 Instruct-Tuning
   The secondary training phase for LLMs where the model is fine-tuned on explicitly labeled prompt/response pairs. This transforms a base model into a highly obedient assistant capable of following specific tactical instructions.
@@ -252,6 +267,9 @@ Node
 
 Observation (ReAct)
   The step in the ReAct loop where the result of an external tool call is returned and injected back into the agent's context window, allowing the agent to evaluate the outcome of its action.
+
+Optimality
+  The guarantee that an AI search algorithm will find the absolute lowest-cost path to a goal state, assuming such a path exists.
 
 Overfitting
   A failure state (driven by high variance) where a model becomes so overly complex that it memorizes the random noise in its training data rather than learning the underlying tactical rules. It performs perfectly in training but fails on unseen data.

@@ -24,6 +24,9 @@ parts:
     - file: lessons/5/search.md
       sections:
       - file: lessons/5/search_nb.ipynb
+    - file: lessons/6/informed_search.md
+      sections:
+      - file: lessons/6/informed_search_nb.ipynb
     - file: lessons/26/mlfoundations.md
       sections:
       - file: lessons/26/evaluating_performance.ipynb

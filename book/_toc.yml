@@ -30,6 +30,9 @@ parts:
     - file: lessons/7/heuristics.md
       sections:
       - file: lessons/7/heuristics_nb.ipynb
+    - file: lessons/8/ai_adversarial_stochastic.md
+      sections:
+      - file: lessons/8/ai_adversarial_stochastic_nb.ipynb
     - file: lessons/26/mlfoundations.md
       sections:
       - file: lessons/26/evaluating_performance.ipynb
@@ -89,7 +92,9 @@ parts:
     - file: exercises/L03.md
     - file: exercises/L04.md
     - file: exercises/L05.md
+    - file: exercises/L06.md
     - file: exercises/L07.md
+    - file: exercises/L08.md
     - file: exercises/L26.md
     - file: exercises/L27.md
     - file: exercises/L28.md

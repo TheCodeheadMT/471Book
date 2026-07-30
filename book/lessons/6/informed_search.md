@@ -76,7 +76,8 @@ The quality of an informed AI is entirely dependent on its heuristic.
 * If $h(n)$ is **too high** (overestimating the cost), the heuristic is no longer admissible. The mathematical guarantee of optimality breaks down, and A* will confidently generate flawed, expensive routes—a major failure case in automated logistics or troop deployments.
 
 ---
-
+## Summary Infographic
+![Search](../../figures/Informed_Search_Tactical_Navigation_Guide.png "Informed Search")
 ## Knowledge Check & Practice Questions
 
 1. Explain why Greedy Best-First Search is highly susceptible to generating suboptimal paths in a complex tactical environment.

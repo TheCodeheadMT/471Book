@@ -28,6 +28,9 @@ Admissible Heuristic
 Adversarial Evasion
   A deployment-phase attack where an adversary subtly alters the physical environment or input data (e.g., using digital static or specialized camouflage) to mathematically force an already-trained AI model to make a highly confident, incorrect prediction.
 
+Adversarial Search
+  A class of search algorithms designed for competitive environments where multiple agents have conflicting goals, typically modeled as a zero-sum game.
+
 Agent
   A system that processes information and produces an output from an input. It perceives its environment and takes actions to achieve a specific goal.
 
@@ -132,6 +135,12 @@ Encoder
 
 Epoch
   One complete pass of the entire training dataset through the neural network during the training phase.
+
+Expected Value (EV)
+  The mathematical average of all possible outcomes of a chance event, calculated by multiplying each possible outcome by its probability of occurrence and summing the results.
+
+Expectimax
+  A decision-making algorithm used in stochastic environments. Instead of assuming an opponent will always make the worst possible move for the agent, it calculates the mathematically expected utility of chance events.
 
 Expert System
   An early form of Symbolic AI that attempts to mimic human expertise by utilizing an inference engine to process a massive knowledge base of hardcoded, explicit "if-then" rules.
@@ -280,6 +289,9 @@ Max Pooling
 Mean Squared Error (MSE)
   A common loss function used for regression tasks (predicting continuous numbers) that calculates the average squared difference between the predicted values and the actual target values.
 
+Minimax
+  A foundational adversarial decision-making algorithm where one agent (MAX) attempts to maximize a tactical score, while the opposing agent (MIN) acts perfectly to minimize that same score.
+
 Naive Assumption (Independence Assumption)
   The core (and mathematically flawed) assumption in Naive Bayes that every feature in a dataset is completely independent of every other feature.
 
@@ -396,6 +408,9 @@ Start State
 
 State Space
   The complete mathematical set of all possible states (configurations) that can exist within a given environment.
+
+Stochastic Environment
+  An environment where the outcomes of actions are not strictly deterministic; instead, actions have probabilistic results governed by chance (e.g., weather patterns, sensor degradation, or electronic warfare jamming success rates).
 
 Stride
   A hyperparameter defining how many pixels a convolution filter or pooling window shifts at a time as it slides across an image or feature map.

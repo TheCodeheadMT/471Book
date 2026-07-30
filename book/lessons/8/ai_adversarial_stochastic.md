@@ -11,7 +11,7 @@
 
 ## Introduction to Complex Environments
 
-In previous routing lessons, our {term}`Agent` operated in an environment that was static. The terrain did not change, and there were no opposing forces. In real-world tactical applications, environments are rarely so passive. 
+In previous lessons, our {term}`Agent` operated in an environment that was static. The terrain did not change, and there were no opposing forces. In real-world tactical applications, environments are rarely so passive. 
 
 We must account for two complex realities:
 1. **Adversarial Environments:** A rational enemy is actively trying to defeat the agent. 

@@ -104,7 +104,7 @@ A policy mathematically guarantees the agent knows the best response, no matter 
 
 Not all environments have an active adversary. Often, uncertainty comes from natural probability—a {term}`Stochastic Environment`. For example, deploying a jamming drone might have a 50% chance of success based on weather. Nature is not actively trying to defeat you; it simply operates on mathematical odds.
 
-To handle this, we use the {term}`Expectimax` algorithm. We replace the adversarial MIN nodes with CHANCE nodes. Instead of assuming the worst possible outcome, we calculate the {term}`Expected Value` (EV) by multiplying each outcome by its probability.
+To handle this, we use the {term}`Expectimax` algorithm. We replace the adversarial MIN nodes with CHANCE nodes. Instead of assuming the worst possible outcome, we calculate the {term}`Expected Value (EV)` by multiplying each outcome by its probability.
 
 ### Expectimax Tree Traversal
 

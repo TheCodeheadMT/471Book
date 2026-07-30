@@ -115,6 +115,9 @@ Decision Tree
 Deep Learning
   A subset of machine learning utilizing neural networks with many hidden layers (deep architectures) capable of autonomously engineering complex, hierarchical features from raw, unstructured data (like images or RF signals).
 
+Depth-Limited Search
+  A variation of Depth-First Search that imposes a strict maximum depth limit to prevent the algorithm from plunging down infinite paths, forcing it to backtrack once the limit is reached.
+
 Document Chunking
   The strategy of splitting massive text documents into smaller, overlapping segments (chunks) so they can be individually embedded, searched, and fit within an LLM's limited context window.
 
@@ -180,6 +183,9 @@ Filter (Kernel)
 
 Fine-Tuning
   An advanced form of transfer learning where the upper layers of a pre-trained neural network are "unfrozen" and trained on domain-specific data to adapt the model to new geometric realities (like shifting from ground-level to top-down satellite imagery).
+
+Follow-On Effects
+  The downstream, cascading consequences of an agent's action in a sequential environment, often extending beyond the immediate state transition.
 
 Forward Propagation
   The process of pushing raw input data forward through the hidden layers of a neural network to generate a final prediction. It involves calculating the weighted sums and applying activation functions at each neuron in the sequence.
@@ -318,6 +324,9 @@ Perceptron
 
 Pipeline
   The highly structured sequence of operations in an AI system that dictates how raw input data is ingested, processed, modeled, and translated into an actionable output.
+
+Policy
+  A comprehensive strategy or mapping that dictates exactly what action an agent should take from any given state in its environment.
 
 Positional Encoding
   A mathematical mechanism in Transformers that tags every input token with a unique signature indicating its exact order in the sentence, allowing the model to process all words in parallel without losing sequential context.
@@ -477,6 +486,9 @@ World State
 
 Zero-Shot Prompting
   Asking a Large Language Model to perform a task without providing it with any examples of the desired output in the prompt.
+
+Zero-Sum Game
+  A mathematical representation of a situation in adversarial search (like Minimax) where one agent's gain is exactly balanced by the opponent's loss.
 
 
 

@@ -50,6 +50,16 @@ While L1 is primarily conceptual, the evaluation of an agent's performance relie
 | O(b^s)$ | Time/Space Complexity (BFS): The Big-O metric for Breadth-First Search, which grows exponentially with the depth of the shallowest goal. |
 | $O(b^{C^*/\epsilon})$ | Time/Space Complexity (UCS): The Big-O metric for Uniform Cost Search, derived from the branching factor exponentially raised to the "effective depth" of the cost contours. |
 
+## L7: Heuristics
+### Admissibility and Consistency
+
+| Notation | Definition |
+| --- | --- |
+| $h(n)$ | The heuristic function. The estimated cost from the current node $n$ to the goal. |
+| $h^*(n)$ | The true, exact cost from the current node $n$ to the goal. |
+| $\text{cost}(A \to C)$ |  The exact step cost of traveling directly from node A to neighboring node C. |
+| $\max(h_a, h_b)$ | A method of creating a superior heuristic by taking the maximum value of two admissible heuristics at every node. |
+
 ## L27: ML Foundations
 ### Confusion Matrix
 | Notation | Definition |

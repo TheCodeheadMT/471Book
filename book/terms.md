@@ -23,7 +23,7 @@ Adjudicator Agent
   In multi-agent wargaming, an impartial referee AI that receives proposed actions from competing agents (Red/Blue teams), evaluates them against simulated physical rules or probabilities, and updates the shared environment.
 
 Admissible Heuristic
-  A heuristic that never overestimates the true cost to reach the goal. In tactical routing, assuming a UAV can fly in a perfect straight line (Euclidean distance) is admissible because physical obstacles will only make the actual flight path longer, never shorter.
+  A heuristic that never overestimates the true cost to reach the goal ($0 \le h(n) \le h^*(n)$). If a heuristic is admissible, A* applied to a Search Tree is mathematically guaranteed to find the optimal path.
 
 Adversarial Evasion
   A deployment-phase attack where an adversary subtly alters the physical environment or input data (e.g., using digital static or specialized camouflage) to mathematically force an already-trained AI model to make a highly confident, incorrect prediction.
@@ -70,11 +70,20 @@ Bias-Variance Tradeoff
 Branching Factor
   The number of successor actions available to an agent from a given node in a search tree, heavily influencing the time complexity of a search algorithm.
 
+Breadth-First Search (BFS)
+  An uninformed search algorithm that explores the state space identically in all directions, layer-by-layer. It utilizes a FIFO queue, ensuring the shallowest nodes are expanded first. 
+
 Cascading Hallucination
   A failure mode unique to multi-agent systems where one agent hallucinates a fact or capability, and other agents subsequently accept that hallucination as truth, rapidly derailing the entire workflow or simulation.
 
+Completeness
+  A property of an AI search algorithm that indicates whether the algorithm is mathematically guaranteed to eventually find a solution if one exists within the state space.
+
 Connectionism
   A subdiscipline of AI popularized in the 1980s that abandoned explicit, programmed rules in favor of artificial neural networks that learn from training examples.
+
+Consistency
+  A property of a heuristic where the estimated cost to the goal from node A is no greater than the step cost to a neighboring node C, plus the estimated cost from C to the goal ($h(A) \le \text{cost}(A \to C) + h(C)$). If consistent, A* Graph Search is guaranteed to be optimal.
 
 Confusion Matrix
   A performance measurement table that visualizes exactly how a classification model succeeds or fails, categorizing predictions into True Positives, True Negatives, False Positives, and False Negatives. Crucial for weighing operational risks.
@@ -105,6 +114,9 @@ Deep Learning
 
 Document Chunking
   The strategy of splitting massive text documents into smaller, overlapping segments (chunks) so they can be individually embedded, searched, and fit within an LLM's limited context window.
+
+Dominance
+  A method of comparing heuristic quality. If heuristic A is mathematically greater than or equal to heuristic B for every node in the state space ($h_a(n) \ge h_b(n)$), then A dominates B. A dominant heuristic guarantees A* explores fewer nodes.
 
 Dropout
   A regularization technique where a random percentage of neurons in a layer are temporarily disabled during each training step. This prevents the network from relying on specific neurons to memorize noise, forcing it to learn robust, generalized features.
@@ -151,6 +163,9 @@ Feedforward Architecture
 Few-Shot Prompting
   Providing an LLM with several examples of the desired input-output behavior within the prompt to guide its inference and establish a strict format before passing it new data.
 
+FIFO (First-In, First-Out) Queue
+  A data structure where the oldest added item is the first one removed. It is used to manage the frontier in Breadth-First Search, causing the algorithm to explore in shallow tiers.
+
 Filter (Kernel)
   A small grid of learnable weights used in a CNN that slides across an image to detect specific patterns, such as horizontal lines or color gradients.
 
@@ -162,6 +177,9 @@ Forward Propagation
 
 Fringe
   In a search algorithm, the frontier or collection of unexpanded nodes waiting to be explored.
+
+Frontier
+  (Also known as the Fringe). The collection of all unexplored nodes that the AI agent has discovered but not yet expanded. How this data structure is managed dictates the search algorithm's tactical behavior.
 
 Generalization
   The ultimate goal of a machine learning model: the ability to learn the true underlying patterns of a dataset so successfully that it performs highly accurately on brand new, unseen data. 
@@ -241,6 +259,9 @@ Learning
 Learning Rate
   A hyperparameter ($\alpha$) that dictates how large of a step the network takes during {term}`Gradient Descent`. If it is too large, the network overcorrects erratically; if it is too small, learning is painfully slow.
 
+LIFO (Last-In, First-Out) Stack
+  A data structure where the most recently added item is the first one removed. It is used to manage the frontier in Depth-First Search, causing the algorithm to plunge as deeply as possible down a single path.
+
 Likelihood
   In Bayes' Theorem, the probability of observing a specific piece of evidence assuming that a particular class is true.
 
@@ -307,6 +328,9 @@ Pre-Training
 Prior
   In Bayes' Theorem, the baseline, historical probability of a class occurring *before* any new evidence is observed.
 
+Priority Queue
+  A data structure that manages nodes based on a specific numerical priority rather than the order they were inserted. In Uniform Cost Search, nodes are prioritized strictly by the lowest cumulative path cost.
+
 Prompt Engineering
   The iterative process of designing, structuring, and refining input text to elicit optimal, accurate, and safe responses from a Large Language Model.
 
@@ -364,6 +388,9 @@ Sigmoid Function
 Software Agent
   An AI program that lacks physical actuators and exists entirely digitally, calculating results or taking actions based purely on data inputs.
 
+Space Complexity
+  A mathematical Big-O representation of how much maximum memory (RAM) an algorithm requires during its execution, usually dictated by the maximum size of the frontier.
+
 Start State
   The initial configuration or state in which a rational agent begins a search problem or sequence of actions.
 
@@ -388,6 +415,9 @@ Testing Set
 Thought (ReAct)
   The step in the ReAct loop where the agent explicitly articulates its internal reasoning, assessing the current situation and determining what action to take next.
 
+Time Complexity
+  A mathematical Big-O representation of how long an algorithm takes to find a solution, typically measured by the total number of nodes generated or expanded in the search tree.
+
 Tokenization
   The process of chopping raw text down into sub-word chunks (tokens) and translating them into mathematical ID numbers so they can be processed by a neural network.
 
@@ -405,6 +435,12 @@ Translation Invariance
 
 Underfitting (High Bias)
   A failure state where a model is too rigid or simple to learn the underlying patterns in the training data, resulting in poor predictive performance across the board.
+
+Uninformed Search
+  A class of search algorithms that explores a state space blindly, having no knowledge of where the goal is located other than the start state, valid actions, and path costs.
+
+Uniform Cost Search (UCS)
+  An uninformed search algorithm that expands the node with the lowest cumulative path cost ($g(n)$) using a Priority Queue. It is complete and guaranteed to find the optimal path.
 
 Unsupervised Learning
   A machine learning paradigm where the algorithm is given raw, unlabeled data and must autonomously discover hidden structures, clusters, or patterns on its own.

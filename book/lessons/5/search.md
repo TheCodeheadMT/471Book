@@ -120,6 +120,13 @@ Figure 3: Even though S -> B -> G is only 2 steps (BFS would pick this), UCS pic
 
 **Space Complexity:** $O(b^{C^*/\epsilon})$. Like BFS, UCS explores in all directions and is highly memory intensive.
 
+
+## Summary Infographic
+![Search](../../figures/search.png "Search")
+
+<br>
+<hr width="100%" size="4" color="black">
+
 ## Knowledge Check & Practice Questions
 
 1. Which search algorithm operates using a FIFO (First-In, First-Out) Queue?

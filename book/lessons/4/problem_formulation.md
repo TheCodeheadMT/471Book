@@ -110,6 +110,13 @@ graph TD
 
 Because search trees contain massive repeated structure, we rarely build the whole tree in memory. We generate it step-by-step using a {term}`Fringe` (the frontier of unexpanded nodes) and a specific exploration strategy.
 
+
+## Summary Infographic
+![Problem Formulation](../../figures/problem_formulation.png "Problem Formulation")
+
+<br>
+<hr width="100%" size="4" color="black">
+
 ## Knowledge Check & Practice Questions
 
 1. In problem formulation, what is the difference between the World State and the Search State?

@@ -27,6 +27,9 @@ parts:
     - file: lessons/6/informed_search.md
       sections:
       - file: lessons/6/informed_search_nb.ipynb
+    - file: lessons/7/heuristics.md
+      sections:
+      - file: lessons/7/heuristics_nb.ipynb
     - file: lessons/26/mlfoundations.md
       sections:
       - file: lessons/26/evaluating_performance.ipynb
@@ -86,6 +89,7 @@ parts:
     - file: exercises/L03.md
     - file: exercises/L04.md
     - file: exercises/L05.md
+    - file: exercises/L07.md
     - file: exercises/L26.md
     - file: exercises/L27.md
     - file: exercises/L28.md

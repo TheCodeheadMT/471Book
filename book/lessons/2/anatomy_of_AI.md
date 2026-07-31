@@ -50,7 +50,7 @@ Different tactical problems require different methodologies within the modeling 
 
 {term}`Learning` Algorithms (Pattern Recognition): Used when the rules are too complex to program manually, so the system must adapt by changing its behavior based on training examples. Example: Training a Convolutional Neural Network (CNN) on thermal images to detect camouflaged armor.
 
-{term}`Inference` Engines (Knowledge-Based Reasoning): Used when the system leverages explicit rules (like first-order logic) to deduce facts from current evidence. Example: An {term}Expert System that cross-references a detected radar frequency to infer the model of an enemy SAM site.
+{term}`Inference` Engines (Knowledge-Based Reasoning): Used when the system leverages explicit rules (like first-order logic) to deduce facts from current evidence. Example: An {term}`Expert System` that cross-references a detected radar frequency to infer the model of an enemy SAM site.
 
 
 ![Anatomy of AI](../../figures/anatomy_of_AI.png "Anatomy of AI")

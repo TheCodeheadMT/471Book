@@ -28,6 +28,16 @@ When evaluating these algorithms, we measure four properties:
 
 * **{term}`Space Complexity`**: How much memory does it require?
 
+### Search Space Parameters
+
+To calculate time and space complexity mathematically, we define the search space using three critical parameters:
+
+* **Branching Factor ($b$)**: The maximum or average number of valid successor actions available to the agent from any given node.
+
+* **Maximum Depth ($m$)**: The absolute maximum depth of the search tree (number of steps from the root to the deepest possible state).
+
+* **Depth of Shallowest Solution ($s$)**: The depth level where the easiest, shortest possible path to a goal state exists.
+
 ## Depth-First Search (DFS)
 
 Depth-First Search (DFS) pushes as far forward as possible down a single path until it hits a dead end (a leaf node). If it hits a dead end, it retreats to the last intersection and tries the next path.
@@ -55,7 +65,9 @@ Figure 1: DFS dives straight down the left-most path (S -> A -> C -> G) before e
 
 **Optimality:** No. It simply finds the "left-most" solution, regardless of how much fuel or time it costs.
 
-**Space Complexity:** $O(bm)$. This is DFS's only major strength. It is highly memory efficient because it only needs to store the current path to the root.
+**Time Complexity:** $O(b^m)$. In the worst-case scenario, DFS might have to explore the entire massive depth of the tree before retreating to find the goal.
+
+**Space Complexity:** $O(bm)$. This is DFS's only major strength. It is highly memory efficient because its LIFO stack only needs to store the current path back to the root.
 
 ---
 
@@ -85,7 +97,9 @@ Figure 2: BFS explores in shallow tiers. It will expand Start, then fully evalua
 
 **Optimality:** Only if all costs are 1. BFS finds the path with the fewest actions, but ignores path costs (like fuel or threat levels).
 
-**Space Complexity:** $O(b^s)$. This is BFS's fatal flaw. Because it must hold the entire bottom tier of the search tree in memory, it will quickly crash the computer on large maps.
+**Time Complexity:** $O(b^s)$. Because it expands tier-by-tier, the time required grows exponentially based on how deep the shallowest goal is.
+
+**Space Complexity:** $O(b^s)$. This is BFS's fatal flaw. Because its FIFO queue must hold the entire bottom tier of the search tree in memory to progress, it will quickly crash the computer's RAM on large, complex maps.
 
 ---
 
@@ -118,8 +132,7 @@ Figure 3: Even though S -> B -> G is only 2 steps (BFS would pick this), UCS pic
 
 **Optimality:** Yes. UCS is guaranteed to find the absolute cheapest path to the goal.
 
-**Space Complexity:** $O(b^{C^*/\epsilon})$. Like BFS, UCS explores in all directions and is highly memory intensive.
-
+**Time & Space Complexity:** $O(b^{C^*/\epsilon})$. Like BFS, UCS explores in all directions and must store the massive frontiers in memory. The complexity is determined by the branching factor exponentially raised to the "effective depth" of the cost contours.
 
 ## Summary Infographic
 ![Search](../../figures/search.png "Search")

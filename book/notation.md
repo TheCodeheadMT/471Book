@@ -29,19 +29,12 @@ While L1 is primarily conceptual, the evaluation of an agent's performance relie
 | $w_t$ | The next predicted word (or token) at time step $t$. |
 | $P(w_t \mid w_1, \dots, w_{t-1})$ | The mathematical probability that a specific word $w_t$ comes next, given the entire sequence of previous words in the context window. |
 
-## L4: Problem Formulation
-### Search Algorithm Properties
-| Notation | Definition |
-| --- | --- | 
-| $b$ | Branching Factor: The average number of successor options available to an agent from any given node in a search tree. |
-| $m$ | Maximum Depth: The maximum depth of the search tree (number of steps from the root to the deepest possible state). |
-| $O(b^m)$ | Time Complexity: The Big-O mathematical representation of the total number of nodes in the entire search tree. |
-| $O(bm)$ | Space Complexity (DFS): The memory required by Depth-First Search, as it only stores the current path (siblings up to the root) in its fringe. |
-
 ## L5: Uninformed Search
 ### Space and Time Complexity
 | Notation | Definition |
 | --- | --- | 
+| $b$ | Branching Factor: The average number of successor options available to an agent from any given node in a search tree. |
+| $m$ | Maximum Depth: The maximum depth of the search tree (number of steps from the root to the deepest possible state). |
 | $s$ | Shallowest Solution Depth: The depth level of the shallowest goal state in the search tree. Used in BFS calculations. |
 | $C^*$ | Optimal Cost: The total mathematical cost of the absolutely cheapest path to the goal. Used in UCS calculations. |
 | $\epsilon$ | Minimum Arc Cost: The smallest possible cost of making a single move/action in the environment. UCS relies on this being greater than 0. |

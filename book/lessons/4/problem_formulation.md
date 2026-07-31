@@ -18,7 +18,7 @@ A formalized {term}`Search` problem consists of four core components:
 
 * {term}`State Space`: The set of all possible states in the environment.
 
-* {term}`Successor Function`: The rules of movement. It takes the current state and a desired {term}Action as input, and returns the resulting state and the associated path cost.
+* {term}`Successor Function`: The rules of movement. It takes the current state and a desired {term}`Action` as input, and returns the resulting state and the associated path cost.
 
 * {term}`Start State` & {term}`Goal State`: Where the agent begins, and the specific condition it is trying to reach (the Goal Test).
 

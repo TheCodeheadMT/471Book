@@ -11,7 +11,7 @@ A* Search
   An optimal and complete informed search algorithm that selects the path minimizing the total estimated cost, calculated by adding the exact cost incurred so far and the estimated cost to the target ($f(n) = g(n) + h(n)$).
 
 Action
-  A specific, localized possibility for an agent to move to another state or manipulate its environment (e.g., move North, fire thruster).
+  A specific, localized possibility for an agent to move to another state or manipulate its environment (e.g., move North, fire thruster, block IP).
 
 Action (ReAct)
   The step in the ReAct loop where the agent executes a specific, structured tool call (e.g., querying a database or calling an API) to interact with the external environment.
@@ -117,6 +117,9 @@ Deep Learning
 
 Depth-Limited Search
   A variation of Depth-First Search that imposes a strict maximum depth limit to prevent the algorithm from plunging down infinite paths, forcing it to backtrack once the limit is reached.
+
+Discount Factor
+  A mathematical multiplier ($\gamma$) bounded between 0 and 1 used in reinforcement learning and MDPs to value near-term rewards more heavily than distant future rewards, ensuring that infinite operational loops converge to a finite mathematical value.
 
 Document Chunking
   The strategy of splitting massive text documents into smaller, overlapping segments (chunks) so they can be individually embedded, searched, and fit within an LLM's limited context window.
@@ -289,6 +292,12 @@ Long-Term Memory (Agentic)
 Loss Function (Cost Function)
   A mathematical function that evaluates how far off a network's predictions are from the true targets. The network's entire training goal is to minimize this value.
 
+Markov Decision Process (MDP)
+  A mathematical framework for modeling decision-making in stochastic environments where outcomes are partly random and partly under the control of a decision-maker. It is defined by a set of states, actions, transition probabilities, and reward functions.
+
+Markov Property
+  The foundational assumption in MDPs that the future state depends strictly and solely on the current state and the current action taken, and is completely independent of the past sequence of events that led to the current state.
+
 Max Pooling
   A downsampling operation commonly used in CNNs that slides a window across a feature map, keeping only the most prominent signal (the maximum value) while discarding the rest. This reduces computational load and provides translation invariance.
 
@@ -325,7 +334,7 @@ Perceptron
 Pipeline
   The highly structured sequence of operations in an AI system that dictates how raw input data is ingested, processed, modeled, and translated into an actionable output.
 
-Policy
+Policy (MDP)
   A comprehensive strategy or mapping that dictates exactly what action an agent should take from any given state in its environment.
 
 Positional Encoding
@@ -381,6 +390,9 @@ ReLU (Rectified Linear Unit)
 
 Retrieval-Augmented Generation (RAG)
   An AI architecture that enhances a Large Language Model's responses by first retrieving verified facts from an external database and injecting them into the model's prompt, effectively grounding the AI in proprietary or real-time intelligence.
+
+Reward Function
+  The immediate numerical feedback $R(s,a,s')$ an agent receives from the environment after transitioning from state $s$ to state $s'$ due to executing action $a$.
 
 ROC Curve (Receiver Operating Characteristic)
   A graph showing the performance of a classification model at all classification thresholds. It plots the True Positive Rate against the False Positive Rate. The area under this curve (AUC) provides an aggregate measure of performance across all possible thresholds.
@@ -454,6 +466,9 @@ Transfer Learning
 Transformer
   A breakthrough neural network architecture that relies heavily on self-attention and positional encoding to process sequential data (like text) entirely in parallel, forming the architectural foundation of all modern Large Language Models.
 
+Transition Function
+  The mathematically defined probability $P(s' \mid s,a)$ (or $T(s,a,s')$) that executing a specific action $a$ in a current state $s$ will successfully lead to the resulting state $s'$.
+
 Translation Invariance
   The ability of a neural network (particularly a CNN using pooling) to recognize a target regardless of where it physically shifted or moved within the camera frame.
 
@@ -489,7 +504,5 @@ Zero-Shot Prompting
 
 Zero-Sum Game
   A mathematical representation of a situation in adversarial search (like Minimax) where one agent's gain is exactly balanced by the opponent's loss.
-
-
 
 ```

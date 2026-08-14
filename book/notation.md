@@ -53,6 +53,21 @@ While L1 is primarily conceptual, the evaluation of an agent's performance relie
 | $\text{cost}(A \to C)$ |  The exact step cost of traveling directly from node A to neighboring node C. |
 | $\max(h_a, h_b)$ | A method of creating a superior heuristic by taking the maximum value of two admissible heuristics at every node. |
 
+## L11: Markov Decision Process
+### MDP Parameters
+| Notation | Definition |
+| --- | --- |
+| $S$ | The set of all possible states in the environment. |
+| $A$ | The set of all available actions the agent can take. |
+| $s$ | The current state the agent occupies. |
+| $s'$ | The resulting successor state after an action is taken. |
+| $P(s' \mid s,a)$ | The Transition Function (also written as $T(s,a,s')$). The exact probability of arriving in state $s'$ given that the agent took action $a$ in state $s$. |
+| $R(s,a,s')$ | The Reward Function. The immediate numerical reward (or penalty) received after making the transition from $s$ to $s'$. |\
+| $\gamma$ | The Discount Factor (Gamma). A multiplier between 0 and 1 used to exponentially decay the value of future rewards. |
+| $\pi^*$ | The Optimal Policy. The mathematically proven best action to take in every single state to maximize long-term expected reward. |
+| $U([r_0, r_1, \dots])$ | The total discounted utility calculated over a sequence of rewards. Evaluated as $r_0 + \gamma r_1 + \gamma^2 r_2 \dots$ |
+
+
 ## L27: ML Foundations
 ### Confusion Matrix
 | Notation | Definition |

@@ -89,6 +89,9 @@ parts:
     - file: lessons/38/ml_workshop.md
       sections: 
       - file: lessons/38/ml_workshop_nb.ipynb
+  - caption: Worksheets
+    chapters:
+      - file: worksheets/worksheets.md
   - caption: Examples
     chapters:
     - file: exercises/L01.md
@@ -99,6 +102,7 @@ parts:
     - file: exercises/L06.md
     - file: exercises/L07.md
     - file: exercises/L08.md
+    - file: exercises/L11.md
     - file: exercises/L26.md
     - file: exercises/L27.md
     - file: exercises/L28.md

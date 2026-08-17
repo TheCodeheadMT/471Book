@@ -53,7 +53,7 @@ While L1 is primarily conceptual, the evaluation of an agent's performance relie
 | $\text{cost}(A \to C)$ |  The exact step cost of traveling directly from node A to neighboring node C. |
 | $\max(h_a, h_b)$ | A method of creating a superior heuristic by taking the maximum value of two admissible heuristics at every node. |
 
-## L11: Markov Decision Process
+## L11: Markov Decision Process I
 ### MDP Parameters
 | Notation | Definition |
 | --- | --- |
@@ -66,6 +66,19 @@ While L1 is primarily conceptual, the evaluation of an agent's performance relie
 | $\gamma$ | The Discount Factor (Gamma). A multiplier between 0 and 1 used to exponentially decay the value of future rewards. |
 | $\pi^*$ | The Optimal Policy. The mathematically proven best action to take in every single state to maximize long-term expected reward. |
 | $U([r_0, r_1, \dots])$ | The total discounted utility calculated over a sequence of rewards. Evaluated as $r_0 + \gamma r_1 + \gamma^2 r_2 \dots$ |
+
+## L12: Markov Decision Process II
+### MDP (Part 2)**
+| Notation | Definition |
+| --- | --- |
+| $\pi(s)$ | A policy mapping state $s$ to an action $a$. |
+| $\pi(a\vert{}s)$ | A stochastic policy representing the probability of taking action $a$ given state $s$. |
+| $G_t$ | The expected discounted return starting from time step $t$. |
+| $V^\pi(s)$ | The State-Value Function for state $s$ under policy $\pi$. |
+| $Q^\pi(s, a)$ | The Action-Value (Q-Value) Function for taking action $a$ in state $s$ under policy $\pi$. |
+| $V^*(s)$ | The optimal State-Value Function. |
+| $Q^*(s, a)$ | The optimal Action-Value Function. |
+| $\pi^*$ | The absolute optimal policy for a given MDP. |
 
 
 ## L27: ML Foundations

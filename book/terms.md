@@ -16,6 +16,9 @@ Action
 Action (ReAct)
   The step in the ReAct loop where the agent executes a specific, structured tool call (e.g., querying a database or calling an API) to interact with the external environment.
 
+Action-Value Function
+  The mathematical expected return achieved after taking a specific action $a$ in state $s$, and then strictly following policy $\pi$ for all subsequent steps. It is used to directly compare different actions available in the same state.
+
 Activation Function
   The mathematical "gate" in an artificial neuron that determines whether, and how strongly, the neuron fires. It introduces non-linearity into neural networks. *(Examples: Sigmoid, ReLU).*
 
@@ -82,14 +85,14 @@ Cascading Hallucination
 Completeness
   A property of an AI search algorithm that indicates whether the algorithm is mathematically guaranteed to eventually find a solution if one exists within the state space.
 
+Confusion Matrix
+  A performance measurement table that visualizes exactly how a classification model succeeds or fails, categorizing predictions into True Positives, True Negatives, False Positives, and False Negatives. Crucial for weighing operational risks.
+
 Connectionism
   A subdiscipline of AI popularized in the 1980s that abandoned explicit, programmed rules in favor of artificial neural networks that learn from training examples.
 
 Consistency
   A property of a heuristic where the estimated cost to the goal from node A is no greater than the step cost to a neighboring node C, plus the estimated cost from C to the goal ($h(A) \le \text{cost}(A \to C) + h(C)$). If consistent, A* Graph Search is guaranteed to be optimal.
-
-Confusion Matrix
-  A performance measurement table that visualizes exactly how a classification model succeeds or fails, categorizing predictions into True Positives, True Negatives, False Positives, and False Negatives. Crucial for weighing operational risks.
 
 Context Window
   The hard mathematical limit on the maximum number of tokens (words/sub-words) a Large Language Model can process in a single request. In agentic AI, this serves as the agent's Short-Term Memory.
@@ -106,17 +109,20 @@ Cosine Similarity
 Data Poisoning
   A training-phase attack where an adversary infiltrates a data pipeline and subtly alters the training examples or labels, causing the AI to learn a malicious, hidden rule (a "backdoor") that the adversary can exploit later in combat.
 
-Decoder
-  The second half of an Autoencoder that attempts to decompress the latent space bottleneck back into the original data format.
-
 Decision Tree
   A supervised learning model that classifies data by recursively splitting it into branches based on the feature that best purifies the resulting groups (often measured by {term}`Gini Impurity`).
+
+Decoder
+  The second half of an Autoencoder that attempts to decompress the latent space bottleneck back into the original data format.
 
 Deep Learning
   A subset of machine learning utilizing neural networks with many hidden layers (deep architectures) capable of autonomously engineering complex, hierarchical features from raw, unstructured data (like images or RF signals).
 
 Depth-Limited Search
   A variation of Depth-First Search that imposes a strict maximum depth limit to prevent the algorithm from plunging down infinite paths, forcing it to backtrack once the limit is reached.
+
+Deterministic Policy
+  A policy that maps each specific state to exactly one single, definitive action.
 
 Discount Factor
   A mathematical multiplier ($\gamma$) bounded between 0 and 1 used in reinforcement learning and MDPs to value near-term rewards more heavily than distant future rewards, ensuring that infinite operational loops converge to a finite mathematical value.
@@ -141,6 +147,9 @@ Encoder
 
 Epoch
   One complete pass of the entire training dataset through the neural network during the training phase.
+
+Expected Return ($G$)
+  The cumulative sum of all discounted future rewards an agent expects to accumulate starting from a given time step.
 
 Expected Value (EV)
   The mathematical average of all possible outcomes of a chance event, calculated by multiplying each possible outcome by its probability of occurrence and summing the results.
@@ -316,6 +325,9 @@ Node
 Observation (ReAct)
   The step in the ReAct loop where the result of an external tool call is returned and injected back into the agent's context window, allowing the agent to evaluate the outcome of its action.
 
+Optimal State-Value Function
+  The maximum expected discounted return achievable from each state, assuming the agent takes the best possible actions from that state onward until termination.
+
 Optimality
   The guarantee that an AI search algorithm will find the absolute lowest-cost path to a goal state, assuming such a path exists.
 
@@ -430,8 +442,14 @@ Start State
 State Space
   The complete mathematical set of all possible states (configurations) that can exist within a given environment.
 
+State-Value Function
+  The expected return an agent will accumulate starting in state $s$ and strictly following policy $\pi$ until the episode terminates.
+
 Stochastic Environment
   An environment where the outcomes of actions are not strictly deterministic; instead, actions have probabilistic results governed by chance (e.g., weather patterns, sensor degradation, or electronic warfare jamming success rates).
+
+Stochastic Policy
+  A policy that assigns mathematical probabilities to various actions available in a state, rather than prescribing a single definitive action.
 
 Stride
   A hyperparameter defining how many pixels a convolution filter or pooling window shifts at a time as it slides across an image or feature map.
@@ -504,5 +522,4 @@ Zero-Shot Prompting
 
 Zero-Sum Game
   A mathematical representation of a situation in adversarial search (like Minimax) where one agent's gain is exactly balanced by the opponent's loss.
-
 ```

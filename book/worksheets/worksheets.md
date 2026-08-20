@@ -9,8 +9,33 @@
     .btn-outline-primary:visited {
         color: inherit !important; 
     }
+    
+    /* --- DARK MODE TABLE FIXES --- */
+    
+    /* Targets OS-level dark mode preferences */
+    @media (prefers-color-scheme: dark) {
+        .table-striped > tbody > tr:nth-of-type(odd) > * {
+            background-color: rgba(255, 255, 255, 0.05) !important;
+            color: inherit !important;
+        }
+        .table-light th {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: inherit !important;
+        }
+    }
+    
+    /* Targets manual dark mode toggles (common in Sphinx/Jupyter Book) */
+    html[data-theme="dark"] .table-striped > tbody > tr:nth-of-type(odd) > *,
+    body[data-theme="dark"] .table-striped > tbody > tr:nth-of-type(odd) > * {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+        color: inherit !important;
+    }
+    html[data-theme="dark"] .table-light th,
+    body[data-theme="dark"] .table-light th {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: inherit !important;
+    }
 </style>
-
 
 <div style="margin-bottom: 20px;">
     <a href="https://github.com/USAFADFCS/CS471_Intro_to_AI/tree/main/slides/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" role="button">

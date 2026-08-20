@@ -1,5 +1,12 @@
 # Local builds used for testing
 book/_build/
+temp_mats/
+
+#venv 
+.471venv/
+
+#gitignore
+.gitignore
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

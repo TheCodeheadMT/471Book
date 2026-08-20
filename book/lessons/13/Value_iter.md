@@ -71,29 +71,60 @@ Once the optimal values ($V^*$) or action-values ($Q^*$) are calculated, the AI 
 1. Why does the Value Iteration algorithm initialize all states with a value of $V_0(s) = 0$?
 <details>
  <summary>Show solution</summary>
- <br>
- <b>Step 1:</b> Consider the definition of $V_k(s)$, where $k$ represents the number of time steps remaining.<br>
- <b>Step 2:</b> At initialization ($k=0$), there are no time steps left for the agent to act.<br>
- <b>Answer:</b> With zero time steps remaining, the agent cannot take any actions, meaning the expected sum of future rewards is zero.
+ <div style="border: 1px solid #b3b3b3; border-radius: 6px; overflow: hidden; font-family: system-ui, sans-serif; max-width: 800px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+  <!-- Header Bar -->
+  <div style="background-color: #b3b3b3; color: #000000; padding: 4px 12px; font-size: 0.95em; font-style: italic;">
+    Solution
+  </div>
+  <!-- Body Content -->
+  <div style="background-color: #fcfcfc; padding: 12px 16px; color: #111111; line-height: 1.5;">
+
+ **Step 1:** Consider the definition of $V_k(s)$, where $k$ represents the number of time steps remaining.
+
+ **Step 2:** At initialization ($k=0$), there are no time steps left for the agent to act.
+
+ **Answer:** With zero time steps remaining, the agent cannot take any actions, meaning the expected sum of future rewards is zero.
+  </div>
+</div>
+
 </details>
 <br>
 
 2. An autonomous routing system has successfully run Value Iteration and possesses the optimal value $V^*(s)$ for every sector on the map. To determine its next exact maneuver, does it simply look at the highest value of the adjacent sectors? Explain based on Policy Extraction.
 <details>
  <summary>Show solution</summary>
- <br>
- <b>Step 1:</b> Recall how Policy Extraction calculates $\pi^*(s)$ from $V^*(s)$.<br>
- <b>Step 2:</b> The agent cannot just look at the raw value of the next state; it must account for transition probabilities and immediate rewards.<br>
- <b>Answer:</b> No, it is not completely trivial. The agent must perform a mini-expectimax calculation (a one-step lookahead) to weigh the transition probabilities ($T$) and immediate rewards ($R$) against the discounted future values ($\gamma V^*$) to accurately extract the optimal policy.
+ <div style="border: 1px solid #b3b3b3; border-radius: 6px; overflow: hidden; font-family: system-ui, sans-serif; max-width: 800px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+  <!-- Header Bar -->
+  <div style="background-color: #b3b3b3; color: #000000; padding: 4px 12px; font-size: 0.95em; font-style: italic;">
+    Solution
+  </div>
+  <!-- Body Content -->
+  <div style="background-color: #fcfcfc; padding: 12px 16px; color: #111111; line-height: 1.5;">
+**Step 1:** Recall how Policy Extraction calculates $\pi^*(s)$ from $V^*(s)$.
+
+**Step 2:** The agent cannot just look at the raw value of the next state; it must account for transition probabilities and immediate rewards.
+
+**Answer:** No, it is not completely trivial. The agent must perform a mini-expectimax calculation (a one-step lookahead) to weigh the transition probabilities ($T$) and immediate rewards ($R$) against the discounted future values ($\gamma V^*$) to accurately extract the optimal policy.
+ </div>
+</div>
 </details>
-<br>
+
 
 3. During the execution of Value Iteration, an AI commander notices that its planned operational actions ($\pi$) stopped changing at Iteration 50, but the mathematical state values ($V$) kept incrementally changing until Iteration 120. Is this a system error?
 <details>
  <summary>Show solution</summary>
+ <div style="border: 1px solid #b3b3b3; border-radius: 6px; overflow: hidden; font-family: system-ui, sans-serif; max-width: 800px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+  <!-- Header Bar -->
+  <div style="background-color: #b3b3b3; color: #000000; padding: 4px 12px; font-size: 0.95em; font-style: italic;">
+    Solution
+  </div>
+  <!-- Body Content -->
+  <div style="background-color: #fcfcfc; padding: 12px 16px; color: #111111; line-height: 1.5;">
  <br>
  <b>Step 1:</b> Evaluate the relationship between policy convergence and value convergence in dynamic programming.<br>
  <b>Step 2:</b> Reference the mathematical properties of the Bellman update over multiple iterations.<br>
  <b>Answer:</b> No, this is normal behavior. In Markov Decision Processes, the agent's policy will often converge and stabilize long before the exact numerical state-values mathematically converge to their final fixed points.
+  </div>
+</div>
 </details>
 <br>

@@ -1,0 +1,116 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[margin=1in]{geometry} % <--- This line fixes the wide margins
+
+\begin{document}
+
+\noindent \textbf{CS471 – Lesson 13 – Reinforcement Learning} \\
+\textbf{Value Iteration (Instructor Solution Key)}
+
+\vspace{0.5cm}
+\noindent In micro-blackjack, you repeatedly draw a card (with replacement) that is equally likely to be a 2, 3, or 4. You can either Draw or Stop if the total score of the cards you have drawn is less than 6. If your total score is 6 or higher, the game ends, and you receive a utility of 0. When you Stop, your utility is equal to your total score (up to 5), and the game ends. When you Draw, you receive no utility. There is a discount factor ($\gamma=0.9$). Let's formulate this problem as an MDP with the following states: 0, 2, 3, 4, 5, and a Done state, for when the game ends.
+
+\vspace{0.5cm}
+\noindent 1. Fill in the following table of value iteration values for the first 5 iterations, or if it converges only complete the table to convergence.
+
+\vspace{0.3cm}
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{States} & \textbf{0} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} \\
+\hline
+$V_0$ & 0 & 0 & 0 & 0 & 0 \\
+\hline
+$V_1$ & 0 & 2 & 3 & 4 & 5 \\
+\hline
+$V_2$ & 2.7 & 2.7 & 3 & 4 & 5 \\
+\hline
+$V_3$ & 2.91 & 2.7 & 3 & 4 & 5 \\
+\hline
+$V_4$ & 2.91 & 2.7 & 3 & 4 & 5 \\
+\hline
+$V_5$ & 2.91 & 2.7 & 3 & 4 & 5 \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{0.2cm}
+\textit{Note: The values completely converge at $V_3$.}
+
+\vspace{0.3cm}
+\noindent \textbf{Step by Step - General Bellman Update Equation:}
+$$\text{For any state } s \in \{0, 2, 3, 4, 5\}:$$
+$$V_{k}(s) = \max \left( \text{Stop}(s), \text{Draw}(s) \right)$$
+$$\text{Where: } \text{Stop}(s) = s, \quad \text{Draw}(s) = 0.9 \sum_{c \in \{2,3,4\}} \frac{1}{3} V_{k-1}(s+c)$$
+\noindent \textit{Note: If $s+c \ge 6$, the game transitions to the Done state, where $V(s') = 0$.}
+
+\vspace{0.5cm}
+\noindent \hrule
+\vspace{0.5cm}
+
+\subsection*{Initial State ($k = 0$)}
+$$V_0(0) = 0, \quad V_0(2) = 0, \quad V_0(3) = 0, \quad V_0(4) = 0, \quad V_0(5) = 0$$
+
+\subsection*{Iteration 1 ($k = 1$)}
+\noindent Since $V_0(s) = 0$ for all states, $\text{Draw}(s) = 0$ for all $s$.
+\begin{itemize}
+    \item $V_1(0) = \max(0, 0) = 0$
+    \item $V_1(2) = \max(2, 0) = 2$
+    \item $V_1(3) = \max(3, 0) = 3$
+    \item $V_1(4) = \max(4, 0) = 4$
+    \item $V_1(5) = \max(5, 0) = 5$
+\end{itemize}
+
+\subsection*{Iteration 2 ($k = 2$)}
+\begin{itemize}
+    \item \textbf{State 0:} 
+    $$\text{Draw}(0) = 0.9 \cdot \frac{V_1(2) + V_1(3) + V_1(4)}{3} = 0.9 \cdot \frac{2 + 3 + 4}{3} = 2.7$$
+    $$V_2(0) = \max(0, 2.7) = 2.7$$
+    
+    \item \textbf{State 2:} 
+    $$\text{Draw}(2) = 0.9 \cdot \frac{V_1(4) + V_1(5) + V_1(\ge 6)}{3} = 0.9 \cdot \frac{4 + 5 + 0}{3} = 2.7$$
+    $$V_2(2) = \max(2, 2.7) = 2.7$$
+    
+    \item \textbf{State 3:} 
+    $$\text{Draw}(3) = 0.9 \cdot \frac{V_1(5) + V_1(\ge 6) + V_1(\ge 6)}{3} = 0.9 \cdot \frac{5 + 0 + 0}{3} = 1.5$$
+    $$V_3(3) = \max(3, 1.5) = 3$$
+    
+    \item \textbf{States 4 \& 5:} Drawing yields $0$ expected utility because all outcome states are $\ge 6$.
+    $$V_2(4) = \max(4, 0) = 4, \quad V_2(5) = \max(5, 0) = 5$$
+\end{itemize}
+
+\subsection*{Iteration 3 ($k = 3$)}
+\begin{itemize}
+    \item \textbf{State 0:} Recalculated due to updated value $V_2(2) = 2.7$:
+    $$\text{Draw}(0) = 0.9 \cdot \frac{V_2(2) + V_2(3) + V_2(4)}{3} = 0.9 \cdot \frac{2.7 + 3 + 4}{3} = 0.9 \cdot \frac{9.7}{3} = 2.91$$
+    $$V_3(0) = \max(0, 2.91) = 2.91$$
+    
+    \item \textbf{States 2, 3, 4, 5:} All values remain unchanged from $V_2$:
+    $$V_3(2) = 2.7, \quad V_3(3) = 3, \quad V_3(4) = 4, \quad V_3(5) = 5$$
+\end{itemize}
+
+\subsection*{Iteration 4 ($k = 4$ -- Verification of Convergence)}
+\begin{itemize}
+    \item \textbf{State 0:} 
+    $$\text{Draw}(0) = 0.9 \cdot \frac{V_3(2) + V_3(3) + V_3(4)}{3} = 0.9 \cdot \frac{2.7 + 3 + 4}{3} = 2.91$$
+    $$V_4(0) = V_3(0) = 2.91$$
+\end{itemize}
+\noindent Since $V_4(s) = V_3(s)$ for all states $s$, the algorithm has fully converged at $k = 3$.
+
+\vspace{0.5cm}
+\noindent 2. What is the optimal policy for this MDP?
+
+\vspace{0.3cm}
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{States} & \textbf{0} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} \\
+\hline
+$\pi^*$ & Draw & Draw & Stop & Stop & Stop \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}

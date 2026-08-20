@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[margin=1in]{geometry} % <--- This line fixes the wide margins
+
+\begin{document}
+
+\noindent \textbf{CS471 – Lesson 13 – Reinforcement Learning} \\
+\textbf{Value Iteration}
+
+\vspace{0.5cm}
+\noindent In micro-blackjack, you repeatedly draw a card (with replacement) that is equally likely to be a 2, 3, or 4. You can either Draw or Stop if the total score of the cards you have drawn is less than 6. If your total score is 6 or higher, the game ends, and you receive a utility of 0. When you Stop, your utility is equal to your total score (up to 5), and the game ends. When you Draw, you receive no utility. There is a discount factor ($\gamma=0.9$). Let's formulate this problem as an MDP with the following states: 0, 2, 3, 4, 5, and a Done state, for when the game ends.
+
+\vspace{0.5cm}
+\noindent 1. Fill in the following table of value iteration values for the first 5 iterations, or if it converges only complete the table to convergence.
+
+\vspace{0.3cm}
+\begin{center}
+\renewcommand{\arraystretch}{2} % Increases row height to match the image spacing
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{States} & \textbf{0} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} \\
+\hline
+$V_0$ & \hspace{1.5cm} & \hspace{1.5cm} & \hspace{1.5cm} & \hspace{1.5cm} & \hspace{1.5cm} \\
+\hline
+$V_1$ & & & & & \\
+\hline
+$V_2$ & & & & & \\
+\hline
+$V_3$ & & & & & \\
+\hline
+$V_4$ & & & & & \\
+\hline
+$V_5$ & & & & & \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.5cm}
+\noindent 2. What is the optimal policy for this MDP?
+
+\vspace{0.3cm}
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{States} & \textbf{0} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} \\
+\hline
+$\pi^*$ & \hspace{1.5cm} & \hspace{1.5cm} & \hspace{1.5cm} & \hspace{1.5cm} & \hspace{1.5cm} \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}

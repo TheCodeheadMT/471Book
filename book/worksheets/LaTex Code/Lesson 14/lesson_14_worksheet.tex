@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\begin{document}
+\begin{center}
+    \LARGE \textbf{Lesson 14 In-Class Worksheet}\\
+    \Large \textbf{Reinforcement Learning II: Policy Iteration}
+\end{center}
+\vspace{0.5cm}
+
+\section*{Part 1: Instructor-Led Walkthrough}
+\textbf{Objective:} Apply Policy Iteration to a simple decision problem.
+
+\noindent \textbf{Scenario:} An autonomous sentry is stationed at a base ($S$). It must decide between two actions: \textit{Patrol} or \textit{Recharge}.
+\begin{itemize}
+    \item \textbf{Action: Patrol ($P$)} $\rightarrow$ Immediate Reward: $+5$
+    \item \textbf{Action: Recharge ($R$)} $\rightarrow$ Immediate Reward: $0$
+\end{itemize}
+\noindent Assume the discount factor $\gamma = 0.9$ and both actions loop right back to the base state ($S$) deterministically.
+
+\vspace{0.5cm}
+\noindent \textbf{Step 1: Initialization}\\
+We initialize the sentry with a flawed, random policy. Let the initial playbook be:\\
+$\pi_0(S) = \text{Recharge}$.
+\vspace{1cm}
+
+\noindent \textbf{Step 2: Policy Evaluation}\\
+Calculate the value of the state under this specific playbook ($\pi_0$).\\
+\textit{Hint: $V^{\pi}(s) = R(s, \pi(s), s') + \gamma V^{\pi}(s')$}\\
+\vspace{3cm}
+
+\noindent \textbf{Step 3: Policy Extraction (Improvement)}\\
+Run a one-step lookahead against the environment to find the best immediate action based on $V^{\pi_0}$.\\
+\textit{Expected utility of Patrol:}\\
+\vspace{1.5cm}\\
+\textit{Expected utility of Recharge:}\\
+\vspace{1.5cm}\\
+\textit{New extracted policy $\pi_1(S) = $}\\
+\vspace{1cm}
+
+\noindent \textbf{Step 4: Convergence Verification}\\
+Evaluate $\pi_1(S)$ to find $V^{\pi_1}(S)$, then run extraction again to find $\pi_2(S)$. \\
+Does $\pi_2 = \pi_1$?
+\vspace{4cm}
+
+\newpage
+\section*{Part 2: Student On Their Own}
+\textbf{Instructions:} Complete the following questions to check your understanding of the lesson objectives.
+
+\vspace{0.5cm}
+\noindent \textbf{Question 1: Value Iteration vs. Policy Iteration} \\
+While both algorithms solve Markov Decision Processes, they take different operational paths. In your own words, explain the fundamental difference between how Value Iteration and Policy Iteration reach the optimal solution. Which one focuses on the "playbook" at every step?
+\vspace{4cm}
+
+\noindent \textbf{Question 2: Online vs. Offline Planning} \\
+Solving these models with Policy Iteration is considered \textit{Offline Planning}. Explain the key difference between Offline Planning and \textit{Reinforcement Learning} (Online Planning). How does the agent's interaction with the environment differ?
+\vspace{4cm}
+
+\noindent \textbf{Question 3: Algorithm Exits} \\
+In Policy Iteration, how does the AI agent definitively know when to stop running its loops and exit the algorithm?
+\vspace{4cm}
+
+\noindent \textbf{Question 4: Policy Evaluation Math} \\
+An AI commander must calculate the exact expected utility of following an established Standard Operating Procedure (SOP). To do this, the commander uses Policy Evaluation. Why is the $\max_a$ operator removed from the Bellman equation during this specific calculation?
+\vspace{4cm}
+
+\end{document}

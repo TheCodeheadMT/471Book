@@ -50,20 +50,20 @@
     <table class="table table-striped table-hover align-middle">
         <thead class="table-light">
             <tr>
-                <th scope="col">Lesson</th>
-                <th scope="col">Topic</th>
-                <th scope="col">Worksheet</th>
-                <th scope="col">Solution Key</th>
+                <th scope="col" class="text-center">Lesson</th>
+                <th scope="col" class="text-center">Topic</th>
+                <th scope="col" class="text-center">Worksheet</th>
+                <th scope="col" class="text-center">Solution Key</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="text-center">
             <tr>
                 <td><strong>4</strong></td>
                 <td>Problem Formulation</td>
-                <td>
+                <td class="text-center">
                     <a href="4_worksheet.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary" role="button">Worksheet</a>
                 </td>
-                <td>
+                <td class="text-center">
                     <a href="4_worksheet_solutions.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" role="button">Solution</a>
                 </td>
             </tr>
@@ -105,6 +105,13 @@
                 </td>
                 <td>
                     <a href="8_worksheet_solutions.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" role="button">Solution</a>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>9</strong></td>
+                <td>GR Review - Block 1</td>
+                <td colspan="2" class="text-center">
+                    <a href="9_gr_review.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary" role="button">Worksheet</a>
                 </td>
             </tr>
             <tr>

@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+
+\begin{document}
+
+\noindent
+\textbf{Name:} \underline{\hspace{6cm}} \hfill \textbf{Date:} \underline{\hspace{4cm}} \\
+\textbf{Course:} CS 471 - Artificial Intelligence \\
+\textbf{Lesson 15:} Reinforcement Learning III (Q-Learning)
+
+\vspace{1cm}
+
+\section*{Section 1: Instructor-Led Walkthrough}
+\textbf{Objective:} Calculate a Q-Value update for an autonomous perimeter sentry. \\
+
+Given the Q-learning update equation:
+\[ Q_{k+1}(s,a) \leftarrow (1-\alpha)Q_k(s,a) + \alpha \left[ R(s,a,s') + \gamma \max_{a'} Q_k(s',a') \right] \]
+
+\noindent
+Assume the sentry is at Checkpoint 1 ($s$), takes action "Advance" ($a$), and receives a reward of $R = -2$. It transitions to Checkpoint 2 ($s'$), which has a maximum future Q-value of $10$. \\
+Let $\alpha = 0.5$, $\gamma = 1.0$, and the initial $Q(s,a) = 0$. \\
+
+\noindent
+\textbf{Step 1: Calculate the sample} \\
+$sample = $
+
+\vspace{2cm}
+
+\noindent
+\textbf{Step 2: Calculate the new Q-value} \\
+$Q(s,a) \leftarrow $
+
+\vspace{2cm}
+
+\section*{Section 2: Student Practice}
+
+\textbf{Problem 1: Exploration vs. Exploitation} \\
+An Electronic Warfare algorithm utilizes an $\epsilon$-greedy strategy to find optimal frequencies for jamming adversary comms. If $\epsilon = 0.1$, explain the behavioral tradeoff the algorithm makes at each time step.
+
+\vspace{4cm}
+
+\textbf{Problem 2: Model-Free Learning} \\
+Why does an autonomous drone using Q-Learning not require prior knowledge of the transition function $T(s,a,s')$ to learn an optimal flight path? 
+
+\vspace{4cm}
+
+\end{document}

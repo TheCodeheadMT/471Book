@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{xcolor}
+
+\begin{document}
+
+\noindent
+\textbf{Name:} \textbf{\textcolor{blue}{ANSWER KEY}} \hfill \textbf{Date:} \underline{\hspace{4cm}} \\
+\textbf{Course:} CS 471 - Artificial Intelligence \\
+\textbf{Lesson 15:} Reinforcement Learning III (Q-Learning)
+
+\vspace{1cm}
+
+\section*{Section 1: Instructor-Led Walkthrough}
+\textbf{Objective:} Calculate a Q-Value update for an autonomous perimeter sentry. \\
+
+Given the Q-learning update equation:
+\[ Q_{k+1}(s,a) \leftarrow (1-\alpha)Q_k(s,a) + \alpha \left[ R(s,a,s') + \gamma \max_{a'} Q_k(s',a') \right] \]
+
+\noindent
+Assume the sentry is at Checkpoint 1 ($s$), takes action "Advance" ($a$), and receives a reward of $R = -2$. It transitions to Checkpoint 2 ($s'$), which has a maximum future Q-value of $10$. \\
+Let $\alpha = 0.5$, $\gamma = 1.0$, and the initial $Q(s,a) = 0$. \\
+
+\noindent
+\textbf{Step 1: Calculate the sample} \\
+\textbf{\textcolor{blue}{$sample = -2 + (1.0 \times 10) = 8$}}
+
+\vspace{2cm}
+
+\noindent
+\textbf{Step 2: Calculate the new Q-value} \\
+\textbf{\textcolor{blue}{$Q(s,a) \leftarrow (0.5 \times 0) + (0.5 \times 8) = 4$}}
+
+\vspace{2cm}
+
+\section*{Section 2: Student Practice}
+
+\textbf{Problem 1: Exploration vs. Exploitation} \\
+An Electronic Warfare algorithm utilizes an $\epsilon$-greedy strategy to find optimal frequencies for jamming adversary comms. If $\epsilon = 0.1$, explain the behavioral tradeoff the algorithm makes at each time step.
+
+\vspace{0.5cm}
+\noindent
+\fbox{\parbox{\textwidth}{\textbf{\textcolor{blue}{
+With a probability of 0.9 (90\%), the algorithm exploits known data by acting on the current policy to maximize rewards. With a probability of 0.1 (10\%), it acts randomly to explore the space and discover potentially better jamming frequencies.
+}}}}
+\vspace{2cm}
+
+\textbf{Problem 2: Model-Free Learning} \\
+Why does an autonomous drone using Q-Learning not require prior knowledge of the transition function $T(s,a,s')$ to learn an optimal flight path? 
+
+\vspace{0.5cm}
+\noindent
+\fbox{\parbox{\textwidth}{\textbf{\textcolor{blue}{
+Model-free learning directly estimates the values (Q-values) of states through observed samples. By using a running average of experienced rewards and subsequent state values, the drone incorporates the environment's probabilistic nature inherently without needing to store or calculate a complete map of state transitions.
+}}}}
+\vspace{2cm}
+
+\end{document}

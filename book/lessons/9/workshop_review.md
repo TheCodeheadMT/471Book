@@ -14,6 +14,6 @@ flowchart TB
     B --> C[Synthesize Concepts & <br/> Practical Scenarios]
     C --> D[Class Presentation]
     D --> E[Q&A / Peer Feedback]
-    style B fill:#0d233a,stroke:#4fc3f7,stroke-width:2px
-    style D fill:#0c2411,stroke:#81c784,stroke-width:2px
+    style B fill:#1a5f7a,stroke:#4fc3f7,stroke-width:2px,color:#ffffff
+    style D fill:#2d6a4f,stroke:#81c784,stroke-width:2px,color:#ffffff
 ```

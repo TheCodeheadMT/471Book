@@ -166,7 +166,7 @@ B) Dependent<br>
 C) Mutually Exclusive<br>
 D) Conditionally Dependent<br>
 <br>
-2. For a battlefield reconnaissance system, adequate visibility occurs with probability $P(V)=0.75$, and reliable communication given adequate visibility occurs with probability $P(C\vert{}V)=0.80$. What is the joint probability $P(V \cap C)$?<br>
+2. For a battlefield reconnaissance system, adequate visibility occurs with probability $P(V)=0.75$, and reliable communication given adequate visibility occurs with probability $P(C\vert{}V)=0.80$. What is the joint probability $P(V, C)$?<br>
 A) 0.94<br>
 B) 0.80<br>
 C) 0.60<br>

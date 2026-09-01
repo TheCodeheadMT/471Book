@@ -12,12 +12,12 @@ When an AI system operates in an uncertain battlefield, it begins with an initia
 
 ## Applying Bayes' Rule to Update Beliefs
 
-**{term}`Bayes' Rule**` is a mathematical theorem that defines how to calculate a {term}`Posterior Probability` by reversing conditional probabilities.
+{term}`Bayes' Rule` is a mathematical theorem that defines how to calculate a {term}`Posterior Probability` by reversing conditional probabilities.
 
 $$P(A \mid B) = \frac{P(B \mid A)P(A)}{P(B)}$$
 
-* $P(A)$: **{term}`Prior Probability**`. What we believed about hypothesis $A$ before seeing any new evidence.
-* $P(B \mid A)$: **{term}`Likelihood**`. The probability of observing evidence $B$ if hypothesis $A$ is true.
+* $P(A)$: {term}`Prior Probability`. What we believed about hypothesis $A$ before seeing any new evidence.
+* $P(B \mid A)$: {term}`Likelihood`. The probability of observing evidence $B$ if hypothesis $A$ is true.
 * $P(B)$: **Marginal Likelihood**. The total probability of observing evidence $B$ under any circumstance.
 * $P(A \mid B)$: **Posterior Probability**. Our newly updated belief about hypothesis $A$ after observing evidence $B$.
 
@@ -66,7 +66,7 @@ An Airborne Early Warning & Control (AEW&C) radar evaluates whether an unidentif
 * **Hypothesis states:** $H$ (Hostile missile present) vs. $\neg H$ (No missile / clear airspace).
 * **Evidence states:** $E$ (Radar alarms) vs. $\neg E$ (Radar remains silent).
 
-### 1. Prior Probability — $P(H)$
+### Prior Probability — $P(H)$
 
 The baseline probability of the hypothesis occurring across all operational flights *before* evaluating the current sensor reading.
 
@@ -75,7 +75,7 @@ The baseline probability of the hypothesis occurring across all operational flig
 $$P(H) = 0.05 \quad \implies \quad P(\neg H) = 1 - 0.05 = 0.95$$
 
 
-### 2. Likelihood (Sensor Sensitivity & False Positive Rate) — $P(E \mid H)$
+### Likelihood (Sensor Sensitivity & False Positive Rate) — $P(E \mid H)$
 
 The conditional probability that the sensor produces evidence $E$ given that the true operational state is known.
 
@@ -89,7 +89,7 @@ $$P(E \mid H) = 0.90 \quad \implies \quad P(\neg E \mid H) = 0.10 \text{ (Missed
 $$P(E \mid \neg H) = 0.10 \quad \implies \quad P(\neg E \mid \neg H) = 0.90 \text{ (True negative)}$$
 
 
-### 3. Joint Probability — $P(H, E)$
+### Joint Probability — $P(H, E)$
 
 The probability that a specific hypothesis state and a specific evidence outcome occur simultaneously. It is computed via the **Product Rule**:
 
@@ -105,7 +105,7 @@ $$P(H, E) = 0.90 \times 0.05 = 0.0450 \text{ (or } 4.50\%)$$
 $$P(\neg H, E) = P(E \mid \neg H) \cdot P(\neg H) = 0.10 \times 0.95 = 0.0950 \text{ (or } 9.50\%)$$
 
 
-### 4. Marginal Probability of Evidence — $P(E)$
+### Marginal Probability of Evidence — $P(E)$
 
 The total, unconditional probability of observing the evidence across all possible operational states. It is computed using the **Law of Total Probability** (marginalizing over all hypotheses):
 
@@ -115,7 +115,7 @@ $$P(E) = \sum_{h \in \{H, \neg H\}} P(h, E) = P(E \mid H)P(H) + P(E \mid \neg H)
 
 $$P(E) = 0.0450 + 0.0950 = 0.1400 \text{ (or } 14.00\%)$$
 
-### 5. Posterior Probability — $P(H \mid E)$
+### Posterior Probability — $P(H \mid E)$
 
 The updated probability that the hypothesis is true *after* observing the sensor evidence. It is computed using **Bayes' Rule**:
 
@@ -158,7 +158,7 @@ Because failures are so rare, the false alerts generated from the massive no-fai
 
 ---
 
-## 4. Knowledge Check & Practice Questions
+## Knowledge Check & Practice Questions
 
 1. Suppose the probability of a drone's primary sensor failing is $P(A)=0.30$, and the probability of it failing given the backup sensor has already failed is $P(A\vert{}B)=0.30$. Are these failure events independent or dependent?<br>
 A) Independent<br>

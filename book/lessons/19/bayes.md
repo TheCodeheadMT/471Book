@@ -171,7 +171,7 @@ A) 0.94<br>
 B) 0.80<br>
 C) 0.60<br>
 D) 0.15<br>
-
+<br>
 3. An AI diagnostics system tracks a hardware failure prior of $P(F)=0.10$, a sensor likelihood of $P(A\vert{}F)=0.80$, and an overall alert probability of $P(A)=0.20$. What is the posterior probability $P(F\vert{}A)$?<br>
 A) 0.08<br>
 B) 0.16<br>

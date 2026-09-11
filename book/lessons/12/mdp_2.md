@@ -1,4 +1,4 @@
-# Lesson 12: Markov Decision Processes II (Values & Policies)
+# L12: Markov Decision Processes II (Values & Policies)
 
 :::{admonition} Lesson Objectives
 :class: note

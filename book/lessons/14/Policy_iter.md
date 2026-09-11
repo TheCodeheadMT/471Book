@@ -1,4 +1,4 @@
-# Lesson 14 — Reinforcement Learning II (Policy Iteration)
+# L14 — Reinforcement Learning II (Policy Iteration)
 
 :::{admonition} Lesson Objectives
 :class: note

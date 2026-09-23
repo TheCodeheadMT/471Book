@@ -41,6 +41,7 @@
     <a href="https://github.com/USAFADFCS/CS471_Intro_to_AI/tree/main/slides/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" role="button">
         Link to Lecture Slides
     </a>
+    <a href="471_Final_Project_Guide.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" role="button"> Final Exam Guide </a>
 </div>
 
 ---

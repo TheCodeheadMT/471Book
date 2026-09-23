@@ -111,9 +111,15 @@
             <tr>
                 <td><strong>9</strong></td>
                 <td>GR Review - Block 1</td>
-                <td colspan="2" class="text-center">
+                <td>
                     <a href="9_gr_review.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary" role="button">Review</a>
+                    <a href="block1_worksheet.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" role="button">Worksheet</a>
                 </td>
+                <td>
+                    <a href="block1_worksheet_solutions.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" role="button">Solution</a>
+                </td>
+
+
             </tr>
             <tr>
                 <td><strong>11</strong></td>
@@ -173,7 +179,7 @@
                     <a href="block2_worksheet.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" role="button">Worksheet</a>
                 </td>
                 <td>
-                    <a href="block2_worksheet_solutions_v2.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" role="button">Solution</a>
+                    <a href="block2_worksheet_solutions.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" role="button">Solution</a>
                 </td>
             </tr>
             <tr>
